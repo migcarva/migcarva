@@ -10,10 +10,10 @@
 		transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1);
 	}
 
-	div.hidden{
+	/* div.hidden{
 		transform: translate(-100px, 0px);
     transition: transform 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
-	}
+	} */
 
 	div:hover{
 		transform: scale(0.90);

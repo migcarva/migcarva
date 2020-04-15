@@ -24,10 +24,10 @@
 		font-style: italic;
 	}
 
-	div.hidden {
+	/* div.hidden {
 		transform: rotate(-90deg) translate(0, -100px);
 		transition: transform 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
-	}
+	} */
 
 	div span {
 			color: #b0b0b0;

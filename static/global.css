@@ -26,10 +26,13 @@ html {
 	overflow: hidden;
 }
 
-a:hover{
+a {
+	color: #171717;
 	text-decoration: none;
+	background-color: transparent;
 }
 
-a{
-	color: #171717;
+a:hover {
+	text-decoration: none;
+	color: inherit;
 }
