@@ -1,5 +1,6 @@
 <script>
 	import Menu from '../components/Menu.svelte';
+	import Hamburger from '../components/Hamburger.svelte';
 
 	export let segment;
 </script>
@@ -35,6 +36,7 @@
 </style>
 
 <Menu {segment}/>
+<Hamburger />
 
 <main>
 	<slot></slot>
