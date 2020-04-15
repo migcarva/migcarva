@@ -1,3 +1,10 @@
+<Menu {segment}/>
+<main>
+	<Hamburger />
+	<LogoVertical />
+	<slot></slot>
+</main>
+
 <script>
 	import Menu from '../components/Menu.svelte';
 	import Hamburger from '../components/Hamburger.svelte';
@@ -14,32 +21,41 @@
 		margin-right: auto;
 		margin-left: auto;
 	}
-	@media (min-width: 576px) {
+
+	@media (max-width: 576px) and (orientation: portrait) {
 		main {
-			max-width: 540px;
+			width: 90%;
+			padding-left: 10%;
 		}
 	}
-	@media (min-width: 768px) {
+
+	@media only screen
+	and (max-width: 320px)
+	and (max-width: 568px)
+	and (-webkit-min-device-pixel-ratio: 2) {
 		main {
-			max-width: 720px;
+			width: 85%;
+			padding-left: 15%;
 		}
 	}
-	@media (min-width: 992px) {
+
+	@media only screen
+  and (min-width: 375px)
+  and (max-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 		main {
-			max-width: 960px;
+			width: 90%;
+			padding-left: 10%;
 		}
 	}
-	@media (min-width: 1200px) {
+
+	@media only screen
+  and (min-width: 768px)
+  and (max-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
 		main {
-				max-width: 1140px;
+			width: 90%;
+			padding-left: 10%;
 		}
 	}
 </style>
-
-<Menu {segment}/>
-
-<main>
-	<Hamburger />
-	<LogoVertical />
-	<slot></slot>
-</main>
