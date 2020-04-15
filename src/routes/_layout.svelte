@@ -1,6 +1,7 @@
 <script>
 	import Menu from '../components/Menu.svelte';
 	import Hamburger from '../components/Hamburger.svelte';
+	import LogoVertical from '../components/LogoVertical.svelte';
 
 	export let segment;
 </script>
@@ -37,6 +38,7 @@
 
 <Menu {segment}/>
 <Hamburger />
+<LogoVertical />
 
 <main>
 	<slot></slot>
