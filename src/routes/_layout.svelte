@@ -1,21 +1,40 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+	import Menu from '../components/Menu.svelte';
 
 	export let segment;
 </script>
 
 <style>
 	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	@media (min-width: 576px) {
+		main {
+			max-width: 540px;
+		}
+	}
+	@media (min-width: 768px) {
+		main {
+			max-width: 720px;
+		}
+	}
+	@media (min-width: 992px) {
+		main {
+			max-width: 960px;
+		}
+	}
+	@media (min-width: 1200px) {
+		main {
+				max-width: 1140px;
+		}
 	}
 </style>
 
-<Nav {segment}/>
+<Menu {segment}/>
 
 <main>
 	<slot></slot>
