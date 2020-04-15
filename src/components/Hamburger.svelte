@@ -1,3 +1,9 @@
+<div>
+	<button>
+		<img src="/images/hamburger.svg" alt="Menu trigger">
+	</button>
+</div>
+
 <script>
 </script>
 
@@ -32,9 +38,3 @@
 		}
 	}
 </style>
-
-<div>
-	<button>
-		<img src="/images/hamburger.svg" alt="Menu trigger">
-	</button>
-</div>

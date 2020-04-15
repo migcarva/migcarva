@@ -1,3 +1,7 @@
+<div id="page-title" class="home">
+	<a href="/" class="name">mig<span>carva</span></a>
+</div>
+
 <script>
 </script>
 
@@ -47,7 +51,3 @@
 		}
 	}
 </style>
-
-<div id="page-title" class="home">
-	<a href="/" class="name">mig<span>carva</span></a>
-</div>
