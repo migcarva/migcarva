@@ -33,7 +33,7 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>migcarva. Miguel Carvalho</title>
 </svelte:head>
 
 <h1>Great success!</h1>
