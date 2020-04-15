@@ -37,9 +37,9 @@
 </style>
 
 <Menu {segment}/>
-<Hamburger />
-<LogoVertical />
 
 <main>
+	<Hamburger />
+	<LogoVertical />
 	<slot></slot>
 </main>
