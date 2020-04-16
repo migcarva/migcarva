@@ -41,6 +41,31 @@
 			title: 'Tale',
 			description: 'Tale is an application that allows you to convey an emotion through words and images',
 		},
+		{
+			slug: 'cryptic',
+			title: 'Cryptic Cup',
+			description: 'Tale is an application that allows you to convey an emotion through words and images',
+		},
+		{
+			slug: 'img43',
+			title: 'IMG43',
+			description: 'Tale is an application that allows you to convey an emotion through words and images',
+		},
+		{
+			slug: 'taskhunters',
+			title: 'Taskhunters for Business',
+			description: 'Tale is an application that allows you to convey an emotion through words and images',
+		},
+		{
+			slug: 'spedity',
+			title: 'Spedity',
+			description: 'Tale is an application that allows you to convey an emotion through words and images',
+		},
+		{
+			slug: 'taskhuntersapp',
+			title: 'Taskhunters App',
+			description: 'Tale is an application that allows you to convey an emotion through words and images',
+		},
 	]
 </script>
 
