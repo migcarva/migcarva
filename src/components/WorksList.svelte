@@ -22,14 +22,14 @@
 				</a>
 			</li>
 		{/each}
-
 	</ul>
+	<a class="link" href="../en/about.html">Discover more</a>
 </section>
 
 <script>
 	let title = {
 		title: "My work",
-		lead: "Both personal and professional work",
+		lead: "— Both personal and professional work",
 	}
 
 	let works = [
@@ -70,7 +70,7 @@
 	li {
 		font-size: 1rem;
     transition: transform .3s;
-		margin-bottom: 6em;
+		margin-bottom: 2em;
 
 		&:hover {
 			figure {

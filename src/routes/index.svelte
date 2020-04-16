@@ -22,10 +22,10 @@
 		<Column size="5">
 			<p>
 				Our goal is to create and improve digital products, ensuring maximum usability and crafting an essential and orderly design. Simplicity is our strength: we highlight what really matters and we are really good at it.
-				<a class="link" href="../en/about.html">Discover more</a>
 			</p>
 		</Column>
 	</div>
+				<a class="link" href="../en/about.html">Discover more</a>
 </section>
 
 <WorksList />
