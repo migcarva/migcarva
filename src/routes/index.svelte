@@ -17,8 +17,8 @@
 		</Paragraph>
 		<Paragraph col={5}>
 			Our goal is to create and improve digital products, ensuring maximum usability and crafting an essential and orderly design. Simplicity is our strength: we highlight what really matters and we are really good at it.
+			<a class="link" href="../en/about.html">Discover more</a>
 		</Paragraph>
-		<a class="link" href="../en/about.html">Discover more</a>
 	</div>
 </section>
 

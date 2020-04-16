@@ -5,19 +5,19 @@
 
 @font-face {
 		font-family: "Helvetica";
-    src: url(./fonts/helveticaneue-roman.ttf);
+    src: url(../fonts/helveticaneue-roman.ttf);
     font-weight: normal;
 }
 
 @font-face {
     font-family: "HelveticaMedium";
-    src: url(./fonts/helveticaneue-medium.ttf);
+    src: url(../fonts/helveticaneue-medium.ttf);
     font-weight: medium;
 }
 
 @font-face {
     font-family: "HelveticaBold";
-    src: url(./fonts/helveticaneue-bold.ttf);
+    src: url(../fonts/helveticaneue-bold.ttf);
 }
 
 body,
@@ -48,6 +48,18 @@ a {
 a:hover {
 	text-decoration: none;
 	color: inherit;
+}
+
+a.link{
+	margin-top: 30px;
+	display: block;
+	float: right;
+	transition: 0.3s;
+}
+
+a.link:hover{
+	color: #24C9BA;
+	transform: scale(0.98);
 }
 
 h1, h2, h3, h4, h5, h6 {
