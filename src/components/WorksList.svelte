@@ -75,13 +75,17 @@
 		&:hover {
 			figure {
 				div {
-					transform: scale(0.98);
+					transform: scale3d(0.98, 0.98, 1);
 				}
 				img {
-					transform: scale(1.06);
+					transform: scale3d(1.06, 1.06, 1);
 				}
 				figcaption {
 					opacity: 1;
+					div {
+						opacity: .95;
+						// box-shadow: 0 8px 6px -6px #E1E1E1;
+					}
 				}
 			}
 		}
@@ -103,13 +107,13 @@
 		div {
 			width: 100%;
 			overflow: hidden;
-			transition: transform .3s;
+			transition: transform .3s cubic-bezier(0, 0.55, 0.45, 1);
 
 			img {
 				width: 100%;
 				pointer-events: none;
 				user-select: none;
-				transition: transform .3s;
+				transition: transform .3s cubic-bezier(0, 0.55, 0.45, 1);
 			}
 		}
 
@@ -119,7 +123,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			opacity: 0;
-			transition: opacity .25s ease-in;
+			transition: opacity .35s cubic-bezier(0, 0.55, 0.45, 1);
 			width: 100%;
 			height: 100%;
 
@@ -134,7 +138,8 @@
 				padding: 2em;
 				width: calc(100% - 2em);
 				height: calc(100% - 2em);
-				opacity: .95;
+				opacity: 0;
+				transition: opacity .3s cubic-bezier(0, 0.55, 0.45, 1);
 			}
 
 			h3 {
