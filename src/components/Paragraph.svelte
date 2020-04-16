@@ -15,9 +15,9 @@
     line-height: 30px;
 	}
 
-	p span {
+	/* p span {
 		color: #171717;
-	}
+	} */
 
 	@media (max-width: 767px) {
 		p {
