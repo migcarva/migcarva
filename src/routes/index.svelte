@@ -32,7 +32,7 @@
 
 <section id="contact">
 	<h2>{@html cTitle.title}<br><span>{@html cTitle.lead}</span></h2>
-	<footer class="row">
+	<div class="row">
 		<Column size="4">
 			<h3>On the interweb</h3>
 		</Column>
@@ -46,7 +46,7 @@
 				{/each}
 			</ul>
 		</Column>
-	</footer>
+	</div>
 </section>
 
 <script>
@@ -57,7 +57,6 @@
 	let hTitle = {
 		title: "I'm Miguel Carvalho",
 		lead: "— I like all things simple, clean and straightforward",
-		isHero: true,
 	}
 
 	let aTitle = {
@@ -87,7 +86,7 @@
 			name: 'Twitter',
 			url: 'https://twitter.com/migcarva/',
 		},
-	]
+	];
 </script>
 
 <style lang="scss">
@@ -129,8 +128,13 @@
 			padding-top: 4px;
 		}
 
-		ul li span {
-			color: #DBDBDB;
+		ul li {
+			display: inline;
+			font-size: 18px;
+
+			span {
+				color: #DBDBDB;
+			}
 		}
 	}
 </style>
