@@ -116,6 +116,12 @@ h2 a:hover{
 	transform: scale(0.98);
 }
 
+h3 {
+	font-family: "HelveticaMedium", Arial, sans-serif;
+	font-size: 18px;
+	padding-top: 4px;
+}
+
 section {
 	margin-top: 200px;
 	padding-top: 50px;
@@ -126,4 +132,31 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+ul.links {
+	padding: 0;
+}
+
+ul.links li {
+	display: inline;
+	font-size: 18px;
+}
+
+
+p {
+	color: #707070;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+p span {
+	color: #171717;
+}
+
+@media (max-width: 767px) {
+	p {
+		font-size: 16px;
+		line-height: 28px;
+	}
 }
