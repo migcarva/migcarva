@@ -1,10 +1,10 @@
 <h2 class={isHero && 'isHero'}>
-	{main}<br>
+	{title}<br>
 	<span>{lead}</span>
 </h2>
 
 <script>
-	export let main;
+	export let title;
 	export let lead;
 	export let isHero;
 </script>
