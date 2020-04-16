@@ -7,4 +7,9 @@
 </script>
 
 <style>
+	@media (max-width: 767px) {
+		h4 {
+			font-size: 11px;
+		}
+	}
 </style>

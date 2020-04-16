@@ -39,10 +39,10 @@
 		<Column size="8">
 			<ul>
 				{#each links as link}
-				<li class="footer">
-					<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
-					<span>/</span>
-				</li>
+					<li>
+						<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
+						<span>/</span>
+					</li>
 				{/each}
 			</ul>
 		</Column>
@@ -116,6 +116,7 @@
 
 	#contact {
 		margin-top: 240px;
+
 		@media (max-width: 767px) {
 			margin-top: 160px;
 		}
