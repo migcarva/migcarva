@@ -22,11 +22,15 @@
 	</div>
 </section>
 
+<WorksList />
+
 <script>
 	import Logo from '../components/Logo.svelte';
 	import Title from '../components/Title.svelte';
 	import Subtitle from '../components/Subtitle.svelte';
 	import Paragraph from '../components/Paragraph.svelte';
+
+	import WorksList from '../components/WorksList.svelte';
 
 	let heroTitle = {
 		title: "I'm Miguel Carvalho",
@@ -41,12 +45,6 @@
 </script>
 
 <style>
-	section {
-		margin-top: 200px;
-		padding-top: 50px;
-		position: relative;
-	}
-
 	#hero {
 		margin-top: 0;
 		height: 100vh;
