@@ -12,11 +12,11 @@
 						</div>
 						<figcaption>
 							<div>
-								<h3 class="heading-3">{work.title}</h3>
+								<h3>{work.title}</h3>
+								<p>
+									{work.description}
+								</p>
 							</div>
-							<p>
-								{work.description}
-							</p>
 						</figcaption>
 					</figure>
 				</a>
@@ -81,7 +81,7 @@
 					transform: scale(1.06);
 				}
 				figcaption {
-					transform: translateY(-10px);
+					opacity: 1;
 				}
 			}
 		}
@@ -98,6 +98,7 @@
 
 	figure {
 		margin: 0;
+		position: relative;
 
 		div {
 			width: 100%;
@@ -113,19 +114,33 @@
 		}
 
 		figcaption {
-			margin: 0 auto;
-			margin-top: 3.2em;
-			transition: transform .3s;
-			max-width: 90%;
-			@media only screen and (min-width: 992px) {
-				max-width: 70%;
-			}
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: opacity .25s ease-in;
+			width: 100%;
+			height: 100%;
 
 			div {
 				display: flex;
+				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 				text-align: center;
+				background-color: white;
+				margin: 1em;
+				padding: 2em;
+				width: calc(100% - 2em);
+				height: calc(100% - 2em);
+				opacity: .95;
+			}
+
+			h3 {
+				font-family: HelveticaMedium, "Arial", sans-serif;
+				font-size: 2.4em;
+				font-weight: medium;
 			}
 
 			p {
