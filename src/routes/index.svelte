@@ -2,31 +2,31 @@
 	<title>migcarva. Welcome</title>
 </svelte:head>
 
-<section>
+<section id="hero">
 	<Logo />
 	<Title {...heroTitle} />
 	<!-- <a class="freccia" href="#list"></a> -->
 </section>
 
-<section>
-	<Logo />
-	<Title {...heroTitle} />
+<section id="about">
+	<Title {...aboutTitle} />
 	<!-- <a class="freccia" href="#list"></a> -->
 </section>
 
 <script>
-	import Title from './Title.svelte';
-	import Logo from './Logo.svelte';
+	import Title from '../components/Title.svelte';
+	import Logo from '../components/Logo.svelte';
 
 	let heroTitle = {
 		main: "I'm Miguel Carvalho",
 		lead: "I like it simple, clean and straightforward",
 		isHero: true,
 	}
+
 	let aboutTitle = {
-		main: "I'm Miguel Carvalho",
-		lead: "I like it simple, clean and straightforward",
-		isHero: true,
+		main: "Frontend developer from Lisbon",
+		lead: "Perpetually curious and forever learning",
+		isHero: false,
 	}
 </script>
 
