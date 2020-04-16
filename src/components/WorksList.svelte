@@ -7,10 +7,7 @@
 					<figure>
 						<div>
 							<img
-								srcset={`
-									images/works/${work.slug}_cover_home.png 1x,
-									images/works/${work.slug}_cover_home@2x.png 2x
-								`}
+								srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
 								alt={work.title}
 							>
 						</div>
