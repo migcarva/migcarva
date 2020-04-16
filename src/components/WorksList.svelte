@@ -1,6 +1,5 @@
 <section>
-	<Title {...title} />
-	<ul class="row">
+	<h2>{title.title}<br><span>{title.lead}</span></h2><ul class="row">
 		{#each works as work}
 			<li class="col-12 col-md-6">
 				<a href={`/works/${work.slug}.html`}>
@@ -28,8 +27,6 @@
 </section>
 
 <script>
-	import Title from './Title.svelte';
-
 	let title = {
 		title: "My work",
 		lead: "Both personal and professional work",

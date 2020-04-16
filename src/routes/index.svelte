@@ -4,12 +4,12 @@
 
 <section id="hero">
 	<Logo />
-	<Title {...heroTitle} />
+	<h2>{@html hTitle.title}<br><span>{@html hTitle.lead}</span></h2>
 	<!-- <a class="freccia" href="#list"></a> -->
 </section>
 
 <section id="about">
-	<Title {...aboutTitle} />
+	<h2>{@html aTitle.title}<br><span>{@html aTitle.lead}</span></h2>
 	<div class="row qa justify-content-center">
 		<Subtitle col={2}>About me</Subtitle>
 		<Paragraph col={5}>
@@ -24,43 +24,62 @@
 
 <WorksList />
 
+<section id="contact">
+	<h2>{@html cTitle.title}<br><span>{@html cTitle.lead}</span></h2>
+</section>
+
 <script>
 	import Logo from '../components/Logo.svelte';
-	import Title from '../components/Title.svelte';
 	import Subtitle from '../components/Subtitle.svelte';
 	import Paragraph from '../components/Paragraph.svelte';
 
 	import WorksList from '../components/WorksList.svelte';
 
-	let heroTitle = {
+	let hTitle = {
 		title: "I'm Miguel Carvalho",
 		lead: "— I like all things simple, clean and straightforward",
 		isHero: true,
 	}
 
-	let aboutTitle = {
+	let aTitle = {
 		title: "Frontend developer from Lisbon",
-		lead: "Perpetually curious and forever learning",
+		lead: "— Perpetually curious and forever learning",
+	}
+
+	let cTitle = {
+		title: "That’s all folks.<br>Let’s work together.",
+		lead: 'Please email <br><a href="mailto:info@migcarva.com">info@migcarva.com</a>',
 	}
 </script>
 
-<style>
+<style lang="scss">
 	#hero {
 		margin-top: 0;
 		height: 100vh;
+		@media (max-width: 767px) {
+			padding-top: 20px;
+		}
+
+		h2 {
+			margin-top: 30vh;
+		}
 	}
 
 	#about {
 		margin-top: 20%;
+		@media (max-width: 767px) {
+			margin-top: 0;
+		}
 	}
 
-	@media (max-width: 767px) {
-		#hero {
-			padding-top: 20px;
+	#contact {
+		margin-top: 240px;
+		@media (max-width: 767px) {
+			margin-top: 160px;
 		}
 
-		#about{
-			margin-top: 0;
+		h2 {
+			padding-top: 0;
 		}
 	}
 </style>
