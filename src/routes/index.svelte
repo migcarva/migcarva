@@ -11,26 +11,26 @@
 <section id="about">
 	<Title {...aboutTitle} />
 	<div class="row qa justify-content-center">
-		<div class="col-md-2 question qanda">
-			<h3>About us</h3>
-		</div>
-		<div class="col-md-5 answer qanda">
-			<p>We are a talented and ambitious young team, able to solve complex problems in a brilliant and innovative way. We explore new technologies with enthusiasm and passion, always pushing ourselves further. We take care of every detail, even the smallest.</p>
-		</div>
-		<div class="col-md-5 answer qanda">
-			<p>Our goal is to create and improve digital products, ensuring maximum usability and crafting an essential and orderly design. Simplicity is our strength: we highlight what really matters and we are really good at it.</p>
-			<a class="link" href="../en/about.html">Discover more</a>
-		</div>
+		<Subtitle col={2}>About me</Subtitle>
+		<Paragraph col={5}>
+			We are a talented and ambitious young team, able to solve complex problems in a brilliant and innovative way. We explore new technologies with enthusiasm and passion, always pushing ourselves further. We take care of every detail, even the smallest.
+		</Paragraph>
+		<Paragraph col={5}>
+			Our goal is to create and improve digital products, ensuring maximum usability and crafting an essential and orderly design. Simplicity is our strength: we highlight what really matters and we are really good at it.
+		</Paragraph>
+		<a class="link" href="../en/about.html">Discover more</a>
 	</div>
 </section>
 
 <script>
-	import Title from '../components/Title.svelte';
 	import Logo from '../components/Logo.svelte';
+	import Title from '../components/Title.svelte';
+	import Subtitle from '../components/Subtitle.svelte';
+	import Paragraph from '../components/Paragraph.svelte';
 
 	let heroTitle = {
 		title: "I'm Miguel Carvalho",
-		lead: "I like it simple, clean and straightforward",
+		lead: "— I like all things simple, clean and straightforward",
 		isHero: true,
 	}
 
@@ -42,14 +42,27 @@
 
 <style>
 	section {
-		height: 100vh;
-		margin-top: 0;
+		margin-top: 200px;
 		padding-top: 50px;
 		position: relative;
 	}
+
+	#hero {
+		margin-top: 0;
+		height: 100vh;
+	}
+
+	#about {
+		margin-top: 20%;
+	}
+
 	@media (max-width: 767px) {
-		section {
+		#hero {
 			padding-top: 20px;
+		}
+
+		#about{
+			margin-top: 0;
 		}
 	}
 </style>
