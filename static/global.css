@@ -36,3 +36,26 @@ a:hover {
 	text-decoration: none;
 	color: inherit;
 }
+
+h1 {
+	font-family: HelvetiaBold, "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 42px;
+	line-height: 1.3;
+	width: 80%;
+}
+
+h1.brand {
+	font-size: 26px;
+	letter-spacing: -0.4px;
+}
+
+h1.brand a {
+	color: #171717;
+}
+
+h1.brand-white a {
+	font-size: 26px;
+	letter-spacing: -0.4px;
+	color: white;
+}
