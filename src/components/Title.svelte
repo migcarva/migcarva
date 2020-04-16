@@ -1,4 +1,4 @@
-<h2>
+<h2 class={isHero && 'isHero'}>
 	{main}<br>
 	<span>{lead}</span>
 </h2>
@@ -6,6 +6,7 @@
 <script>
 	export let main;
 	export let lead;
+	export let isHero;
 </script>
 
 <style>
@@ -20,6 +21,10 @@
 
 	h2 span {
 		color: #CBCFD3;
+	}
+
+	h2.isHero {
+		margin-top: 30vh;
 	}
 
 	@media (max-width: 767px){

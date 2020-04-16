@@ -10,11 +10,9 @@
 	let title = {
 		main: "I'm Miguel Carvalho",
 		lead: "— I like simple and uncomplicated things",
+		isHero: true,
 	}
 </script>
 
 <style>
-	h2 {
-		margin-top: 30vh;
-	}
 </style>
