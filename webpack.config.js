@@ -10,6 +10,8 @@ const alias = { svelte: path.resolve('node_modules', 'svelte') };
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 
+const { preprocess } = require("./svelte.config.js");
+
 module.exports = {
 	client: {
 		entry: config.client.entry(),
@@ -22,6 +24,7 @@ module.exports = {
 					use: {
 						loader: 'svelte-loader',
 						options: {
+							preprocess,
 							dev,
 							hydratable: true,
 							hotReload: false // pending https://github.com/sveltejs/svelte/issues/2377
@@ -55,6 +58,7 @@ module.exports = {
 					use: {
 						loader: 'svelte-loader',
 						options: {
+							preprocess,
 							css: false,
 							generate: 'ssr',
 							dev
