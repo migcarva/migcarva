@@ -1,15 +1,17 @@
 <section>
-	<h1 class="brand">migcarva</h1>
+	<!-- <h1 class="brand">migcarva.</h1> -->
+	<Logo />
 	<Title {...title} />
 	<!-- <a class="freccia" href="#list"></a> -->
 </section>
 
 <script>
 	import Title from './Title.svelte';
+	import Logo from './Logo.svelte';
 
 	let title = {
 		main: "I'm Miguel Carvalho",
-		lead: "— I like simple and uncomplicated things",
+		lead: "I like it simple, clean and straightforward",
 		isHero: true,
 	}
 </script>

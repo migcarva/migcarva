@@ -14,7 +14,7 @@
 		padding-top: 40px;
 		margin-bottom: 100px;
 		font-size: 50px;
-		font-family: HelvetiaBold, "Arial", sans-serif;
+		font-family: HelveticaBold, "Arial", sans-serif;
 		line-height: 1;
 		letter-spacing: -1.5px;
 	}

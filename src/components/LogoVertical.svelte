@@ -1,5 +1,5 @@
-<div id="page-title" class="home">
-	<a href="/" class="name">mig<span>carva</span></a>
+<div id="page-title">
+	<a href="/">migcarva.</a>
 </div>
 
 <script>
@@ -7,35 +7,37 @@
 
 <style>
 	div {
-		font-family: HelvetiaBold, "Arial", sans-serif;
+		font-family: HelveticaBold, "Arial", sans-serif;
+		font-weight: 600;
+		font-size: 16px;
 		position: fixed;
 		z-index: 10;
 		margin: 0 0 0 0;
 		padding: 0;
 		text-align: right;
 		top: 80px;
-		left: -28px;
+		left: -16px;
 		transform: rotate(-90deg) translate(0, 0);
 		transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1);
 	}
 
-	div a.name {
-    font-family: HelvetiaBold, "Arial", sans-serif;
+	div a {
+    font-family: HelveticaBold, "Arial", sans-serif;
     font-size: 18px;
 	}
 
-	div a.contact span {
+	/* div a.contact span {
 		font-style: italic;
-	}
+	} */
 
 	/* div.hidden {
 		transform: rotate(-90deg) translate(0, -100px);
 		transition: transform 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
 	} */
 
-	div span {
+	/* div span {
 			color: #b0b0b0;
-	}
+	} */
 
 	div:hover{
 		transform: rotate(-90deg) translate(0, 0) scale(0.95);
@@ -46,7 +48,7 @@
 		div {
 			left: -11px;
 		}
-		div a.name {
+		div a {
 			padding-left: env(safe-area-inset-left);
 		}
 	}

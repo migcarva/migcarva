@@ -1,6 +1,9 @@
 <div>
 	<button>
-		<img src="/images/hamburger.svg" alt="Menu trigger">
+		<svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 0H10L12 2H0V0Z" fill="black"/>
+			<path d="M0 6L16 6L18 8H0V6Z" fill="black"/>
+		</svg>
 	</button>
 </div>
 

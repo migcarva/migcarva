@@ -1,4 +1,4 @@
-<Menu {segment}/>
+<!-- <Menu {segment}/> -->
 <main>
 	<Hamburger />
 	<LogoVertical />
@@ -6,11 +6,11 @@
 </main>
 
 <script>
-	import Menu from '../components/Menu.svelte';
+	// import Menu from '../components/Menu.svelte';
 	import Hamburger from '../components/Hamburger.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
 
-	export let segment;
+	// export let segment;
 </script>
 
 <style>
