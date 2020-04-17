@@ -18,10 +18,11 @@
 	<section transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
 		<div>
 			<ul>
-			<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-			<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
-			<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
-		</ul>
+				<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
+				<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
+				<li><a aria-current='{segment === "about" ? "page" : undefined}' href='works'>works</a></li>
+				<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
+			</ul>
 		</div>
 	</section>
 {/if}
@@ -36,6 +37,10 @@
 	let wWidth;
 	let visible = false;
 
+	onMount(() => {
+    wWidth = window.innerWidth;
+  });
+
 	function toggleVisibility() {
 		visible = !visible;
 	}
@@ -44,10 +49,6 @@
 		visible,
 		handleClick: toggleVisibility,
 	}
-
-	onMount(() => {
-    wWidth = window.innerWidth;
-  });
 </script>
 
 <style lang="scss">
