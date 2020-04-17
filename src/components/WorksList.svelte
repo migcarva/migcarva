@@ -34,37 +34,37 @@
 
 	let works = [
 		{
-			slug: 'tale',
+			slug: 'work',
 			title: 'Work 1',
 			client: 'Client A',
 			tech: 'react + python'
 		},
 		{
-			slug: 'cryptic',
+			slug: 'work',
 			title: 'Work Adasd',
 			client: 'Client A',
 			tech: 'react + python'
 		},
 		{
-			slug: 'img43',
+			slug: 'work',
 			title: 'Work lsdfj',
 			client: 'Client A',
 			tech: 'react + python'
 		},
 		{
-			slug: 'taskhunters',
+			slug: 'work',
 			title: 'Work for Business',
 			client: 'Client A',
 			tech: 'react + python'
 		},
 		{
-			slug: 'spedity',
+			slug: 'work',
 			title: 'Work for you',
 			client: 'Client A',
 			tech: 'react + python'
 		},
 		{
-			slug: 'taskhuntersapp',
+			slug: 'work',
 			title: 'Work App',
 			client: 'Client A',
 			tech: 'react + python'
@@ -101,6 +101,10 @@
 		&:link,
 		&:visited {
 			text-decoration: none;
+		}
+
+		&.action {
+			margin-top: -2em;
 		}
 	}
 
