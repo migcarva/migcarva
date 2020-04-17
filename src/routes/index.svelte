@@ -11,47 +11,27 @@
 <section id="about">
 	<h2>{@html aTitle.title}<br><span>{@html aTitle.lead}</span></h2>
 	<div class="row qa justify-content-center">
-		<Column size="2">
+		<div class="col-2">
 			<h3>About me</h3>
-		</Column>
-		<Column size="5">
+		</div>
+		<div class="col-5">
 			<p>
 				We are a talented and ambitious young team, able to solve complex problems in a brilliant and innovative way. We explore new technologies with enthusiasm and passion, always pushing ourselves further. We take care of every detail, even the smallest.
 			</p>
-		</Column>
-		<Column size="5">
+		</div>
+		<div class="col-5">
 			<p>
 				Our goal is to create and improve digital products, ensuring maximum usability and crafting an essential and orderly design. Simplicity is our strength: we highlight what really matters and we are really good at it.
 			</p>
-		</Column>
+		</div>
 	</div>
-				<a class="link" href="../en/about.html">Discover more</a>
+	<a class="action" href="../en/about.html">Discover more</a>
 </section>
 
 <WorksList />
 
-<section id="contact">
-	<h2>{@html cTitle.title}<br><span>{@html cTitle.lead}</span></h2>
-	<div class="row">
-		<Column size="4">
-			<h3>On the interweb</h3>
-		</Column>
-		<Column size="8">
-			<ul>
-				{#each links as link}
-					<li>
-						<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
-						<span>/</span>
-					</li>
-				{/each}
-			</ul>
-		</Column>
-	</div>
-</section>
-
 <script>
 	import Logo from '../components/Logo.svelte';
-	import Column from '../components/Column.svelte';
 	import WorksList from '../components/WorksList.svelte';
 
 	let hTitle = {
@@ -63,30 +43,6 @@
 		title: "Frontend developer from Lisbon",
 		lead: "— Perpetually curious and forever learning",
 	}
-
-	let cTitle = {
-		title: "That’s all folks.<br>Let’s work together.",
-		lead: 'Please email <br><a href="mailto:info@migcarva.com">info@migcarva.com</a>',
-	}
-
-	let links = [
-		{
-			name: 'Linkedin',
-			url: 'https://www.linkedin.com/in/migcarva',
-		},
-		{
-			name: 'Github',
-			url: 'https://www.Github.com/migcarva',
-		},
-		{
-			name: 'Dribble',
-			url: 'https://dribbble.com/migcarva',
-		},
-		{
-			name: 'Twitter',
-			url: 'https://twitter.com/migcarva/',
-		},
-	];
 </script>
 
 <style lang="scss">
@@ -111,31 +67,6 @@
 		> div {
 			margin-top: 60px;
     	margin-bottom: 10px;
-		}
-	}
-
-	#contact {
-		margin-top: 240px;
-
-		@media (max-width: 767px) {
-			margin-top: 160px;
-		}
-
-		h2 {
-			padding-top: 0;
-		}
-
-		h3 {
-			padding-top: 4px;
-		}
-
-		ul li {
-			display: inline;
-			font-size: 18px;
-
-			span {
-				color: #DBDBDB;
-			}
 		}
 	}
 </style>

@@ -1,7 +1,7 @@
 <section>
 	<h2>{title.title}<br><span>{title.lead}</span></h2><ul class="row">
 		{#each works as work}
-			<li class="col-12 col-md-6">
+			<li class="col col-6">
 				<a href={`/works/${work.slug}.html`}>
 					<figure>
 						<div>
@@ -23,7 +23,7 @@
 			</li>
 		{/each}
 	</ul>
-	<a class="link" href="../en/about.html">Discover more</a>
+	<a class="action" href="../en/about.html">Discover more</a>
 </section>
 
 <script>
@@ -143,7 +143,7 @@
 			}
 
 			h3 {
-				font-family: HelveticaMedium, "Arial", sans-serif;
+				font-family: var(--font);
 				font-size: 2.4em;
 				font-weight: medium;
 			}

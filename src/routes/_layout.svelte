@@ -11,11 +11,39 @@
 	import Hamburger from '../components/Hamburger.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
 	import Footer from '../components/Footer.svelte';
-
-	// export let segment;
 </script>
 
 <style>
+	:global(:root) {
+		--black: black;
+		--grey: #171717;
+		--action: #24C9BA;
+
+		--dribble: #ea4c89;
+		--github: #24292e;
+		--linkedin: #007bb5;
+		--twitter: #55acee;
+
+		--font: 'Raleway', 'Arial', sans-serif;
+		--font-base: 1em;
+		--font-normal: 300;
+		--font-medium: 400;
+		--font-bold: 600;
+		--line-height-base: 1.5;
+		--line-height-extra: 1.75;
+
+		--scale-sm: 0.98, 0.98, 1;
+		--scale-md: 0.96, 0.96, 1;
+		--scale-lg: 0.94, 0.94, 1;
+
+		--breakpoint-xs:0;
+		--breakpoint-sm:576px;
+		--breakpoint-md:768px;
+		--breakpoint-lg:992px;
+		--breakpoint-xl:1200px;
+
+	}
+
 	main {
 		width: 100%;
 		padding-right: 15px;

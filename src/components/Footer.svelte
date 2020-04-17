@@ -1,10 +1,10 @@
 <footer id="contact">
 	<h2>{@html cTitle.title}<br><span>{@html cTitle.lead}</span></h2>
 	<div class="row">
-		<Column size="4">
+		<div class="col-4">
 			<h3>On the interweb</h3>
-		</Column>
-		<Column size="8">
+		</div>
+		<div class="col-4">
 			<ul>
 				{#each links as link}
 					<li>
@@ -13,20 +13,18 @@
 					</li>
 				{/each}
 			</ul>
-		</Column>
+		</div>
 	</div>
 	<h4 class="footer">© {year} migcarva.com</h4>
 </footer>
 
 <script>
-	import Column from './Column.svelte';
-
-	let cTitle = {
+	const cTitle = {
 		title: "That’s all folks.<br>Let’s work together.",
 		lead: 'Please email <br><a href="mailto:info@migcarva.com">info@migcarva.com</a>',
 	}
 
-	let links = [
+	const links = [
 		{
 			name: 'Linkedin',
 			url: 'https://www.linkedin.com/in/migcarva',
@@ -65,6 +63,7 @@
 		}
 
 		ul {
+			background-color: var(--black);
 
 			li {
 				display: inline;
@@ -88,6 +87,4 @@
 			font-size: 11px;
 		}
 	}
-
-
 </style>

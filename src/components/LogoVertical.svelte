@@ -1,5 +1,7 @@
 <div id="page-title">
-	<a href="/">migcarva.</a>
+	<h1>
+		<a href="/">migcarva.</a>
+	</h1>
 </div>
 
 <script>
@@ -7,7 +9,7 @@
 
 <style>
 	div {
-		font-family: HelveticaBold, "Arial", sans-serif;
+		font-family: var(--font);
 		font-weight: 600;
 		font-size: 16px;
 		position: fixed;
@@ -22,7 +24,7 @@
 	}
 
 	div a {
-    font-family: HelveticaBold, "Arial", sans-serif;
+    font-family: var(--font);
     font-size: 18px;
 	}
 
