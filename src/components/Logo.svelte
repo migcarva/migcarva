@@ -19,14 +19,9 @@
 		@media (min-width: 48em) {
 			width: 3rem;
 		}
-		@media (min-width: 64em) {
-			width: 4rem;
-		}
 	}
 	a:hover {
 		display: block;
-		width: 2rem;
-		height: 2rem;
 		transform: scale3d(.96, .96, 1);
 		transition: transform .3s;
 	}
