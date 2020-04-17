@@ -1,6 +1,7 @@
 <footer>
 	<h2>
-		That’s all folks.<br>Let’s work together.<br>
+		Thanks for your time.<br>
+		Want to get in touch?<br>
 		<span>Use my email<br><a href="mailto:info@migcarva.com">info@migcarva.com</a></span>
 	</h2>
 	<div class="row">
