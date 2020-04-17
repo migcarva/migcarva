@@ -29,7 +29,7 @@
 		--font-base: 1em;
 		--font-h2: 2em;
 		--font-h3: var(--font-base);
-		--font-h4: 0.75em;
+		--font-h4: 0.80em;
 		--font-normal: 300;
 		--font-medium: 400;
 		--font-bold: 600;

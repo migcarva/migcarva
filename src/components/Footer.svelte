@@ -18,7 +18,7 @@
 			</ul>
 		</div>
 	</div>
-	<h4 class="footer">© {year} migcarva.com</h4>
+	<h4 class="footer">{year} | migcarva.com ™</h4>
 </footer>
 
 <script>

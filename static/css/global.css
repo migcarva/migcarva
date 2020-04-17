@@ -218,7 +218,7 @@ button:focus {
 	main {
 		--font-base: 1.1em;
 		--font-h2: 2.4em;
-		--font-h3: .875em;
+		--font-h4: .875em;
 		--title-bottom-margin: 3em;
 	}
 
@@ -267,7 +267,7 @@ button:focus {
 @media (min-width: 64em) {
 	main {
 		--font-h2: 2.8em;
-		--font-h3: .875em;
+		--font-h4: .9em;
 		--title-bottom-margin: 2em;
 	}
 
@@ -280,7 +280,7 @@ button:focus {
 	main {
 		--font-base: 1.2em;
 		--font-h2: 4em;
-		--font-h3: .875em;
+		--font-h4: .95em;
 		--title-bottom-margin: 3em;
 	}
 }
