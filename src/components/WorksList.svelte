@@ -14,7 +14,7 @@
 							<div>
 								<h3>{work.title}</h3>
 								<p>
-									{work.description}
+									description: 'lorem	lorem lol ipsum lipsum lol lorem',
 								</p>
 							</div>
 						</figcaption>
@@ -35,33 +35,33 @@
 	let works = [
 		{
 			slug: 'tale',
-			title: 'Tale',
-			description: 'Tale is an application that allows you to convey an emotion through words and images',
+			title: 'Work 1',
+			description: 'lorem	lorem lol ipsum lipsum lol lorem',
 		},
 		{
 			slug: 'cryptic',
-			title: 'Cryptic Cup',
-			description: 'Tale is an application that allows you to convey an emotion through words and images',
+			title: 'Work Adasd',
+			description: 'lorem	lorem lol ipsum lipsum lol lorem',
 		},
 		{
 			slug: 'img43',
-			title: 'IMG43',
-			description: 'Tale is an application that allows you to convey an emotion through words and images',
+			title: 'Work lsdfj',
+			description: 'lorem	lorem lol ipsum lipsum lol lorem',
 		},
 		{
 			slug: 'taskhunters',
-			title: 'Taskhunters for Business',
-			description: 'Tale is an application that allows you to convey an emotion through words and images',
+			title: 'Work for Business',
+			description: 'lorem	lorem lol ipsum lipsum lol lorem',
 		},
 		{
 			slug: 'spedity',
-			title: 'Spedity',
-			description: 'Tale is an application that allows you to convey an emotion through words and images',
+			title: 'Work for you',
+			description: 'lorem	lorem lol ipsum lipsum lol lorem',
 		},
 		{
 			slug: 'taskhuntersapp',
-			title: 'Taskhunters App',
-			description: 'Tale is an application that allows you to convey an emotion through words and images',
+			title: 'Work App',
+			description: 'lorem	lorem lol ipsum lipsum lol lorem',
 		},
 	]
 </script>

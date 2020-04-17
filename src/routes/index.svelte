@@ -6,7 +6,7 @@
 	<Logo />
 	<h2>
 		I'm Miguel Carvalho<br>
-		<span>— I like all things simple, clean and straightforward</span>
+		<span>— Perpetually curious and forever learning</span>
 	</h2>
 	<!-- <a class="freccia" href="#list"></a> -->
 </section>
@@ -14,7 +14,7 @@
 <section id="about">
 	<h2>
 		Frontend developer from Lisbon<br>
-		<span>— Perpetually curious and forever learning</span>
+		<span>— I like my code to be simple, readable and optimized</span>
 	</h2>
 	<div class="row qa justify-content-center">
 		<div class="col-2">
@@ -42,7 +42,7 @@
 </script>
 
 <style lang="scss">
-	#hero {
+	section:first-of-type {
 		margin-top: 0;
 		min-height: 100vh;
 		@media (max-width: 767px) {
@@ -54,8 +54,7 @@
 		}
 	}
 
-	#about {
-		margin-top: 20%;
+	section {
 		@media (max-width: 767px) {
 			margin-top: 0;
 		}

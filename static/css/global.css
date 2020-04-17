@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
 
 body,
 html {
@@ -143,7 +143,7 @@ a.twitter:hover {
 }
 
 section {
-	margin-top: 200px;
+	margin-top: var(--sections-top-margin);
 	padding-top: 50px;
 	position: relative;
 }
@@ -281,6 +281,7 @@ button:focus {
 
 	h2 {
 		font-size: calc(var(--font-h2) * 1.4);
+		font-weight: var(--font-bolder);
 	}
 }
 

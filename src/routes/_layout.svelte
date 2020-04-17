@@ -33,16 +33,19 @@
 		--font-normal: 300;
 		--font-medium: 400;
 		--font-bold: 600;
+		--font-bolder: 700;
 		--line-height-small: 1;
 		--line-height-base: 1.5;
 		--letter-spacing-small: -2px;
 		--letter-spacing-base: 0;
 
+		--sections-top-margin: 20%;
+		--sections-bottom-margin: ;
+
 		--scale-sm: scale3d(0.98, 0.98, 1);
 		--scale-md: scale3d(0.96, 0.96, 1);
 		--scale-lg: scale3d(0.90, 0.90, 1);
 
-		--breakpoint-xs: 0;
 		--breakpoint-sm: 30em; /*576px*/
 		--breakpoint-md: 48em;  /*768px*/
 		--breakpoint-lg: 64em;  /*1024px*/

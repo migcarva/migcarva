@@ -12,10 +12,16 @@
 <script>
 </script>
 
-<style>
+<style lang="scss">
 	div {
 		width: 2rem;
 		height: auto;
+		@media (min-width: 48em) {
+			width: 3rem;
+		}
+		@media (min-width: 64em) {
+			width: 4rem;
+		}
 	}
 	a:hover {
 		display: block;

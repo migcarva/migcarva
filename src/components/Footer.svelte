@@ -1,4 +1,4 @@
-<footer id="contact">
+<footer>
 	<h2>{@html cTitle.title}<br><span>{@html cTitle.lead}</span></h2>
 	<div class="row">
 		<div class="col-4">
@@ -47,8 +47,8 @@
 </script>
 
 <style lang="scss">
-	#contact {
-		margin-top: 240px;
+	footer {
+		margin-top: var(--sections-top-margin);
 
 		@media (max-width: 767px) {
 			margin-top: 160px;
