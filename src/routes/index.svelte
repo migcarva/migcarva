@@ -60,7 +60,6 @@
 		}
 
 		> div {
-			margin-top: 60px;
     	margin-bottom: 10px;
 		}
 	}

@@ -58,6 +58,7 @@ h1 {
 h2 {
 	font-size: var(--font-h2);
 	letter-spacing: var(--letter-spacing-small);
+	margin-bottom: var(--title-bottom-margin);
 }
 
 h3 {
@@ -222,6 +223,7 @@ button:focus {
 
 	h2 {
 		font-size: calc(var(--font-h2) * 1.2);
+		margin-bottom: calc(var(--title-bottom-margin) * 2);
 	}
 
 	h3, p, a, li {
@@ -282,6 +284,7 @@ button:focus {
 	h2 {
 		font-size: calc(var(--font-h2) * 1.4);
 		font-weight: var(--font-bolder);
+		margin-bottom: calc(var(--title-bottom-margin) * 3);
 	}
 }
 
