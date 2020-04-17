@@ -32,9 +32,9 @@
 		--line-height-base: 1.5;
 		--line-height-extra: 1.75;
 
-		--scale-sm: 0.98, 0.98, 1;
-		--scale-md: 0.96, 0.96, 1;
-		--scale-lg: 0.94, 0.94, 1;
+		--scale-sm: scale3d(0.98, 0.98, 1);
+		--scale-md: scale3d(0.96, 0.96, 1);
+		--scale-lg: scale3d(0.90, 0.90, 1);
 
 		--breakpoint-xs:0;
 		--breakpoint-sm:576px;
@@ -42,6 +42,8 @@
 		--breakpoint-lg:992px;
 		--breakpoint-xl:1200px;
 
+		--ease-in-quart: cubic-bezier(0.5, 0, 0.75, 0);
+		--ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 	}
 
 	main {

@@ -10,34 +10,27 @@
 <script>
 </script>
 
-<style>
+<style lang="scss">
 	div {
 		position: fixed;
 		z-index: 100;
 		top: 50%;
-		left: 20px;
-		transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1);
-	}
-
-	/* div.hidden{
-		transform: translate(-100px, 0px);
-    transition: transform 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
-	} */
-
-	div:hover{
-		transform: scale(0.90);
-		transform: scale(0.90);
-		transition: transform 0.2s ease-out;
-	}
-
-	div button {
-		padding: 4px;
-		padding-left: 0px;
-	}
-
-	@media only screen and (max-height: 500px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-		div {
+		left: 1.25em;
+		transition: transform 0.3s var(--ease-out-quart);
+		@media only screen
+			and (max-height: 500px)
+			and (orientation: landscape)
+			and (-webkit-min-device-pixel-ratio: 2) {
 			padding-left: env(safe-area-inset-left);
+		}
+
+		&:hover{
+			transform: var(--scale-lg);
+		}
+
+		button {
+			padding: .4em .8em;
+			padding-left: 0;
 		}
 	}
 </style>
