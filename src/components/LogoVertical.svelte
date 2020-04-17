@@ -30,11 +30,6 @@
 			left: -11px;
 		}
 
-		// &.isHidden {
-		// 	transform: rotate(-90deg) translate(0, -100px);
-		// 	transition: transform 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
-		// }
-
 		h1 {
 			font-family: var(--font);
 			font-weight: var(--font-bold);
