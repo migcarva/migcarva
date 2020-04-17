@@ -72,7 +72,7 @@
 		position: fixed;
 		z-index: 200;
 		top: 50%;
-		left: 20px;
+		left: 1em;
 		transition: transform 0.3s var(--ease-out-quart);
 		@media only screen
 			and (max-height: 500px)

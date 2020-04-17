@@ -43,16 +43,119 @@ h1, h2, h3, h4, h5, h6, a, p, body, a {
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	margin-bottom: .5rem;
+	font-family: var(--font);
 	font-weight: var(--font-bold);
-	line-height: var(--line-height-extra);
+	line-height: var(--line-height-small);
+	letter-spacing: var(--letter-spacing-base);
+	color: var(--black);
+}
+
+h1 {
+	font-size: var(--font-base);
+	text-align: right;
+}
+
+h2 {
+	font-size: var(--font-h2);
+	letter-spacing: var(--letter-spacing-small);
+}
+
+h3 {
+	font-size: var(--font-h3);
+	line-height: var(--line-height-base);
+}
+
+h4 {
+	font-size: var(--font-h4);
+	font-weight: var(--font-normal);
+	line-height: var(--line-height-base);
+}
+
+h1 a {
+	color: var(--black);
+}
+
+h2 span {
+	color: var(--grey-light);
+}
+
+h2 a {
+	color: var(--grey-light);
+	transition: 0.3s;
+	display: inline-block;
+	text-overflow: ellipsis;
+}
+
+h2 a:hover{
+	color: var(--black);
+	transform: scale(0.98);
 }
 
 p {
-	color: #707070;
-	font-size: 18px;
-	line-height: 30px;
+	color: var(--grey);
+	font-size: var(--font-base);
+	line-height: var(--line-height-base);
 	margin-top: 0;
 	margin-bottom: 1rem;
+}
+
+p span {
+	color: var(--black);
+}
+
+a {
+	color: var(--grey);
+	text-decoration: none;
+	background-color: transparent;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+a.action {
+	margin-top: 2em;
+	display: block;
+	float: right;
+	transition: 0.3s;
+}
+
+a.action:hover{
+	color: var(--action);
+	transform: scale3d(var(--scale-sm));
+}
+
+a.linkedin:hover {
+	color: var(--linkedin);
+}
+
+a.github:hover {
+	color: var(--github);
+}
+
+a.dribble:hover {
+	color: var(--dribble);
+}
+
+a.twitter:hover {
+	color: var(--twitter);
+}
+
+section {
+	margin-top: 200px;
+	padding-top: 50px;
+	position: relative;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	font-size: var(--font-base);
 }
 
 figure {
@@ -110,7 +213,25 @@ button:focus {
 	max-width:100%;
 }
 
-@media (min-width:768px) {
+@media (min-width: 30em) {}
+
+@media (min-width: 48em) {
+	h1 {
+		font-size: calc(var(--font-base));
+	}
+
+	h2 {
+		font-size: calc(var(--font-h2) * 1.2);
+	}
+
+	h3, p, a, li {
+		font-size: calc(var(--font-h3) * 1.1);
+	}
+
+	h4 {
+		font-size: calc(var(--font-h4) * 1.1);
+	}
+
   .col-2 {
 		-ms-flex:0 0 16.666667%;
     flex:0 0 16.666667%;
@@ -153,128 +274,26 @@ button:focus {
   }
 }
 
-a {
-	color: var(--grey);
-	text-decoration: none;
-	background-color: transparent;
+@media (min-width: 64em) {
+	h1 {
+		font-size: calc(var(--font-base) * 1.1);
+	}
+
+	h2 {
+		font-size: calc(var(--font-h2) * 1.4);
+	}
 }
 
-a:hover {
-	text-decoration: none;
-	color: inherit;
-}
+@media (min-width: 90em) {
+	h2 {
+		font-size: calc(var(--font-h2) * 2);
+	}
 
-a.action {
-	margin-top: 2em;
-	display: block;
-	float: right;
-	transition: 0.3s;
-}
+	h3, p, a, li {
+		font-size: calc(var(--font-h3) * 1.2);
+	}
 
-a.action:hover{
-	color: var(--action);
-	transform: scale3d(var(--scale-sm));
-}
-
-a.linkedin:hover {
-	color: var(--linkedin);
-}
-
-a.github:hover {
-	color: var(--github);
-}
-
-a.dribble:hover {
-	color: var(--dribble);
-}
-
-a.twitter:hover {
-	color: var(--twitter);
-}
-
-
-h1 {
-	font-family: var(--font);
-	font-weight: 300;
-	font-size: 42px;
-	line-height: 1.3;
-	width: 80%;
-}
-
-h1.brand {
-	font-size: 26px;
-	letter-spacing: -0.4px;
-}
-
-h1.brand a {
-	color: #171717;
-}
-
-h1.brand-white a {
-	font-size: 26px;
-	letter-spacing: -0.4px;
-	color: white;
-}
-
-h2 {
-	padding-top: 40px;
-	margin-bottom: 100px;
-	font-size: 50px;
-	font-family: var(--font);
-	line-height: 1;
-	letter-spacing: -1.5px;
-}
-
-
-h2 span {
-	color: #CBCFD3;
-}
-
-h2 a {
-	color: #CBCFD3;
-	transition: 0.3s;
-	display: inline-block;
-	text-overflow: ellipsis;
-}
-
-h2 a:hover{
-	color: #171717;
-	transform: scale(0.98);
-}
-
-h3 {
-	font-family: var(--font);
-	font-size: 18px;
-	padding-top: 4px;
-}
-
-section {
-	margin-top: 200px;
-	padding-top: 50px;
-	position: relative;
-}
-
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-p {
-	color: #707070;
-	font-size: 18px;
-	line-height: 30px;
-	margin-top: 0;
-	margin-bottom: 1rem;
-}
-
-p span {
-	color: #171717;
-}
-
-@media (max-width: 767px) {
-	p {
-		font-size: 16px;
-		line-height: 28px;
+	h4 {
+		font-size: calc(var(--font-h4) * 1.2);
 	}
 }

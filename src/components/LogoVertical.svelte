@@ -20,30 +20,22 @@
 		margin: 0 0 0 0;
 		padding: 0;
 		top: 80px;
-		left: -4px;
+		left: -8px;
 		transform: rotate(-90deg) translate(0, 0);
 		transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1);
 		@media only screen
-			and (max-height: 500px)
-			and (orientation: landscape)
-			and (-webkit-min-device-pixel-ratio: 2) {
+		and (max-height: 500px)
+		and (orientation: landscape)
+		and (-webkit-min-device-pixel-ratio: 2) {
 			left: -11px;
 		}
 
 		h1 {
-			font-family: var(--font);
-			font-weight: var(--font-bold);
-			font-size: var(--font-base);
-			text-align: right;
-
 			a {
-				font-family: var(--font);
-				font-size: var(--font-base);
-
 				@media only screen
-					and (max-height: 500px)
-					and (orientation: landscape)
-					and (-webkit-min-device-pixel-ratio: 2) {
+				and (max-height: 500px)
+				and (orientation: landscape)
+				and (-webkit-min-device-pixel-ratio: 2) {
 						padding-left: env(safe-area-inset-left);
 				}
 			}

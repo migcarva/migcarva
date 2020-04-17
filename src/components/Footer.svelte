@@ -63,11 +63,9 @@
 		}
 
 		ul {
-			background-color: var(--black);
 
 			li {
 				display: inline;
-				font-size: 18px;
 
 				span {
 					color: #DBDBDB;
@@ -77,14 +75,7 @@
 	}
 
 	h4 {
-		font-family: var(--font);
-		font-weight: medium;
 		margin-top: 100px;
 		margin-bottom: 40px;
-		font-size: 14px;
-		font-weight: 400;
-		@media (max-width: 767px) {
-			font-size: 11px;
-		}
 	}
 </style>

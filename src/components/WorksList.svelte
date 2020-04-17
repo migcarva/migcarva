@@ -68,7 +68,7 @@
 
 <style lang="scss">
 	li {
-		font-size: 1rem;
+		font-size: var(--font-base);
     transition: transform .3s;
 		margin-bottom: 2em;
 
@@ -143,13 +143,10 @@
 			}
 
 			h3 {
-				font-family: var(--font);
-				font-size: 2.4em;
-				font-weight: medium;
+				font-size: calc(var(--font-h3) * 2);
 			}
 
 			p {
-				font-weight: medium;
 				text-align: center;
 				color: #707070;
 			}

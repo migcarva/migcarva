@@ -4,12 +4,18 @@
 
 <section id="hero">
 	<Logo />
-	<h2>{@html hTitle.title}<br><span>{@html hTitle.lead}</span></h2>
+	<h2>
+		I'm Miguel Carvalho<br>
+		<span>— I like all things simple, clean and straightforward</span>
+	</h2>
 	<!-- <a class="freccia" href="#list"></a> -->
 </section>
 
 <section id="about">
-	<h2>{@html aTitle.title}<br><span>{@html aTitle.lead}</span></h2>
+	<h2>
+		Frontend developer from Lisbon<br>
+		<span>— Perpetually curious and forever learning</span>
+	</h2>
 	<div class="row qa justify-content-center">
 		<div class="col-2">
 			<h3>About me</h3>
@@ -33,28 +39,18 @@
 <script>
 	import Logo from '../components/Logo.svelte';
 	import WorksList from '../components/WorksList.svelte';
-
-	let hTitle = {
-		title: "I'm Miguel Carvalho",
-		lead: "— I like all things simple, clean and straightforward",
-	}
-
-	let aTitle = {
-		title: "Frontend developer from Lisbon",
-		lead: "— Perpetually curious and forever learning",
-	}
 </script>
 
 <style lang="scss">
 	#hero {
 		margin-top: 0;
-		height: 100vh;
+		min-height: 100vh;
 		@media (max-width: 767px) {
-			padding-top: 20px;
+			padding-top: 1.25em;
 		}
 
 		h2 {
-			margin-top: 30vh;
+			margin-top: 40vh;
 		}
 	}
 
