@@ -214,24 +214,12 @@ button:focus {
 	max-width:100%;
 }
 
-@media (min-width: 30em) {}
-
 @media (min-width: 48em) {
-	h1 {
-		font-size: calc(var(--font-base));
-	}
-
-	h2 {
-		font-size: calc(var(--font-h2) * 1.2);
-		margin-bottom: calc(var(--title-bottom-margin) * 2);
-	}
-
-	h3, p, a, li {
-		font-size: calc(var(--font-h3) * 1.1);
-	}
-
-	h4 {
-		font-size: calc(var(--font-h4) * 1.1);
+	main {
+		--font-base: 1.1em;
+		--font-h2: 2.4em;
+		--font-h3: .875em;
+		--title-bottom-margin: 3em;
 	}
 
   .col-2 {
@@ -277,27 +265,22 @@ button:focus {
 }
 
 @media (min-width: 64em) {
-	h1 {
-		font-size: calc(var(--font-base) * 1.1);
+	main {
+		--font-h2: 2.8em;
+		--font-h3: .875em;
+		--title-bottom-margin: 2em;
 	}
 
 	h2 {
-		font-size: calc(var(--font-h2) * 1.4);
 		font-weight: var(--font-bolder);
-		margin-bottom: calc(var(--title-bottom-margin) * 3);
 	}
 }
 
 @media (min-width: 90em) {
-	h2 {
-		font-size: calc(var(--font-h2) * 2);
-	}
-
-	h3, p, a, li {
-		font-size: calc(var(--font-h3) * 1.2);
-	}
-
-	h4 {
-		font-size: calc(var(--font-h4) * 1.2);
+	main {
+		--font-base: 1.2em;
+		--font-h2: 4em;
+		--font-h3: .875em;
+		--title-bottom-margin: 3em;
 	}
 }

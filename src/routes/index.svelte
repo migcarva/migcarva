@@ -13,8 +13,8 @@
 
 <section id="about">
 	<h2>
-		Frontend developer from Lisbon<br>
-		<span>— I like my code to be simple, readable and optimized</span>
+		A frontend developer from Lisbon<br>
+		<span>— I enjoy simple, concise and readable code</span>
 	</h2>
 	<div class="row qa justify-content-center">
 		<div class="col-2">
@@ -22,12 +22,12 @@
 		</div>
 		<div class="col-5">
 			<p>
-				We are a talented and ambitious young team, able to solve complex problems in a brilliant and innovative way. We explore new technologies with enthusiasm and passion, always pushing ourselves further. We take care of every detail, even the smallest.
+				I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. I spend a lot of my time programming. Not just for work, but as a general hobby. I have a strong passion for learning new things, and I’m always taking time out of my day to pick up something new.
 			</p>
 		</div>
 		<div class="col-5">
 			<p>
-				Our goal is to create and improve digital products, ensuring maximum usability and crafting an essential and orderly design. Simplicity is our strength: we highlight what really matters and we are really good at it.
+				I'm currently workin as a Senior Frontend at Unbabel, where I'm part of the Language Operations Team, a crucial team supporting Unbabel's clients. I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.
 			</p>
 		</div>
 	</div>

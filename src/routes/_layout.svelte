@@ -40,7 +40,7 @@
 		--letter-spacing-base: 0;
 
 		--sections-top-margin: 20%;
-		--title-bottom-margin: 3rem;
+		--title-bottom-margin: 1rem;
 
 		--scale-sm: scale3d(0.98, 0.98, 1);
 		--scale-md: scale3d(0.96, 0.96, 1);

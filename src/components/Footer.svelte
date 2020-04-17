@@ -1,5 +1,8 @@
 <footer>
-	<h2>{@html cTitle.title}<br><span>{@html cTitle.lead}</span></h2>
+	<h2>
+		That’s all folks.<br>Let’s work together.<br>
+		<span>Use my email<br><a href="mailto:info@migcarva.com">info@migcarva.com</a></span>
+	</h2>
 	<div class="row">
 		<div class="col-4">
 			<h3>On the interweb</h3>
@@ -19,11 +22,6 @@
 </footer>
 
 <script>
-	const cTitle = {
-		title: "That’s all folks.<br>Let’s work together.",
-		lead: 'Please email <br><a href="mailto:info@migcarva.com">info@migcarva.com</a>',
-	}
-
 	const links = [
 		{
 			name: 'Linkedin',
