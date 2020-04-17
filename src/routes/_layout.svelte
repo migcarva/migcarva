@@ -53,6 +53,8 @@
 
 		--ease-in-quart: cubic-bezier(0.5, 0, 0.75, 0);
 		--ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+		--shadow-smooth: 0 8px 6px -6px var(--grey-light);
 	}
 
 	main {

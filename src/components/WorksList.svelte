@@ -8,14 +8,14 @@
 							<img
 								srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
 								alt={work.title}
-							>
+							/>
 						</div>
+						<p>view more</p>
 						<figcaption>
+							<h3>{work.title}</h3>
 							<div>
-								<h3>{work.title}</h3>
-								<p>
-									description: 'lorem	lorem lol ipsum lipsum lol lorem',
-								</p>
+								<p>{work.client}</p>
+								<p>{work.tech}</p>
 							</div>
 						</figcaption>
 					</figure>
@@ -36,32 +36,38 @@
 		{
 			slug: 'tale',
 			title: 'Work 1',
-			description: 'lorem	lorem lol ipsum lipsum lol lorem',
+			client: 'Client A',
+			tech: 'react + python'
 		},
 		{
 			slug: 'cryptic',
 			title: 'Work Adasd',
-			description: 'lorem	lorem lol ipsum lipsum lol lorem',
+			client: 'Client A',
+			tech: 'react + python'
 		},
 		{
 			slug: 'img43',
 			title: 'Work lsdfj',
-			description: 'lorem	lorem lol ipsum lipsum lol lorem',
+			client: 'Client A',
+			tech: 'react + python'
 		},
 		{
 			slug: 'taskhunters',
 			title: 'Work for Business',
-			description: 'lorem	lorem lol ipsum lipsum lol lorem',
+			client: 'Client A',
+			tech: 'react + python'
 		},
 		{
 			slug: 'spedity',
 			title: 'Work for you',
-			description: 'lorem	lorem lol ipsum lipsum lol lorem',
+			client: 'Client A',
+			tech: 'react + python'
 		},
 		{
 			slug: 'taskhuntersapp',
 			title: 'Work App',
-			description: 'lorem	lorem lol ipsum lipsum lol lorem',
+			client: 'Client A',
+			tech: 'react + python'
 		},
 	]
 </script>
@@ -74,18 +80,16 @@
 
 		&:hover {
 			figure {
-				div {
-					transform: scale3d(0.98, 0.98, 1);
-				}
 				img {
-					transform: scale3d(1.06, 1.06, 1);
+					transform: scale3d(1.16, 1.16, 1);
+					transition: transform 2.2s cubic-bezier(0, 0.55, 0.45, 1);
 				}
-				figcaption {
-					opacity: 1;
-					div {
-						opacity: .95;
-						// box-shadow: 0 8px 6px -6px #E1E1E1;
-					}
+				> p {
+					opacity: .9;
+					transition: opacity 1.1s cubic-bezier(0, 0.55, 0.45, 1);
+				}
+				h3:after {
+					width: 100%;
 				}
 			}
 		}
@@ -106,49 +110,62 @@
 
 		div {
 			width: 100%;
+			height: auto;
 			overflow: hidden;
-			transition: transform .3s cubic-bezier(0, 0.55, 0.45, 1);
 
 			img {
 				width: 100%;
+				height: 100%;
+				object-fit: cover;
 				pointer-events: none;
 				user-select: none;
-				transition: transform .3s cubic-bezier(0, 0.55, 0.45, 1);
+				transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
 			}
 		}
 
-		figcaption {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			opacity: 0;
-			transition: opacity .35s cubic-bezier(0, 0.55, 0.45, 1);
+		> p {
 			width: 100%;
-			height: 100%;
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 3em;
+			font-weight: var(--font-medium);
+			text-shadow: 0 4px 4px var(--grey-light);
+			opacity: 0;
+			transition: opacity .3s cubic-bezier(0, 0.55, 0.45, 1);
+		}
+
+		figcaption {
+			margin-bottom: 3em;
 
 			div {
 				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-				background-color: white;
-				margin: 1em;
-				padding: 2em;
-				width: calc(100% - 2em);
-				height: calc(100% - 2em);
-				opacity: 0;
+				justify-content: space-between;
 				transition: opacity .3s cubic-bezier(0, 0.55, 0.45, 1);
 			}
 
 			h3 {
-				font-size: calc(var(--font-h3) * 2);
+				padding-top: 1em;
+				position: relative;
+				display: inline-block;
+
+				&:after {
+					position: absolute;
+					content: "";
+					bottom: 0;
+					left: 0;
+					border-bottom: 2px solid var(--black);
+					width: 0;
+					transition: width .4s cubic-bezier(.215,.61,.355,1);
+				}
 			}
 
 			p {
-				text-align: center;
 				color: #707070;
+				font-size: calc(var(--font-base) * .75);
 			}
 		}
 	}
