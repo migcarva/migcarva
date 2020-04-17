@@ -1,16 +1,16 @@
-<!-- <Menu {segment}/> -->
+<Menu {segment} />
+<LogoVertical />
 <main>
-	<Hamburger />
-	<LogoVertical />
 	<slot></slot>
 	<Footer />
 </main>
 
 <script>
-	// import Menu from '../components/Menu.svelte';
-	import Hamburger from '../components/Hamburger.svelte';
+	import Menu from '../components/Menu.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
 	import Footer from '../components/Footer.svelte';
+
+	let segment;
 </script>
 
 <style>

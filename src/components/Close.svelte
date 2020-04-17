@@ -1,8 +1,8 @@
 <div>
 	<button on:click={handleClick}>
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M3 8H13L15 10H3V8Z" fill="black"/>
-			<path d="M3 14L19 14L21 16H3V14Z" fill="black"/>
+			<path d="M4.07104 14.4853L11.1421 7.41422H13.9705L5.48526 15.8995L4.07104 14.4853Z" fill="white"/>
+			<path d="M4.41418 5L15.7279 16.3137L15.7279 19.1421L2.99997 6.41421L4.41418 5Z" fill="white"/>
 		</svg>
 	</button>
 </div>
@@ -16,7 +16,7 @@
 		position: fixed;
 		z-index: 100;
 		top: 50%;
-		left: 20px;
+		left: 1.25em;
 		transition: transform 0.3s var(--ease-out-quart);
 		@media only screen
 			and (max-height: 500px)

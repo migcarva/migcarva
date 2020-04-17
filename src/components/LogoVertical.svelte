@@ -20,7 +20,7 @@
 		margin: 0 0 0 0;
 		padding: 0;
 		top: 80px;
-		left: -8px;
+		left: -4px;
 		transform: rotate(-90deg) translate(0, 0);
 		transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1);
 		@media only screen
