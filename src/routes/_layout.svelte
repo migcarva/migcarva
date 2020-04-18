@@ -39,7 +39,7 @@
 		--letter-spacing-small: -2px;
 		--letter-spacing-base: 0;
 
-		--sections-top-margin: 20%;
+		--sections-top-margin: 30%;
 		--title-bottom-margin: 1rem;
 
 		--scale-sm: scale3d(0.98, 0.98, 1);

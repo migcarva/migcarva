@@ -1,5 +1,5 @@
 <footer>
-	<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 }}>
+	<FlyUp top={0} options={{ y: 200, duration: 2000, delay: 200 }}>
 		<h2>
 			Thanks for your time.<br>
 			Want to get in touch?<br>
@@ -8,7 +8,7 @@
 	</FlyUp>
 	<div class="row">
 		<div class="col-4">
-			<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 }}>
+			<FlyUp top={0} options={{ y: 200, duration: 2000, delay: 200 }}>
 				<h3>On the interweb</h3>
 			</FlyUp>
 		</div>
@@ -16,7 +16,7 @@
 			<ul>
 				{#each links as link, i}
 					<li>
-						<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 + i * 100 }}>
+						<FlyUp top={0} options={{ y: 200, duration: 2000, delay: 200 + i * 25 }}>
 							<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
 							<span>/</span>
 						</FlyUp>
@@ -25,7 +25,9 @@
 			</ul>
 		</div>
 	</div>
-	<h4 class="footer">{year} | migcarva.com ™</h4>
+	<!-- <FlyUp top={0} options={{ y: 200, duration: 1000, delay: 200 }}> -->
+		<h4 class="footer">{year} | migcarva.com ™</h4>
+	<!-- </FlyUp> -->
 </footer>
 
 <script>

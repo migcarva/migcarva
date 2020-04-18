@@ -1,11 +1,13 @@
 <section>
-	<FlyUp top={-300} options={{ y: 200, duration: 1000, delay: 200 }}>
+	<FlyUp top={-250} options={{ y: 200, duration: 2000, delay: 100 }}>
 		<h2>{title.title}<br><span>{title.lead}</span></h2>
 	</FlyUp>
 	<ul class="row">
 		{#each works as work, i}
 			<li class="col col-6">
-				<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 + 100 * i }}>
+				<FlyUp
+					top={-250}
+					options={{ y: 300, duration: 2000, delay: i % 2 === 0 || i > 0 ? (100 + 100 * (i - 1)) : (100 + 100 * i) }}>
 					<a href={`/works/${work.slug}.html`}>
 						<figure>
 							<div>
@@ -28,7 +30,7 @@
 			</li>
 		{/each}
 	</ul>
-	<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 }}>
+	<FlyUp top={-250} options={{ y: 100, duration: 1000, delay: 200 }}>
 		<a class="action" href="../en/about.html">Discover more</a>
 	</FlyUp>
 </section>
