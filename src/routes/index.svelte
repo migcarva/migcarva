@@ -3,10 +3,10 @@
 </svelte:head>
 
 <section id="hero">
-	<FlyUp top={0} options={{ y: 200, duration: 1500, delay: 0 }}>
+	<FlyUp top={0} options={{ x: -500, duration: 1500, delay: 0 }}>
 		<Logo />
 	</FlyUp>
-	<FlyUp top={0} options={{ y: 200, duration: 1500, delay: 300 }}>
+	<FlyUp top={0} options={{ x: 500, duration: 1500, delay: 300 }}>
 		<h2>
 			I'm Miguel Carvalho<br>
 			<span>— Perpetually curious and forever learning</span>

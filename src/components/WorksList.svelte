@@ -124,6 +124,7 @@
 
 		div {
 			width: 100%;
+			max-height: 640px;
 			height: auto;
 			overflow: hidden;
 
