@@ -51,6 +51,7 @@
 		--breakpoint-lg: 64em;  /*1024px*/
 		--breakpoint-xl: 90em;  /*1440px*/
 
+		--ease-for-hover: cubic-bezier(.215, .61, .355, 1);
 		--ease-in-quart: cubic-bezier(0.5, 0, 0.75, 0);
 		--ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 

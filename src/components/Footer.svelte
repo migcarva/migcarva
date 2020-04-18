@@ -1,5 +1,5 @@
 <footer>
-	<FlyUp top={0} options={{ y: 200, duration: 2000, delay: 200 }}>
+	<FlyUp {...flyUps('footer', 'h2')}>
 		<h2>
 			Thanks for your time.<br>
 			Want to get in touch?<br>
@@ -8,7 +8,7 @@
 	</FlyUp>
 	<div class="row">
 		<div class="col-4">
-			<FlyUp top={0} options={{ y: 200, duration: 2000, delay: 200 }}>
+			<FlyUp {...flyUps('footer', 'h3')}>
 				<h3>On the interweb</h3>
 			</FlyUp>
 		</div>
@@ -16,7 +16,7 @@
 			<ul>
 				{#each links as link, i}
 					<li>
-						<FlyUp top={0} options={{ y: 200, duration: 2000, delay: 200 + i * 25 }}>
+						<FlyUp  {...flyUps('footer', 'li', i)}>
 							<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
 							<span>/</span>
 						</FlyUp>
@@ -25,9 +25,9 @@
 			</ul>
 		</div>
 	</div>
-	<!-- <FlyUp top={0} options={{ y: 200, duration: 1000, delay: 200 }}> -->
+	<FlyUp {...flyUps('footer', 'h4')}>
 		<h4 class="footer">{year} | migcarva.com ™</h4>
-	<!-- </FlyUp> -->
+	</FlyUp>
 </footer>
 
 <script>
@@ -52,14 +52,41 @@
 	];
 
 	let year = new Date().getFullYear();
+
+	const flyUpsMobile = (section, tag, i) => {
+		const flyUps = {
+			footer: {
+				h2: {
+					top: -48,
+					options: { y: 128, duration: 1280, delay: 256 },
+				},
+				h3: {
+					top: -48,
+					options: { y: 128, duration: 1280, delay: 256 },
+				},
+				li: {
+					top: -48,
+					options: { x: 256, duration: 1280, delay: 256 + 128 * (i + 1) },
+				},
+				h4: {
+					top: -48,
+					options: { y: -128, duration: 1280, delay: 256 },
+				}
+			}
+		};
+
+		return flyUps[section][tag];
+	};
+
+	let flyUps = flyUpsMobile;
 </script>
 
 <style lang="scss">
 	footer {
-		margin-top: var(--sections-bottom-margin);
+		padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
 
 		@media (max-width: 767px) {
-			margin-top: 160px;
+			padding: 10em 0 2.5em;
 		}
 
 		h2 {
@@ -83,7 +110,6 @@
 	}
 
 	h4 {
-		margin-top: 100px;
-		margin-bottom: 40px;
+		margin: 6em 0 0;
 	}
 </style>

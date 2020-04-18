@@ -1,13 +1,11 @@
 <section>
-	<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 128 }}>
+	<FlyUp {...flyUps('works','h2')}>
 		<h2>{title.title}<br><span>{title.lead}</span></h2>
 	</FlyUp>
 	<ul class="row">
 		{#each works as work, i}
 			<li class="col col-6">
-				<FlyUp
-					top={0}
-					options={{ y: 256, duration: 1280, delay: i % 2 === 0 || i > 0 ? (128 + 128 * (i - 1)) : (128 + 128 * i) }}>
+				<FlyUp {...flyUps('works','li', i)}>
 					<a href={`/works/${work.slug}.html`}>
 						<figure>
 							<div>
@@ -30,7 +28,7 @@
 			</li>
 		{/each}
 	</ul>
-	<FlyUp top={0} options={{ x: -256, duration: 1280, delay: 256 }}>
+	<FlyUp {...flyUps('works','a')}>
 		<a class="action" href="../en/about.html">Discover more</a>
 	</FlyUp>
 </section>
@@ -79,7 +77,30 @@
 			client: 'Client A',
 			tech: 'react + python'
 		},
-	]
+	];
+
+	const flyUpsMobile = (section, tag, i) => {
+		const flyUps = {
+			works: {
+				h2: {
+					top: -192,
+					options: { y: 128, duration: 1280, delay: 256 },
+				},
+				li: {
+					top: -256,
+					options: { x: 256, duration: 640, delay: 128 },
+					// options: { y: 256, duration: 1280, delay: i % 2 === 0 || i > 0 ? (128 + 128 * (i - 1)) : (128 + 128 * i) },
+				},
+				a: {
+					top: -256,
+					options: { x: -256, duration: 1280, delay: 256 },
+				}
+			}
+		};
+		return flyUps[section][tag];
+	};
+
+	let flyUps = flyUpsMobile;
 </script>
 
 <style lang="scss">
@@ -114,7 +135,7 @@
 		}
 
 		&.action {
-			margin-top: 0m;
+			margin-top: 0;
 		}
 	}
 
@@ -174,7 +195,7 @@
 					left: 0;
 					border-bottom: 2px solid var(--black);
 					width: 0;
-					transition: width .4s cubic-bezier(.215,.61,.355,1);
+					transition: width .4s var(--ease-for-hover);
 				}
 			}
 

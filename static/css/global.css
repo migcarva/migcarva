@@ -100,8 +100,23 @@ p {
 	margin-bottom: 1rem;
 }
 
-p span {
+p span,
+p a {
 	color: var(--black);
+}
+
+p a:after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	border-bottom: 2px solid var(--black);
+	width: 0;
+	transition: width .4s var(--ease-for-hover);
+}
+
+p a:hover:after {
+	width: 100%;
 }
 
 a {

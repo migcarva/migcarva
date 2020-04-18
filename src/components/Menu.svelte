@@ -1,5 +1,5 @@
 <div>
-	<FlyUp top={0} options={{ x: -128, duration: 1280, delay: 512 }}>
+	<FlyUp {...flyUps('menu', 'button')}>
 		<button on:click={toggleVisibility}>
 			{#if visible}
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +53,21 @@
 		visible,
 		handleClick: toggleVisibility,
 	}
+
+	const flyUpsMobile = (section, tag, i) => {
+		const flyUps = {
+			menu: {
+				button: {
+					top: 0,
+					options: { x: -128, duration: 1280, delay: 512 },
+				},
+			},
+		};
+
+		return flyUps[section][tag];
+	};
+
+	let flyUps = flyUpsMobile;
 </script>
 
 <style lang="scss">
