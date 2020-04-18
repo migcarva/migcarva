@@ -24,26 +24,26 @@
 	</FlyUp>
 		<div class="row 5a justify-content-center">
 			<div class="col-2">
-				<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 256 }}>
+				<FlyUp top={0} options={{ y: 256, duration: 1280, delay: 256 }}>
 					<h3>About me</h3>
 				</FlyUp>
 			</div>
 			<div class="col-5">
-				<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 384 }}>
+				<FlyUp top={0} options={{ y: 256, duration: 1280, delay: 384 }}>
 					<p>
 						I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. I spend a lot of my time programming. Not just for work, but as a general hobby. I have a strong passion for learning new things, and I’m always taking time out of my day to pick up something new.
 					</p>
 				</FlyUp>
 			</div>
 			<div class="col-5">
-				<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 512 }}>
+				<FlyUp top={0} options={{ y: 256, duration: 1280, delay: 512 }}>
 					<p>
 						I'm currently workin as a Senior Frontend at Unbabel, where I'm part of the Language Operations Team, a crucial team supporting Unbabel's clients. I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.
 					</p>
 				</FlyUp>
 			</div>
 		</div>
-	<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 512 }}>
+	<FlyUp top={0} options={{ x: -256, duration: 1280, delay: 512 }}>
 		<a class="action" href="../en/about.html">Discover more</a>
 	</FlyUp>
 </section>

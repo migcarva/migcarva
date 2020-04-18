@@ -30,7 +30,7 @@
 			</li>
 		{/each}
 	</ul>
-	<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 256 }}>
+	<FlyUp top={0} options={{ x: -256, duration: 1280, delay: 256 }}>
 		<a class="action" href="../en/about.html">Discover more</a>
 	</FlyUp>
 </section>

@@ -146,7 +146,7 @@ a.twitter:hover {
 section {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: var(--sections-top-margin);
+	margin-bottom: var(--sections-bottom-margin);
 	position: relative;
 }
 

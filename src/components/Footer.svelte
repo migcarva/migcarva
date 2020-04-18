@@ -56,7 +56,7 @@
 
 <style lang="scss">
 	footer {
-		margin-top: var(--sections-top-margin);
+		margin-top: var(--sections-bottom-margin);
 
 		@media (max-width: 767px) {
 			margin-top: 160px;
