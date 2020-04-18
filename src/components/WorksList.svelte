@@ -1,32 +1,40 @@
 <section>
-	<h2>{title.title}<br><span>{title.lead}</span></h2><ul class="row">
-		{#each works as work}
+	<FlyUp top={-300} options={{ y: 200, duration: 1000, delay: 200 }}>
+		<h2>{title.title}<br><span>{title.lead}</span></h2>
+	</FlyUp>
+	<ul class="row">
+		{#each works as work, i}
 			<li class="col col-6">
-				<a href={`/works/${work.slug}.html`}>
-					<figure>
-						<div>
-							<img
-								srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
-								alt={work.title}
-							/>
-						</div>
-						<p>view more</p>
-						<figcaption>
-							<h3>{work.title}</h3>
+				<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 + 100 * i }}>
+					<a href={`/works/${work.slug}.html`}>
+						<figure>
 							<div>
-								<p>{work.client}</p>
-								<p>{work.tech}</p>
+								<img
+									srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
+									alt={work.title}
+								/>
 							</div>
-						</figcaption>
-					</figure>
-				</a>
+							<p>view more</p>
+							<figcaption>
+								<h3>{work.title}</h3>
+								<div>
+									<p>{work.client}</p>
+									<p>{work.tech}</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</FlyUp>
 			</li>
 		{/each}
 	</ul>
-	<a class="action" href="../en/about.html">Discover more</a>
+	<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 }}>
+		<a class="action" href="../en/about.html">Discover more</a>
+	</FlyUp>
 </section>
 
 <script>
+	import FlyUp from '../helpers/FlyUp.svelte';
 	let title = {
 		title: "My work",
 		lead: "— Both personal and professional work",

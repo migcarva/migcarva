@@ -1,19 +1,25 @@
 <footer>
-	<h2>
-		Thanks for your time.<br>
-		Want to get in touch?<br>
-		<span>Use my email<br><a href="mailto:info@migcarva.com">info@migcarva.com</a></span>
-	</h2>
+	<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 }}>
+		<h2>
+			Thanks for your time.<br>
+			Want to get in touch?<br>
+			<span>Use my email<br><a href="mailto:info@migcarva.com">info@migcarva.com</a></span>
+		</h2>
+	</FlyUp>
 	<div class="row">
 		<div class="col-4">
-			<h3>On the interweb</h3>
+			<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 }}>
+				<h3>On the interweb</h3>
+			</FlyUp>
 		</div>
 		<div class="col-4">
 			<ul>
-				{#each links as link}
+				{#each links as link, i}
 					<li>
-						<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
-						<span>/</span>
+						<FlyUp top={-300} options={{ y: 100, duration: 1000, delay: 200 + i * 100 }}>
+							<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
+							<span>/</span>
+						</FlyUp>
 					</li>
 				{/each}
 			</ul>
@@ -23,6 +29,7 @@
 </footer>
 
 <script>
+	import FlyUp from '../helpers/FlyUp.svelte';
 	const links = [
 		{
 			name: 'Linkedin',
