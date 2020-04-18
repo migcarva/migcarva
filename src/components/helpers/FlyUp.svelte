@@ -1,6 +1,6 @@
-<Intersection once let:intersecting top={0}>
+<Intersection once let:intersecting top={top}>
 	{#if intersecting}
-    <div transition:fly="{{ y: 500, duration: 1000, delay: 300 }}">
+    <div transition:fly="{options}">
 		  <slot></slot>
     </div>
 	{/if}
@@ -8,5 +8,7 @@
 
 <script>
 	import { fly } from 'svelte/transition';
-	import Intersection from '../observers/Intersection.svelte';
+  import Intersection from '../observers/Intersection.svelte';
+  export let top;
+  export let options;
 </script>
