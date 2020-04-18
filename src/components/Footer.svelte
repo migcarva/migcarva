@@ -1,9 +1,8 @@
 <footer>
 	<FlyUp {...flyUps('footer', 'h2')}>
 		<h2>
-			Thanks for your time.<br>
 			Want to get in touch?<br>
-			<span>Use my email<br><a href="mailto:info@migcarva.com">info@migcarva.com</a></span>
+			<span>Use my email<br><a href="mailto:info@migcarva.com">info@migcarva</a></span>
 		</h2>
 	</FlyUp>
 	<div class="row">
@@ -83,12 +82,16 @@
 
 <style lang="scss">
 	footer {
-		padding: 8em 0 2.5em;
+		padding: 8em 0 6em;
 
 		@media (min-width: 375px) {
 			padding: 6em 0;
 		}
-		// padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
+
+		@media (min-width: 768px) {
+		padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
+		}
+
 
 
 		h2 {
