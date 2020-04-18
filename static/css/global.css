@@ -144,8 +144,9 @@ a.twitter:hover {
 }
 
 section {
-	margin-top: var(--sections-top-margin);
-	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: var(--sections-top-margin);
 	position: relative;
 }
 
@@ -210,6 +211,12 @@ button {
 	-ms-flex:0 0 100%;
 	flex:0 0 100%;
 	max-width:100%;
+}
+
+#hero > div:last-child {
+	flex: 1;
+	display: flex;
+	align-items: center
 }
 
 @media (min-width: 48em) {

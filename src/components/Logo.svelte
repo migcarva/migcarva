@@ -14,6 +14,7 @@
 
 <style lang="scss">
 	div {
+		padding-top: 2rem;
 		width: 2rem;
 		height: auto;
 		@media (min-width: 48em) {

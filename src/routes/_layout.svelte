@@ -39,8 +39,8 @@
 		--letter-spacing-small: -2px;
 		--letter-spacing-base: 0;
 
-		--sections-top-margin: 30%;
-		--title-bottom-margin: 1rem;
+		--sections-top-margin: 30vh;
+		--title-bottom-margin: 3rem;
 
 		--scale-sm: scale3d(0.98, 0.98, 1);
 		--scale-md: scale3d(0.96, 0.96, 1);

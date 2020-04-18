@@ -1,12 +1,12 @@
 <section>
-	<FlyUp top={-64} options={{ y: 128, duration: 1280, delay: 128 }}>
+	<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 128 }}>
 		<h2>{title.title}<br><span>{title.lead}</span></h2>
 	</FlyUp>
 	<ul class="row">
 		{#each works as work, i}
 			<li class="col col-6">
 				<FlyUp
-					top={-64}
+					top={0}
 					options={{ y: 256, duration: 1280, delay: i % 2 === 0 || i > 0 ? (128 + 128 * (i - 1)) : (128 + 128 * i) }}>
 					<a href={`/works/${work.slug}.html`}>
 						<figure>
@@ -30,7 +30,7 @@
 			</li>
 		{/each}
 	</ul>
-	<FlyUp top={-64} options={{ y: 128, duration: 1280, delay: 256 }}>
+	<FlyUp top={0} options={{ y: 128, duration: 1280, delay: 256 }}>
 		<a class="action" href="../en/about.html">Discover more</a>
 	</FlyUp>
 </section>
@@ -114,7 +114,7 @@
 		}
 
 		&.action {
-			margin-top: -2em;
+			margin-top: 0m;
 		}
 	}
 
@@ -141,7 +141,7 @@
 		> p {
 			width: 100%;
 			position: absolute;
-			top: 45%;
+			top: 0;
 			left: 50%;
 			text-align: center;
 			transform: translate(-50%, -50%);
@@ -163,7 +163,7 @@
 			}
 
 			h3 {
-				padding-top: 1em;
+				padding-top: 0;
 				position: relative;
 				display: inline-block;
 
