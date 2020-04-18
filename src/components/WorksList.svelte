@@ -148,6 +148,7 @@
 			max-height: 640px;
 			height: auto;
 			overflow: hidden;
+			margin-bottom: 1.2em;
 
 			img {
 				width: 100%;
@@ -187,6 +188,7 @@
 				padding-top: 0;
 				position: relative;
 				display: inline-block;
+				margin-bottom: 0;
 
 				&:after {
 					position: absolute;

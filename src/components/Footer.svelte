@@ -69,7 +69,7 @@
 					options: { x: 256, duration: 1280, delay: 256 + 128 * (i + 1) },
 				},
 				h4: {
-					top: -48,
+					top: -32,
 					options: { y: -128, duration: 1280, delay: 256 },
 				}
 			}
@@ -83,11 +83,13 @@
 
 <style lang="scss">
 	footer {
-		padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
+		padding: 8em 0 2.5em;
 
-		@media (max-width: 767px) {
-			padding: 10em 0 2.5em;
+		@media (min-width: 375px) {
+			padding: 6em 0;
 		}
+		// padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
+
 
 		h2 {
 			padding-top: 0;
