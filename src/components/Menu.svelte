@@ -1,17 +1,20 @@
 <div>
-	<button on:click={toggleVisibility}>
-		{#if visible}
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M4.07104 14.4853L11.1421 7.41422H13.9705L5.48526 15.8995L4.07104 14.4853Z" fill="white"/>
-				<path d="M4.41418 5L15.7279 16.3137L15.7279 19.1421L2.99997 6.41421L4.41418 5Z" fill="white"/>
-			</svg>
-		{:else}
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M3 8H13L15 10H3V8Z" fill="black"/>
-				<path d="M3 14L19 14L21 16H3V14Z" fill="black"/>
-			</svg>
-		{/if}
-	</button>
+	<FlyUp top={0} options={{ x: -128, duration: 1280, delay: 512 }}>
+		<button on:click={toggleVisibility}>
+			{#if visible}
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.41417 5L22.4142 16.3137L22.4141 19.1421L2.41417 7.82842L2.41417 5Z" fill="white"/>
+					<path d="M22.4142 5L2.41419 16.3137L2.41424 19.1421L22.4142 7.82842L22.4142 5Z" fill="white"/>
+				</svg>
+			{:else}
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 17H20L22 19H2V17Z" fill="black"/>
+					<path d="M2 5H8L10 7H2V5Z" fill="black"/>
+					<path d="M2 11L14 11L16 13H2V11Z" fill="black"/>
+				</svg>
+			{/if}
+		</button>
+	</FlyUp>
 </div>
 
 {#if visible}
@@ -31,6 +34,7 @@
 	import { onMount } from 'svelte';
 	import { quintOut } from 'svelte/easing';
 	import { slide, fade, fly } from 'svelte/transition';
+	import FlyUp from '../helpers/FlyUp.svelte';
 
 	export let segment;
 
