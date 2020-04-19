@@ -1,6 +1,9 @@
 <section>
 	<FlyUp {...flyUps('works','h2')}>
-		<h2>{title.title}<br><span>{title.lead}</span></h2>
+		<h2>
+			Selected work<br>
+			<span>— Both personal and professional work</span>
+		</h2>
 	</FlyUp>
 	<ul class="row">
 		{#each works as work, i}
@@ -29,17 +32,12 @@
 		{/each}
 	</ul>
 	<FlyUp {...flyUps('works','a')}>
-		<a class="action" href="../en/about.html">Discover more</a>
+		<a class="action" href="/works">Discover more</a>
 	</FlyUp>
 </section>
 
 <script>
 	import FlyUp from '../helpers/FlyUp.svelte';
-	let title = {
-		title: "My work",
-		lead: "— Both personal and professional work",
-	}
-
 	let works = [
 		{
 			slug: 'work',
@@ -62,18 +60,6 @@
 		{
 			slug: 'work',
 			title: 'Work for Business',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work for you',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work App',
 			client: 'Client A',
 			tech: 'react + python'
 		},
