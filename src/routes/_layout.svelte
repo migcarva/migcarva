@@ -1,16 +1,33 @@
 <Menu />
 <LogoVertical />
 <Logo invert={false} />
-<main>
-	<slot></slot>
-</main>
+
+{#if $preloading}
+	<PreloadingIndicator/>
+{:else}
+	<main>
+		<slot></slot>
+	</main>
+{/if}
+
 <Footer />
 
 <script>
+	import { stores } from '@sapper/app';
 	import Menu from '../components/Menu.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
-	import Footer from '../components/Footer.svelte';
 	import Logo from '../components/Logo.svelte';
+	import PreloadingIndicator from '../components/PreloadingIndicator.svelte';
+	import Footer from '../components/Footer.svelte';
+
+	export let segment;
+
+	const { page, preloading, session } = stores();
+
+	console.log($page);
+	console.log($preloading);
+	console.log($session);
+
 </script>
 
 <style lang="scss">
