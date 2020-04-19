@@ -1,11 +1,8 @@
 <svelte:head>
-	<title>migcarva. Welcome</title>
+	<title>migcarva.</title>
 </svelte:head>
 
 <section id="hero">
-	<div class="logo" id="top">
-		<Logo />
-	</div>
 	<FlyUp {...flyUps('hero', 'h2')}>
 		<h2>
 			I'm Miguel Carvalho<br>
@@ -99,17 +96,6 @@
 		position: relative;
 		padding-top: 0;
 		min-height: 100vh;
-
-		.logo {
-			position: absolute;
-			top: 0;
-			padding-top: 2rem;
-			width: 2rem;
-			@media (min-width: 48em) {
-				padding-top: 4rem;
-				width: 3rem;
-			}
-		}
 
 		h2 {
 			margin-bottom: 0;

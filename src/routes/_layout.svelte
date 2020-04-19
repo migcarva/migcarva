@@ -1,5 +1,6 @@
 <Menu />
 <LogoVertical />
+<Logo />
 <main>
 	<slot></slot>
 	<Footer />
@@ -9,9 +10,10 @@
 	import Menu from '../components/Menu.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
 	import Footer from '../components/Footer.svelte';
+	import Logo from '../components/Logo.svelte';
 </script>
 
-<style>
+<style lang="scss">
 	:global(:root) {
 		--black: #171717;
 		--grey: #707070;

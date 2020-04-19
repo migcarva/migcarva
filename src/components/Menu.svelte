@@ -8,8 +8,8 @@
 				</svg>
 			{:else}
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M2 17H20L22 19H2V17Z" fill="black"/>
-					<path d="M2 5H8L10 7H2V5Z" fill="black"/>
+					<path d="M2 17H20L22 19H2V17Z" fill="#171717"/>
+					<path d="M2 5H8L10 7H2V5Z" fill="#171717"/>
 					<path d="M2 11L14 11L16 13H2V11Z" fill="black"/>
 				</svg>
 			{/if}

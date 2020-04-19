@@ -1,7 +1,16 @@
 <svelte:head>
-	<title>About</title>
+	<title>migcarva. about</title>
 </svelte:head>
 
-<h1>About this site</h1>
-
-<p>This is the 'about' page. There's not much here.</p>
+<section id="hero">
+	<div class="logo" id="top">
+		<Logo />
+	</div>
+	<FlyUp {...flyUps('hero', 'h2')}>
+		<h2>
+			I'm Miguel Carvalho<br>
+			<span>— Perpetually curious and forever learning</span>
+		</h2>
+	</FlyUp>
+	<!-- <a class="freccia" href="#list"></a> -->
+</section>
