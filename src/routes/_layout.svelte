@@ -1,4 +1,4 @@
-<Menu />
+<Menu {segment} {page} />
 <LogoVertical />
 <Logo invert={false} />
 
@@ -23,11 +23,6 @@
 	export let segment;
 
 	const { page, preloading, session } = stores();
-
-	console.log($page);
-	console.log($preloading);
-	console.log($session);
-
 </script>
 
 <style lang="scss">

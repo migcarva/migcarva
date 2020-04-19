@@ -26,18 +26,31 @@
 			<nav>
 				<ul>
 					{#each links as link, i}
-						<li>
-							<FlyUp {...flyUps('menu', 'li', i)}>
-								<a
-									on:click={menuOpen.reset}
-									rel=prefetch
-									aria-current='{segment === undefined ? "page" : undefined}'
-									href={`/${link === 'home' ? '' : link}`}
-								>
-									{link}
-								</a>
-							</FlyUp>
-						</li>
+						<Hoverable let:hovering={hover}>
+							<li class:hover>
+								<FlyUp {...flyUps('menu', 'li', i)}>
+									{#if hover}
+										<a
+											on:click={menuOpen.reset}
+											rel=prefetch
+											aria-current='{segment === undefined ? "page" : undefined}'
+											href={`/${link === 'home' ? '' : link}`}
+										>
+											{link} —
+										</a>
+									{:else}
+										<a
+											on:click={menuOpen.reset}
+											rel=prefetch
+											aria-current='{segment === undefined ? "page" : undefined}'
+											href={`/${link === 'home' ? '' : link}`}
+										>
+											{link} {active && ' —'}
+										</a>
+									{/if}
+								</FlyUp>
+							</li>
+						</Hoverable>
 					{/each}
 				</ul>
 			</nav>
@@ -47,15 +60,23 @@
 {/if}
 
 <script>
-	import { onMount } from 'svelte';
+	import { stores } from '@sapper/app';
+	import { onMount, setContext } from 'svelte';
+	import { writable } from 'svelte/store';
 	import { quintOut } from 'svelte/easing';
 	import { slide, fade, fly } from 'svelte/transition';
+
 	import FlyUp from '../helpers/FlyUp.svelte';
+	import Hoverable from '../helpers/Hoverable.svelte';
 	import Logo from './Logo.svelte';
 	import SocialLinks from './SocialLinks.svelte';
 	import { menuOpen } from '../store.js';
 
 	export let segment;
+	export let page;
+
+	const current = writable(null);
+	setContext('nav', current);
 
 	let isMenuOpen;
 	let menuStore = menuOpen.subscribe(state => isMenuOpen = state);
@@ -155,5 +176,9 @@
 			padding-left: 0;
 			cursor: pointer;
 		}
+	}
+
+	.hover {
+		font-weight: 600;
 	}
 </style>
