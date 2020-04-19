@@ -1,12 +1,12 @@
 <Hoverable let:hovering={hover}>
 	{#if hover}
-		<li class:active="{$current === segment}">
+		<li class:active="{$current === segment || segment === ''}">
 			<a rel="prefetch" href={segment} class:hover>
 				<slot></slot>
 			</a>
 		</li>
 	{:else}
-		<li class:active="{$current === segment}">
+		<li class:active="{$current === segment || segment === ''}">
 			<a rel="prefetch" href={segment}>
 				<slot></slot>
 			</a>
@@ -20,6 +20,10 @@
 
 	export let segment = null;
 	const current = getContext('nav');
+	console.log(current);
+	console.log(segment);
+
+
 </script>
 
 <style lang="scss">
