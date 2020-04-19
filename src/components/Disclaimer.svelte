@@ -1,4 +1,4 @@
-<div class={isMenu ? 'isMenu disclaimer' : 'disclaimer'}>
+<div class="{isMenu ? 'isMenu disclaimer' : 'disclaimer'}">
 	<FlyUp {...flyUps('disclaimer', 'h4')}>
 		<h4>{year} | migcarva.com ™</h4>
 	</FlyUp>
@@ -59,6 +59,12 @@
 		justify-content: space-between;
 		margin: 6em 0 0;
 		position: relative;
+
+		&.isMenu {
+			h4 {
+				color: white;
+			}
+		}
 
 		.top {
 			position: absolute;
