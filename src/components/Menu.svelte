@@ -1,4 +1,4 @@
-<div>
+<div class="button" >
 	<FlyUp {...flyUps('menu', 'button')}>
 		<button on:click={toggleVisibility}>
 			{#if visible}
@@ -20,12 +20,36 @@
 {#if visible}
 	<section transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
 		<div>
-			<ul>
-				<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-				<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
-				<li><a aria-current='{segment === "about" ? "page" : undefined}' href='works'>works</a></li>
-				<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
-			</ul>
+			<div class="logo">
+				<Logo invert />
+			</div>
+			<nav>
+				<ul>
+					<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
+					<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
+					<li><a aria-current='{segment === "about" ? "page" : undefined}' href='works'>works</a></li>
+					<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
+				</ul>
+			</nav>
+			<div class="row">
+				<div class="col-4">
+					<FlyUp {...flyUps('menu', 'h3')}>
+						<h3>On the interweb</h3>
+					</FlyUp>
+				</div>
+				<div class="col-4">
+					<ul>
+						{#each links as link, i}
+							<li>
+								<FlyUp  {...flyUps('menu', 'li', i)}>
+									<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
+									<span>/</span>
+								</FlyUp>
+							</li>
+						{/each}
+					</ul>
+				</div>
+			</div>
 		</div>
 	</section>
 {/if}
@@ -35,6 +59,7 @@
 	import { quintOut } from 'svelte/easing';
 	import { slide, fade, fly } from 'svelte/transition';
 	import FlyUp from '../helpers/FlyUp.svelte';
+	import Logo from './Logo.svelte';
 
 	export let segment;
 
@@ -54,12 +79,39 @@
 		handleClick: toggleVisibility,
 	}
 
+	const links = [
+		{
+			name: 'Linkedin',
+			url: 'https://www.linkedin.com/in/migcarva',
+		},
+		{
+			name: 'Github',
+			url: 'https://www.Github.com/migcarva',
+		},
+		{
+			name: 'Dribble',
+			url: 'https://dribbble.com/migcarva',
+		},
+		{
+			name: 'Twitter',
+			url: 'https://twitter.com/migcarva/',
+		},
+	];
+
 	const flyUpsMobile = (section, tag, i) => {
 		const flyUps = {
 			menu: {
 				button: {
 					top: 0,
 					options: { x: -128, duration: 1280, delay: 512 },
+				},
+				h3: {
+					top: -48,
+					options: { y: 128, duration: 1280, delay: 256 },
+				},
+				li: {
+					top: -48,
+					options: { x: 256, duration: 1280, delay: 256 + 128 * (i + 1) },
 				},
 			},
 		};
@@ -72,22 +124,48 @@
 
 <style lang="scss">
 	section {
-		background-color: #171717;
-		background-color: rosybrown;
+		background-color: var(--black);
 		position: fixed;
 		z-index: 100;
 		width: 100%;
 		height: 100%;
-		margin-top: 0;
-		padding-top: 50px;
-		/* transform: translateY(-100%); */
-		transition: transform 0.2s ease-out;
+		padding: 0 10% 0 15%;
+		@media (min-width: 768px)  {
+			padding-left: 10%;
+		}
+
+		.logo {
+			padding-top: 2rem;
+			width: 2rem;
+			@media (min-width: 48em) {
+				padding-top: 4rem;
+				width: 3rem;
+			}
+
+			svg {
+				fill: white;
+			}
+		}
+
+		a,
+		span,
+		h3 {
+			color: white;
+		}
+
+		nav {
+			margin: 15vh 0;
+			ul {
+				li {
+					a {
+						font-size: var(--font-h2);
+					}
+				}
+			}
+		}
 	}
-	/* .menu.open {
-			transform: translateY(0);
-			transition: transform 0.2s ease-out;
-	} */
-	div {
+
+	.button {
 		position: fixed;
 		z-index: 200;
 		top: 50%;

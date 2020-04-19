@@ -59,16 +59,12 @@
 	}
 
 	main {
-		width: 85%;
-		padding-right: 15px;
-		padding-left: 15%;
-		margin-right: auto;
-		margin-left: auto;
+		width: 100%;
+		padding: 0 10% 0 15%;
 	}
 
 	@media (min-width: 768px)  {
 		main {
-			width: 90%;
 			padding-left: 10%;
 		}
 	}
