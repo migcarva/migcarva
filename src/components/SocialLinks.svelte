@@ -59,14 +59,6 @@
 					top: -48,
 					options: { x: 256, duration: 1280, delay: (invert ? 1024 : 256) + 128 * (i + 1) },
 				},
-				h4: {
-					top: -32,
-					options: { y: 128, duration: 1280, delay: (invert ? 1024 : 256) },
-				},
-				logo: {
-					top: -32,
-					options: { x: 128, duration: 1280, delay: (invert ? 1024 : 256) },
-				}
 			}
 		};
 
