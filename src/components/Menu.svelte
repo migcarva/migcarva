@@ -25,31 +25,22 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-					<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
-					<li><a aria-current='{segment === "about" ? "page" : undefined}' href='works'>works</a></li>
-					<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
+					{#each links as link, i}
+						<li>
+							<FlyUp {...flyUps('menu', 'li', i)}>
+								<a
+									rel=prefetch
+									aria-current='{segment === undefined ? "page" : undefined}'
+									href={`/${link === 'home' ? '' : link}`}
+								>
+									{link}
+								</a>
+							</FlyUp>
+						</li>
+					{/each}
 				</ul>
 			</nav>
-			<div class="row">
-				<div class="col-4">
-					<FlyUp {...flyUps('menu', 'h3')}>
-						<h3>On the interweb</h3>
-					</FlyUp>
-				</div>
-				<div class="col-4">
-					<ul>
-						{#each links as link, i}
-							<li>
-								<FlyUp  {...flyUps('menu', 'li', i)}>
-									<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
-									<span>/</span>
-								</FlyUp>
-							</li>
-						{/each}
-					</ul>
-				</div>
-			</div>
+			<SocialLinks invert />
 		</div>
 	</section>
 {/if}
@@ -60,6 +51,7 @@
 	import { slide, fade, fly } from 'svelte/transition';
 	import FlyUp from '../helpers/FlyUp.svelte';
 	import Logo from './Logo.svelte';
+	import SocialLinks from './SocialLinks.svelte';
 
 	export let segment;
 
@@ -79,24 +71,7 @@
 		handleClick: toggleVisibility,
 	}
 
-	const links = [
-		{
-			name: 'Linkedin',
-			url: 'https://www.linkedin.com/in/migcarva',
-		},
-		{
-			name: 'Github',
-			url: 'https://www.Github.com/migcarva',
-		},
-		{
-			name: 'Dribble',
-			url: 'https://dribbble.com/migcarva',
-		},
-		{
-			name: 'Twitter',
-			url: 'https://twitter.com/migcarva/',
-		},
-	];
+	const links = [ 'home', 'about', 'works', 'blog'];
 
 	const flyUpsMobile = (section, tag, i) => {
 		const flyUps = {
@@ -130,6 +105,7 @@
 		width: 100%;
 		height: 100%;
 		padding: 0 10% 0 15%;
+		overflow: hidden;
 		@media (min-width: 768px)  {
 			padding-left: 10%;
 		}
@@ -147,18 +123,19 @@
 			}
 		}
 
-		a,
-		span,
-		h3 {
+		a {
 			color: white;
 		}
 
 		nav {
-			margin: 15vh 0;
+			margin: 7.5vh 0;
+			@media (min-width: 375px) {
+				margin: 15vh 0;
+			}
 			ul {
 				li {
 					a {
-						font-size: var(--font-h2);
+						font-size: calc(var(--font-h2) * .75);
 					}
 				}
 			}
