@@ -1,18 +1,7 @@
 <div class="button" >
 	<FlyUp {...flyUps('menu', 'button')}>
 		<button on:click={() => open = !open}>
-			{#if open}
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M2.41417 5L22.4142 16.3137L22.4141 19.1421L2.41417 7.82842L2.41417 5Z" fill="white"/>
-					<path d="M22.4142 5L2.41419 16.3137L2.41424 19.1421L22.4142 7.82842L22.4142 5Z" fill="white"/>
-				</svg>
-			{:else}
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M2 17H20L22 19H2V17Z" fill="#171717"/>
-					<path d="M2 5H8L10 7H2V5Z" fill="#171717"/>
-					<path d="M2 11L14 11L16 13H2V11Z" fill="black"/>
-				</svg>
-			{/if}
+			<Icon name={open ? 'close' : 'hamburger'} />
 		</button>
 	</FlyUp>
 </div>
@@ -69,6 +58,7 @@
 	import Hoverable from '../helpers/Hoverable.svelte';
 	import Logo from './Logo.svelte';
 	import SocialLinks from './SocialLinks.svelte';
+	import Icon from './core/Icon.svelte';
 
 	export let segment;
 	export let page;
