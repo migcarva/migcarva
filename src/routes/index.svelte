@@ -96,10 +96,13 @@
 
 <style lang="scss">
 	#hero {
+		position: relative;
 		padding-top: 0;
 		min-height: 100vh;
 
 		.logo {
+			position: absolute;
+			top: 0;
 			padding-top: 2rem;
 			width: 2rem;
 			@media (min-width: 48em) {

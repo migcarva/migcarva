@@ -1,4 +1,4 @@
-<Menu {segment} />
+<Menu />
 <LogoVertical />
 <main>
 	<slot></slot>
@@ -9,8 +9,6 @@
 	import Menu from '../components/Menu.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
 	import Footer from '../components/Footer.svelte';
-
-	let segment;
 </script>
 
 <style>

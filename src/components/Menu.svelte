@@ -1,7 +1,7 @@
 <div class="button" >
 	<FlyUp {...flyUps('menu', 'button')}>
-		<button on:click={toggleVisibility}>
-			{#if visible}
+		<button on:click={menuOpen.toggle}>
+			{#if isMenuOpen}
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M2.41417 5L22.4142 16.3137L22.4141 19.1421L2.41417 7.82842L2.41417 5Z" fill="white"/>
 					<path d="M22.4142 5L2.41419 16.3137L2.41424 19.1421L22.4142 7.82842L22.4142 5Z" fill="white"/>
@@ -17,7 +17,7 @@
 	</FlyUp>
 </div>
 
-{#if visible}
+{#if isMenuOpen}
 	<section transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
 		<div>
 			<div class="logo">
@@ -29,6 +29,7 @@
 						<li>
 							<FlyUp {...flyUps('menu', 'li', i)}>
 								<a
+									on:click={menuOpen.reset}
 									rel=prefetch
 									aria-current='{segment === undefined ? "page" : undefined}'
 									href={`/${link === 'home' ? '' : link}`}
@@ -52,24 +53,18 @@
 	import FlyUp from '../helpers/FlyUp.svelte';
 	import Logo from './Logo.svelte';
 	import SocialLinks from './SocialLinks.svelte';
+	import { menuOpen } from '../store.js';
 
 	export let segment;
 
+	let isMenuOpen;
+	let menuStore = menuOpen.subscribe(state => isMenuOpen = state);
+
 	let wWidth;
-	let visible = false;
 
 	onMount(() => {
     wWidth = window.innerWidth;
   });
-
-	function toggleVisibility() {
-		visible = !visible;
-	}
-
-	const hamburgerProps = {
-		visible,
-		handleClick: toggleVisibility,
-	}
 
 	const links = [ 'home', 'about', 'works', 'blog'];
 
