@@ -9,8 +9,17 @@
 			<span>— Perpetually curious and forever learning</span>
 		</h2>
 	</FlyUp>
-	<!-- <a class="freccia" href="#list"></a> -->
 </section>
+
+{#if showScrollText}
+	<div class="scroll">
+		<FlyUp {...flyUps('scroll', 'p')}>
+			<p>
+				scroll down
+			</p>
+		</FlyUp>
+	</div>
+{/if}
 
 <section id="about">
 	<FlyUp {...flyUps('about', 'h2')}>
@@ -48,12 +57,19 @@
 <WorksList />
 
 <script>
+	import { fade, fly } from 'svelte/transition';
 	import Logo from '../components/Logo.svelte';
 	import WorksList from '../components/WorksList.svelte';
 	import FlyUp from '../helpers/FlyUp.svelte';
 
 	const flyUpsMobile = (section, tag, i) => {
 		const flyUps = {
+			scroll: {
+				p: {
+					top: 0,
+					options: { y: 256, duration: 1280, delay: 0 },
+				},
+			},
 			hero: {
 				h2: {
 					top: 0,
@@ -89,9 +105,39 @@
 
 	let flyUps = flyUpsMobile;
 
+	let showScrollText = false;
+
+	function toggleScrollText() {
+		showScrollText = !showScrollText;
+	}
+
+	function animateScrollText() {
+		setTimeout(() => {
+			toggleScrollText();
+		}, 4800);
+	}
+
+	setTimeout(() => {
+		toggleScrollText();
+		animateScrollText();
+	}, 1280);
 </script>
 
 <style lang="scss">
+	.scroll {
+		position: absolute;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		bottom: 1rem;
+		left: 0;
+
+		p {
+			margin: 0 auto;
+			font-size: var(--font-h3);
+		}
+	}
+
 	#hero {
 		position: relative;
 		padding-top: 0;

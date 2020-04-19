@@ -234,6 +234,11 @@ button {
 	align-items: center
 }
 
+.scroll div {
+	display: flex;
+	justify-content: center;
+}
+
 @media (min-width: 48em) {
 	main {
 		--font-base: 1.1em;
