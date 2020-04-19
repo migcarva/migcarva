@@ -41,7 +41,7 @@
 			</div>
 		</div>
 	<FlyUp {...flyUps('about', 'a')}>
-		<a class="action" href="../en/about.html">Discover more</a>
+		<a class="action" href="/about">Discover more</a>
 	</FlyUp>
 </section>
 
