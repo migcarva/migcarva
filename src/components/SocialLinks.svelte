@@ -122,4 +122,24 @@
 			}
 		}
 	}
+	a.action:hover{
+		color: var(--action);
+		transform: scale3d(var(--scale-sm));
+	}
+
+	a.linkedin:hover {
+		color: var(--linkedin) !important;
+	}
+
+	a.github:hover {
+		color: var(--grey-light) !important;
+	}
+
+	a.dribble:hover {
+		color: var(--dribble) !important;
+	}
+
+	a.twitter:hover {
+		color: var(--twitter) !important;
+	}
 </style>

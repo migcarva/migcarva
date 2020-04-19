@@ -137,27 +137,6 @@ a.action {
 	transition: 0.3s;
 }
 
-a.action:hover{
-	color: var(--action);
-	transform: scale3d(var(--scale-sm));
-}
-
-a.linkedin:hover {
-	color: var(--linkedin);
-}
-
-a.github:hover {
-	color: var(--github);
-}
-
-a.dribble:hover {
-	color: var(--dribble);
-}
-
-a.twitter:hover {
-	color: var(--twitter);
-}
-
 section {
 	display: flex;
 	flex-direction: column;
