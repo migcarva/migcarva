@@ -1,4 +1,4 @@
-<div class={invert ? 'invert row' : 'row'}>
+<div class={isMenuOpen ? 'invert row' : 'row'}>
 	<div class="col-4">
 		<FlyUp {...flyUps('links', 'h3')}>
 			<h3>On the interweb</h3>
@@ -17,15 +17,16 @@
 		</ul>
 	</div>
 </div>
-<Disclaimer isMenu />
+<Disclaimer />
 
 <script>
 	import FlyUp from '../helpers/FlyUp.svelte';
 	import Disclaimer from './Disclaimer.svelte';
 	import Logo from './Logo.svelte';
+	import { menuOpen } from '../store.js';
 
-	export let invert;
-	let isMenu = invert;
+	let isMenuOpen;
+	let menuStore = menuOpen.subscribe(state => isMenuOpen = state);
 
 	const links = [
 		{
@@ -46,18 +47,16 @@
 		},
 	];
 
-	let year = new Date().getFullYear();
-
 	const flyUpsMobile = (section, tag, i) => {
 		const flyUps = {
 			links: {
 				h3: {
 					top: -48,
-					options: { x: 256, duration: 1280, delay: (invert ? 1024 : 256) },
+					options: { x: 256, duration: 1280, delay: (isMenuOpen ? 1024 : 256) },
 				},
 				li: {
 					top: -48,
-					options: { x: 256, duration: 1280, delay: (invert ? 1024 : 256) + 128 * (i + 1) },
+					options: { x: 256, duration: 1280, delay: (isMenuOpen ? 1024 : 256) + 128 * (i + 1) },
 				},
 			}
 		};
@@ -66,13 +65,6 @@
 	};
 
 	let flyUps = flyUpsMobile;
-
-	function goToTop() {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		});
-	}
 </script>
 
 <style lang="scss">

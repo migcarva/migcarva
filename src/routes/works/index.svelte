@@ -2,5 +2,5 @@
 </style>
 
 <svelte:head>
-	<title>migcarva. Welcome</title>
+	<title>migcarva. Works</title>
 </svelte:head>
