@@ -1,4 +1,4 @@
-<div id="logo">
+<div>
 	<a href="/">
 		<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M0 9.14286L18.2857 0V128H0V9.14286Z" fill="black"/>
@@ -14,12 +14,8 @@
 
 <style lang="scss">
 	div {
-		padding-top: 2rem;
-		width: 2rem;
+		width: 100%;
 		height: auto;
-		@media (min-width: 48em) {
-			width: 3rem;
-		}
 	}
 	a:hover {
 		display: block;

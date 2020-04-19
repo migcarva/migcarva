@@ -1,3 +1,5 @@
+<svelte:window bind:scrollY={y}/>
+
 <footer>
 	<FlyUp {...flyUps('footer', 'h2')}>
 		<h2>
@@ -24,13 +26,24 @@
 			</ul>
 		</div>
 	</div>
-	<FlyUp {...flyUps('footer', 'h4')}>
-		<h4 class="footer">{year} | migcarva.com ™</h4>
-	</FlyUp>
+	<div class="disclaimer">
+		<FlyUp {...flyUps('footer', 'h4')}>
+			<h4 class="footer">{year} | migcarva.com ™</h4>
+		</FlyUp>
+		<div class="logo" on:click={goToTop}>
+			<FlyUp {...flyUps('footer', 'logo')}>
+				<div class="top">
+					<span>go to top</span>
+				</div>
+				<Logo />
+			</FlyUp>
+		</div>
+	</div>
 </footer>
 
 <script>
 	import FlyUp from '../helpers/FlyUp.svelte';
+	import Logo from '../components/Logo.svelte';
 	const links = [
 		{
 			name: 'Linkedin',
@@ -50,6 +63,7 @@
 		},
 	];
 
+	let y;
 	let year = new Date().getFullYear();
 
 	const flyUpsMobile = (section, tag, i) => {
@@ -69,7 +83,11 @@
 				},
 				h4: {
 					top: -32,
-					options: { y: -128, duration: 1280, delay: 256 },
+					options: { y: 128, duration: 1280, delay: 256 },
+				},
+				logo: {
+					top: -32,
+					options: { x: 128, duration: 1280, delay: 256 },
 				}
 			}
 		};
@@ -78,21 +96,24 @@
 	};
 
 	let flyUps = flyUpsMobile;
+
+	function goToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	}
 </script>
 
 <style lang="scss">
 	footer {
 		padding: 8em 0 6em;
-
 		@media (min-width: 375px) {
 			padding: 6em 0;
 		}
-
 		@media (min-width: 768px) {
-		padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
+			padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
 		}
-
-
 
 		h2 {
 			padding-top: 0;
@@ -114,7 +135,40 @@
 		}
 	}
 
-	h4 {
+	.disclaimer {
+		display: flex;
+		justify-content: space-between;
 		margin: 6em 0 0;
+		position: relative;
+
+		.top {
+			position: absolute;
+			width: 2em;
+			height: 2em;
+			top: 0;
+			right: 0;
+
+			&:hover {
+				span {
+					opacity: 1;
+				}
+			}
+			span {
+				width: 6em;
+				text-align: right;
+				font-size: .75em;
+				position: absolute;
+				top: -2em;
+				right: 0;
+				opacity: 0;
+				transition: opacity .3s ease-in;
+			}
+		}
+
+		.logo {
+			max-width: 1rem;
+		}
 	}
+
+
 </style>
