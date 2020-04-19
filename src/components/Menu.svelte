@@ -117,10 +117,6 @@
 				padding-top: 4rem;
 				width: 3rem;
 			}
-
-			svg {
-				fill: white;
-			}
 		}
 
 		a {

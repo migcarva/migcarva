@@ -16,29 +16,16 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="disclaimer">
-		<FlyUp {...flyUps('links', 'h4')}>
-			<h4 class="footer">{year} | migcarva.com ™</h4>
-		</FlyUp>
-		{#if !invert}
-			<div class="logo" on:click={goToTop}>
-				<FlyUp {...flyUps('links', 'logo')}>
-					<div class="top">
-						<span>go to top</span>
-					</div>
-					<Logo />
-				</FlyUp>
-			</div>
-			{/if}
-	</div>
 </div>
+<Disclaimer isMenu />
 
 <script>
 	import FlyUp from '../helpers/FlyUp.svelte';
-	import SocialLinks from './SocialLinks.svelte';
+	import Disclaimer from './Disclaimer.svelte';
 	import Logo from './Logo.svelte';
 
 	export let invert;
+	let isMenu = invert;
 
 	const links = [
 		{
@@ -108,13 +95,13 @@
 				display: inline;
 
 				span {
-					color: #DBDBDB;
+					color: var(--grey-light);
 				}
 			}
 		}
 
 		&.invert {
-			h3, h4, a, span {
+			h3, a {
 				color: white;
 			}
 		}
