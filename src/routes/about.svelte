@@ -8,6 +8,8 @@
 			About me<br>
 			<span>— Past, present and future</span>
 		</h2>
+	</FlyUp>
+	<FlyUp {...flyUps('intro', 'img')}>
 		<img src="images/about_cover.png" alt="">
 	</FlyUp>
 	<!-- <a class="freccia" href="#list"></a> -->
@@ -20,27 +22,27 @@
 			<span>— Now a virtual space architect</span>
 		</h2>
 	</FlyUp>
-		<div class="row 5a justify-content-center">
-			<div class="col-2">
-				<FlyUp  {...flyUps('history', 'h3')}>
-					<h3>My history</h3>
-				</FlyUp>
-			</div>
-			<div class="col-8">
-				<FlyUp {...flyUps('history', 'p1')}>
-					<p>
-						I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. After 2014 I made a shift in my career and entered the entrepreneurial world. I was trying to build a SaaS logistics startup, with 2 other friends. I was focused on the business and financial plans while also developing the webapp frontend architecture.
-					</p>
-					<p>
-						In the end, the startup didn't work, mainly because of timming, but I figured out that I could had a career as a developer, just need some more fundamental knowledge. That's when I entered <a href="https://www.academiadecodigo.org/">Academira de Código</a>, a Java and Javascript Bootcamp and sky rocketed my personal growth.
-					</p>
-					<p>
-						I've been working in all kind of companies ever since. <a href="https://eae.pt/">East Atlantic Engineering</a> is an portuguese agency, with both local portuguese clients and internacional clients. <a href="https://brpx.com/">Bright Pixel</a> is a very special company. A group of very experienced builders, creative thinkers and investors. With a big fund to invest in startups while helping them with technical knowledge, using in house talent. <a href="https://unbabel.com/">Unbabel</a> is a portuguese startup, in it's way to unicorn level, trying to 'create universal understanding'.
-					</p>
-				</FlyUp>
-			</div>
+	<div class="row 5a justify-content-center">
+		<div class="col-2">
+			<FlyUp  {...flyUps('history', 'h3')}>
+				<h3>My history</h3>
+			</FlyUp>
 		</div>
-		<FlyUp {...flyUps('history', 'a')}>
+		<div class="col-8">
+			<FlyUp {...flyUps('history', 'p')}>
+				<p>
+					I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. After 2014 I made a shift in my career and entered the entrepreneurial world. I was trying to build a SaaS logistics startup, with 2 other friends. I was focused on the business and financial plans while also developing the webapp frontend architecture.
+				</p>
+				<p>
+					In the end, the startup didn't work, mainly because of timming, but I figured out that I could had a career as a developer, just need some more fundamental knowledge. That's when I entered <a href="https://www.academiadecodigo.org/">Academira de Código</a>, a Java and Javascript Bootcamp and sky rocketed my personal growth.
+				</p>
+				<p>
+					I've been working in all kind of companies ever since. <a href="https://eae.pt/">East Atlantic Engineering</a> is an portuguese agency, with both local portuguese clients and internacional clients. <a href="https://brpx.com/">Bright Pixel</a> is a very special company. A group of very experienced builders, creative thinkers and investors. With a big fund to invest in startups while helping them with technical knowledge, using in house talent. <a href="https://unbabel.com/">Unbabel</a> is a portuguese startup, in it's way to unicorn level, trying to 'create universal understanding'.
+				</p>
+			</FlyUp>
+		</div>
+	</div>
+	<FlyUp {...flyUps('history', 'a')}>
 		<a class="action" href="/works">Discover my work</a>
 	</FlyUp>
 </section>
@@ -254,28 +256,24 @@
 				},
 				img: {
 					top: 0,
-					options: { x: -1280, duration: 1280, delay: 0 },
+					options: { x: 1280, duration: 2560, delay: 256 },
 				},
 			},
 			history: {
 				h2: {
-					top: -128,
-					options: { y: 128, duration: 1280, delay: 512 },
-				},
-				h3: {
-					top: -192,
+					top: 0,
 					options: { y: 128, duration: 1280, delay: 0 },
 				},
-				p1: {
-					top: -192,
-					options: { y: 256, duration: 1280, delay: 0 },
+				h3: {
+					top: -512,
+					options: { y: 128, duration: 1280, delay: 0 },
 				},
-				p2: {
-					top: -256,
+				p: {
+					top: -512,
 					options: { y: 256, duration: 1280, delay: 0 },
 				},
 				a: {
-					top: -256,
+					top: -512,
 					options: { x: -256, duration: 1280, delay: 0 },
 				}
 			},
