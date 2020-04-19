@@ -1,8 +1,8 @@
-<div class="{isMenuOpen ? 'isMenu disclaimer' : 'disclaimer'}">
+<div class="{invert ? 'isMenu disclaimer' : 'disclaimer'}">
 	<FlyUp {...flyUps('disclaimer', 'h4')}>
 		<h4>{year} | migcarva.com ™</h4>
 	</FlyUp>
-	{#if !isMenuOpen}
+	{#if !invert}
 		<div class="logo" on:click={goToTop}>
 			<FlyUp {...flyUps('disclaimer', 'logo')}>
 				<div class="top">
@@ -21,10 +21,8 @@
 
 <script>
 	import FlyUp from '../helpers/FlyUp.svelte';
-	import { menuOpen } from '../store.js';
 
-	let isMenuOpen;
-	let menuStore = menuOpen.subscribe(state => isMenuOpen = state);
+	export let invert;
 
 	let year = new Date().getFullYear();
 
@@ -33,11 +31,11 @@
 			disclaimer: {
 				h4: {
 					top: -32,
-					options: { y: 128, duration: 1280, delay: (isMenuOpen ? 1024 : 256) },
+					options: { y: 128, duration: 1280, delay: (invert ? 1024 : 256) },
 				},
 				logo: {
 					top: -32,
-					options: { x: 128, duration: 1280, delay: (isMenuOpen ? 1024 : 256) },
+					options: { x: 128, duration: 1280, delay: (invert ? 1024 : 256) },
 				}
 			}
 		};

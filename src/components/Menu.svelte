@@ -12,36 +12,7 @@
 			<div class="logo">
 				<Logo invert />
 			</div>
-			<nav>
-				<ul>
-					{#each links as link, i}
-						<Hoverable let:hovering={hover}>
-							<li class:hover segment>
-								<FlyUp {...flyUps('menu', 'li', i)}>
-									{#if hover}
-										<a
-											class:active="{!segment}"
-											rel=prefetch
-											href={`/${link === 'home' ? '' : link}`}
-										>
-											— {link}
-										</a>
-									{:else}
-										<a
-											rel=prefetch
-											aria-current='{segment === undefined ? "page" : undefined}'
-											href={`/${link === 'home' ? '' : link}`}
-										>
-											<!-- {link} {active && ' —'} -->
-											{link}
-										</a>
-									{/if}
-								</FlyUp>
-							</li>
-						</Hoverable>
-					{/each}
-				</ul>
-			</nav>
+			<Nav {segment} {page} />
 			<SocialLinks invert />
 		</div>
 	</section>
@@ -59,6 +30,7 @@
 	import Logo from './Logo.svelte';
 	import SocialLinks from './SocialLinks.svelte';
 	import Icon from './core/Icon.svelte';
+	import Nav from './core/Nav.svelte';
 
 	export let segment;
 	export let page;
@@ -72,8 +44,6 @@
 
 	const current = writable(null);
 	setContext('nav', current);
-	console.log(current);
-
 
 	let wWidth;
 
@@ -130,24 +100,6 @@
 				width: 3rem;
 			}
 		}
-
-		a {
-			color: white;
-		}
-
-		nav {
-			margin: 7.5vh 0;
-			@media (min-width: 375px) {
-				margin: 15vh 0;
-			}
-			ul {
-				li {
-					a {
-						font-size: calc(var(--font-h2) * .75);
-					}
-				}
-			}
-		}
 	}
 
 	.button {
@@ -172,9 +124,5 @@
 			padding-left: 0;
 			cursor: pointer;
 		}
-	}
-
-	.hover {
-		font-weight: 600;
 	}
 </style>
