@@ -80,12 +80,5 @@
 		@media (min-width: 375px) {
 			margin: 15vh 0;
 		}
-		ul {
-			li {
-				a {
-					font-size: calc(var(--font-h2) * .75);
-				}
-			}
-		}
 	}
 </style>

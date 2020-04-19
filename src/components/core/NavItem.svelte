@@ -31,7 +31,7 @@
 	a {
 		position: relative;
 		color: white;
-		font-size: var(--font-h2);
+		font-size: calc(var(--font-h2) * .75);
 		&:hover {
 			&:after {
 				width: 100%;

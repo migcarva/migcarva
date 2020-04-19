@@ -60,14 +60,6 @@
 					top: 0,
 					options: { x: -128, duration: 1280, delay: 512 },
 				},
-				h3: {
-					top: -48,
-					options: { y: 128, duration: 1280, delay: 256 },
-				},
-				li: {
-					top: -48,
-					options: { x: 256, duration: 1280, delay: 256 + 128 * (i + 1) },
-				},
 			},
 		};
 
