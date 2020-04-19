@@ -61,12 +61,14 @@
 
 <style lang="scss">
 	footer {
-		padding: 8em 0 6em;
+		width: 100%;
+		padding: 8em 10% 6em 15%;
 		@media (min-width: 375px) {
 			padding: 6em 0;
+			padding-left: 10%;
 		}
 		@media (min-width: 768px) {
-			padding: var(--sections-bottom-margin) 0 calc(var(--sections-bottom-margin) / 4);
+			padding: var(--sections-bottom-margin) 10% calc(var(--sections-bottom-margin) / 4);
 		}
 
 		h2 {

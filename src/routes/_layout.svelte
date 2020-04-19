@@ -1,10 +1,10 @@
 <Menu />
 <LogoVertical />
-<Logo />
+<Logo invert={false} />
 <main>
 	<slot></slot>
-	<Footer />
 </main>
+<Footer />
 
 <script>
 	import Menu from '../components/Menu.svelte';
