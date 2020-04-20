@@ -1,4 +1,4 @@
-<Intersection once let:intersecting top={top} anchor={anchor} threshold={threshold}>
+<Intersection once let:intersecting top={top} anchor={anchor} threshold={threshold} debug={debug}>
 	{#if intersecting}
     <div transition:fly="{options}">
 		  <slot></slot>
@@ -13,4 +13,5 @@
   export let anchor;
   export let threshold;
   export let options;
+  export let debug;
 </script>

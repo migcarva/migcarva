@@ -28,7 +28,7 @@
 	</FlyUp>
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<FlyUp  {...flyUps('about', 'h3')}>
+			<FlyUp {...flyUps('about', 'h3')}>
 				<h3>About me</h3>
 			</FlyUp>
 		</div>
@@ -76,23 +76,23 @@
 				},
 				h3: {
 					anchor: '#about',
-					threshold: .5,
-					options: { y: 128, duration: 1280, delay: 256 },
+					threshold: .75,
+					options: { y: 128, duration: 1280, delay: 0 },
 				},
 				p1: {
 					anchor: '#about',
-					threshold: .5,
-					options: { y: 256, duration: 1280, delay: 256 * 2 },
+					threshold: .75,
+					options: { y: 256, duration: 1280, delay: 256},
 				},
 				p2: {
 					anchor: '#about',
-					threshold: .5,
-					options: { y: 256, duration: 1280, delay: 256 * 3 },
+					threshold: .75,
+					options: { y: 256, duration: 1280, delay: 384 },
 				},
 				a: {
 					anchor: '#about',
-					threshold: .5,
-					options: { x: -256, duration: 1280, delay: 256 * 4 },
+					threshold: .95,
+					options: { x: -256, duration: 1280, delay: 0 },
 				}
 			}
 		}
@@ -137,14 +137,12 @@
 
 	section {
 		min-height: 100vh;
-		margin-top: 20%;
 	}
 
 	#hero {
 		position: relative;
 		display: flex;
 		align-items: center;
-		margin-top: 0;
 
 		h2 {
 			margin-bottom: 0;
