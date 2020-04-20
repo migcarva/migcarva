@@ -1,10 +1,10 @@
 <div class="{invert ? 'isMenu disclaimer' : 'disclaimer'}">
-	<IntersectableTransition {...IntersectableTransitions('disclaimer', 'h4')}>
+	<IntersectableTransition options={{ delay: invert ? 1024 : 256 }}>
 		<h4>{year} | migcarva.com ™</h4>
 	</IntersectableTransition>
 	{#if !invert}
 		<div class="logo" on:click={goToTop}>
-			<IntersectableTransition {...IntersectableTransitions('disclaimer', 'logo')}>
+			<IntersectableTransition options={{ delay: invert ? 1024 : 256 }}>
 				<div class="top">
 					<span>go to top</span>
 				</div>
@@ -25,25 +25,6 @@
 	export let invert;
 
 	let year = new Date().getFullYear();
-
-	const IntersectableTransitionsMobile = (section, tag, i) => {
-		const IntersectableTransitions = {
-			disclaimer: {
-				h4: {
-					top: -32,
-					options: { y: 128, duration: 1280, delay: (invert ? 1024 : 256) },
-				},
-				logo: {
-					top: -32,
-					options: { x: 128, duration: 1280, delay: (invert ? 1024 : 256) },
-				}
-			}
-		};
-
-		return IntersectableTransitions[section][tag];
-	};
-
-	let IntersectableTransitions = IntersectableTransitionsMobile;
 
 	function goToTop() {
 		window.scrollTo({

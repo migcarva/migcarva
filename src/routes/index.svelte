@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section id="hero">
-	<IntersectableTransition options={{ y: 128, duration: 1280, delay: 0 }}>
+	<IntersectableTransition>
 		<h2>
 			I'm Miguel Carvalho<br>
 			<span>— Perpetually curious and forever learning</span>
@@ -13,14 +13,14 @@
 
 {#if showScrollText}
 	<div class="scroll">
-		<p in:fly="{{ y: -64, delay: 128, duration: 1280 }}" out:fade="{{ duration: 1280, delay: 0 }}">
+		<p in:fly="{{ y: -64, delay: 1024, duration: 1280 }}" out:fade="{{ duration: 1280, delay: 0 }}">
 			scroll down
 		</p>
 	</div>
 {/if}
 
 <section id="about">
-	<IntersectableTransition anchor='#about' threshold={.5} options={{ y: 128, duration: 1280, delay: 0 }}>
+	<IntersectableTransition anchor='#about' threshold={.5}>
 		<h2>
 			A frontend developer from Lisbon<br>
 			<span>— I enjoy simple, concise and readable code</span>
@@ -28,26 +28,28 @@
 	</IntersectableTransition>
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<IntersectableTransition {...IntersectableTransitions('about', 'h3')}>
+			<IntersectableTransition anchor='#about' threshold={.75}>
 				<h3>About me</h3>
 			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<IntersectableTransition {...IntersectableTransitions('about', 'p1')}>
+			<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 256 }}>
 				<p>
 					I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. I spend a lot of my time programming. Not just for work, but as a general hobby. I have a strong passion for learning new things, and I’m always taking time out of my day to pick up something new.
 				</p>
 			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<IntersectableTransition {...IntersectableTransitions('about', 'p2')}>
+			<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 384 }}>
 				<p>
 					I'm currently working as a senior frontend developer at <a href="https://unbabel.com">Unbabel</a>, where I'm part of the Language Operations Team, a crucial team supporting Unbabel's clients. I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.
 				</p>
 			</IntersectableTransition>
 		</div>
 	</div>
-	<ActionLink href="/about" options={IntersectableTransitions('about', 'a')}>Discover more</ActionLink>
+	<ActionLink href="/about" anchor="#about" threshold={.75}>
+		Discover more
+	</ActionLink>
 </section>
 
 <WorksList />
@@ -60,42 +62,6 @@
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
-	const IntersectableTransitionsMobile = (section, tag, i) => {
-		const IntersectableTransitions = {
-			about: {
-				h2: {
-					anchor: '#about',
-					threshold: .5,
-					options: { y: 128, duration: 1280, delay: 0 },
-				},
-				h3: {
-					anchor: '#about',
-					threshold: .75,
-					options: { y: 128, duration: 1280, delay: 0 },
-				},
-				p1: {
-					anchor: '#about',
-					threshold: .75,
-					options: { y: 128, duration: 1280, delay: 256},
-				},
-				p2: {
-					anchor: '#about',
-					threshold: .75,
-					options: { y: 128, duration: 1280, delay: 384 },
-				},
-				a: {
-					anchor: '#about',
-					threshold: .95,
-					options: { duration: 640, delay: 0 },
-				}
-			}
-		}
-
-		return IntersectableTransitions[section][tag];
-	};
-
-	let IntersectableTransitions = IntersectableTransitionsMobile;
-
 	let showScrollText = false;
 
 	function toggleScrollText() {
@@ -105,13 +71,13 @@
 	function animateScrollText() {
 		setTimeout(() => {
 			toggleScrollText();
-		}, 1280);
+		}, 1024 * 3);
 	}
 
 	setTimeout(() => {
 		toggleScrollText();
 		animateScrollText();
-	}, 512);
+	}, 1024);
 </script>
 
 <style lang="scss">

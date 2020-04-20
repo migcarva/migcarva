@@ -20,6 +20,7 @@
 	onMount(() => {
 		let lAnchor = anchor !== '' ? document.querySelector(anchor) : container;
 		if (debug) lAnchor.style.border = '1px solid red';
+
 		if (typeof IntersectionObserver !== 'undefined') {
 			const rootMargin = `${bottom}px ${left}px ${top}px ${right}px`;
 			const observer = new IntersectionObserver(entries => {

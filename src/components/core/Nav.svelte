@@ -2,7 +2,7 @@
 <nav>
 	<ul>
 		{#each links as link, i}
-			<IntersectableTransition {...IntersectableTransitions('nav', 'li', i)}>
+			<IntersectableTransition options={{ x: 256, y: 0, delay: 256 + 128 * (i + 1) }}>
 				<NavItem segment={link === 'home' ? '' : link}>{link}</NavItem>
 			</IntersectableTransition>
 		{/each}
@@ -19,21 +19,6 @@
 	export let page;
 
 	const links = [ 'home', 'about', 'works', 'blog'];
-
-	const IntersectableTransitionsMobile = (section, tag, i) => {
-		const IntersectableTransitions = {
-			nav: {
-				li: {
-					top: -48,
-					options: { x: 256, duration: 1280, delay: 256 + 128 * (i + 1) },
-				},
-			},
-		};
-
-		return IntersectableTransitions[section][tag];
-	};
-
-	let IntersectableTransitions = IntersectableTransitionsMobile;
 
 	const current = writable(null);
 	setContext('nav', current);

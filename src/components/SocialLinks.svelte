@@ -1,6 +1,6 @@
 <div class={invert ? 'invert row' : 'row'}>
 	<div class="col-4">
-		<IntersectableTransition {...IntersectableTransitions('links', 'h3')}>
+		<IntersectableTransition options={{ x: 256, y: 0, duration: 1280, delay: invert ? 1024 : 256 }}>
 			<h3>On the interweb</h3>
 		</IntersectableTransition>
 	</div>
@@ -8,7 +8,7 @@
 		<ul>
 			{#each links as link, i}
 				<li>
-					<IntersectableTransition  {...IntersectableTransitions('links', 'li', i)}>
+					<IntersectableTransition options={{ x: 256, y: 0, duration: 1280, delay: liDelay(i) }}>
 						<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
 						<span>/</span>
 					</IntersectableTransition>
@@ -45,24 +45,9 @@
 		},
 	];
 
-	const IntersectableTransitionsMobile = (section, tag, i) => {
-		const IntersectableTransitions = {
-			links: {
-				h3: {
-					top: -48,
-					options: { x: 256, duration: 1280, delay: (invert ? 1024 : 256) },
-				},
-				li: {
-					top: -48,
-					options: { x: 256, duration: 1280, delay: (invert ? 1024 : 256) + 128 * (i + 1) },
-				},
-			}
-		};
-
-		return IntersectableTransitions[section][tag];
+	const liDelay = (i) => {
+		return invert ? 1024 : 256 + (128 * (i + 1));
 	};
-
-	let IntersectableTransitions = IntersectableTransitionsMobile;
 </script>
 
 <style lang="scss">

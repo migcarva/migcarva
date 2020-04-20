@@ -1,5 +1,5 @@
 <div class="button" >
-	<IntersectableTransition {...IntersectableTransitions('menu', 'button')}>
+	<IntersectableTransition options={{ x: -128, y: 0, delay: 512 }}>
 		<button on:click={() => open = !open}>
 			<Icon name={open ? 'close' : 'hamburger'} />
 		</button>
@@ -52,21 +52,6 @@
   });
 
 	const links = [ 'home', 'about', 'works', 'blog'];
-
-	const IntersectableTransitionsMobile = (section, tag, i) => {
-		const IntersectableTransitions = {
-			menu: {
-				button: {
-					top: 0,
-					options: { x: -128, duration: 1280, delay: 512 },
-				},
-			},
-		};
-
-		return IntersectableTransitions[section][tag];
-	};
-
-	let IntersectableTransitions = IntersectableTransitionsMobile;
 
 	$: $current = segment;
 </script>

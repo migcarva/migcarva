@@ -1,5 +1,5 @@
-<section>
-	<IntersectableTransition {...IntersectableTransitions('works','h2')}>
+<section id="works">
+	<IntersectableTransition anchor='#works' threshold={.5}>
 		<h2>
 			Selected work<br>
 			<span>— Both personal and professional work</span>
@@ -8,7 +8,10 @@
 	<ul class="row">
 		{#each works as work, i}
 			<li class="col col-6">
-				<IntersectableTransition {...IntersectableTransitions('works','li', i)}>
+				<IntersectableTransition
+					anchor='#works' threshold={.5}
+					options={{ x: 256, duration: 640, delay: 128 }}
+				>
 					<a href={`/works/${work.slug}.html`}>
 						<figure>
 							<div>
@@ -31,8 +34,9 @@
 			</li>
 		{/each}
 	</ul>
-		<ActionLink href="/about" options={IntersectableTransitions('works', 'a')}>Discover more</ActionLink>
-</section>
+	<ActionLink href="/works">
+		Discover more
+	</ActionLink></section>
 
 <script>
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
@@ -63,29 +67,6 @@
 			tech: 'react + python'
 		},
 	];
-
-	const IntersectableTransitionsMobile = (section, tag, i) => {
-		const IntersectableTransitions = {
-			works: {
-				h2: {
-					top: -192,
-					options: { y: 128, duration: 1280, delay: 256 },
-				},
-				li: {
-					top: -256,
-					options: { x: 256, duration: 640, delay: 128 },
-					// options: { y: 256, duration: 1280, delay: i % 2 === 0 || i > 0 ? (128 + 128 * (i - 1)) : (128 + 128 * i) },
-				},
-				a: {
-					top: -256,
-					options: { x: -256, duration: 1280, delay: 256 },
-				}
-			}
-		};
-		return IntersectableTransitions[section][tag];
-	};
-
-	let IntersectableTransitions = IntersectableTransitionsMobile;
 </script>
 
 <style lang="scss">
