@@ -1,9 +1,9 @@
-<FadeIn {...options}>
+<IntersectableTransition isFade {...options}>
 	<a class="action" href={href}><slot></slot></a>
-</FadeIn>
+</IntersectableTransition>
 
 <script>
-	import FadeIn from '../helpers/FadeIn.svelte';
+	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	export let href;
 	export let options;
 </script>
