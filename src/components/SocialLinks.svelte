@@ -1,17 +1,17 @@
 <div class={invert ? 'invert row' : 'row'}>
 	<div class="col-4">
-		<FlyUp {...flyUps('links', 'h3')}>
+		<IntersectableTransition {...IntersectableTransitions('links', 'h3')}>
 			<h3>On the interweb</h3>
-		</FlyUp>
+		</IntersectableTransition>
 	</div>
 	<div class="col-4">
 		<ul>
 			{#each links as link, i}
 				<li>
-					<FlyUp  {...flyUps('links', 'li', i)}>
+					<IntersectableTransition  {...IntersectableTransitions('links', 'li', i)}>
 						<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
 						<span>/</span>
-					</FlyUp>
+					</IntersectableTransition>
 				</li>
 			{/each}
 		</ul>
@@ -20,7 +20,7 @@
 <Disclaimer invert />
 
 <script>
-	import FlyUp from '../helpers/FlyUp.svelte';
+	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import Disclaimer from './Disclaimer.svelte';
 	import Logo from './Logo.svelte';
 
@@ -45,8 +45,8 @@
 		},
 	];
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			links: {
 				h3: {
 					top: -48,
@@ -59,10 +59,10 @@
 			}
 		};
 
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 </script>
 
 <style lang="scss">

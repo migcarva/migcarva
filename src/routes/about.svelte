@@ -3,33 +3,33 @@
 </svelte:head>
 
 <section id="intro">
-	<FlyUp {...flyUps('intro', 'h2')}>
+	<IntersectableTransition {...IntersectableTransitions('intro', 'h2')}>
 		<h2>
 			About me<br>
 			<span>— Past, present and future</span>
 		</h2>
-	</FlyUp>
-	<FlyUp {...flyUps('intro', 'img')}>
+	</IntersectableTransition>
+	<IntersectableTransition {...IntersectableTransitions('intro', 'img')}>
 		<img src="images/about_cover.png" alt="">
-	</FlyUp>
+	</IntersectableTransition>
 	<!-- <a class="freccia" href="#list"></a> -->
 </section>
 
 <section id="history">
-	<FlyUp {...flyUps('history', 'h2')}>
+	<IntersectableTransition {...IntersectableTransitions('history', 'h2')}>
 		<h2>
 			Once an architect<br>
 			<span>— Now a virtual space architect</span>
 		</h2>
-	</FlyUp>
+	</IntersectableTransition>
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<FlyUp  {...flyUps('history', 'h3')}>
+			<IntersectableTransition  {...IntersectableTransitions('history', 'h3')}>
 				<h3>My history</h3>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-8">
-			<FlyUp {...flyUps('history', 'p')}>
+			<IntersectableTransition {...IntersectableTransitions('history', 'p')}>
 				<p>
 					I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. After 2014 I made a shift in my career and entered the entrepreneurial world. I was trying to build a SaaS logistics startup, with 2 other friends. I was focused on the business and financial plans while also developing the webapp frontend architecture.
 				</p>
@@ -39,197 +39,197 @@
 				<p>
 					I've been working in all kind of companies ever since. <a href="https://eae.pt/">East Atlantic Engineering</a> is an portuguese agency, with both local portuguese clients and internacional clients. <a href="https://brpx.com/">Bright Pixel</a> is a very special company. A group of very experienced builders, creative thinkers and investors. With a big fund to invest in startups while helping them with technical knowledge, using in house talent. <a href="https://unbabel.com/">Unbabel</a> is a portuguese startup, in it's way to unicorn level, trying to 'create universal understanding'.
 				</p>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 	</div>
-	<FlyUp {...flyUps('history', 'a')}>
+	<IntersectableTransition {...IntersectableTransitions('history', 'a')}>
 		<a class="action" href="/works">Discover my work</a>
-	</FlyUp>
+	</IntersectableTransition>
 </section>
 
 <section id="expertise">
-	<FlyUp {...flyUps('expertise', 'h2')}>
+	<IntersectableTransition {...IntersectableTransitions('expertise', 'h2')}>
 		<h2>
 			Diverse Expertise<br>
 			<span>— What I bring to a team</span>
 		</h2>
-	</FlyUp>
+	</IntersectableTransition>
 		<div class="row 5a justify-content-center">
 			<div class="col-2">
-				<FlyUp  {...flyUps('expertise', 'h3')}>
+				<IntersectableTransition  {...IntersectableTransitions('expertise', 'h3')}>
 					<h3>Im an expert in</h3>
-				</FlyUp>
+				</IntersectableTransition>
 			</div>
 			<div class="col-5">
-				<FlyUp {...flyUps('expertise', 'p1')}>
+				<IntersectableTransition {...IntersectableTransitions('expertise', 'p1')}>
 					<h3>Product design</h3>
 					<p>
 						Whether it's an online platform, a mobile app, or a project that leverages augmented reality or artificial intelligence, I'll help you create your product at all stages.
 					</p>
-				</FlyUp>
+				</IntersectableTransition>
 			</div>
 			<div class="col-5">
-				<FlyUp {...flyUps('expertise', 'p1')}>
+				<IntersectableTransition {...IntersectableTransitions('expertise', 'p1')}>
 					<h3>Product development</h3>
 					<p>
 						I have been doing software architecture, mainly frontend, for a long time. I can help structuring an webstie, app or webapp in a way it's robust, scalable and optimized.
 					</p>
-				</FlyUp>
+				</IntersectableTransition>
 			</div>
 		</div>
 		<div class="row 5a justify-content-center">
 			<div class="col-2"></div>
 			<div class="col-5">
-				<FlyUp {...flyUps('expertise', 'p1')}>
+				<IntersectableTransition {...IntersectableTransitions('expertise', 'p1')}>
 					<h3>Mentoring</h3>
 					<p>
 						I was a educational tutor for half my life. I think it's one of my main soft skills, to pass knowledge and teach others. I love to mentor and learn with others.
 					</p>
-				</FlyUp>
+				</IntersectableTransition>
 			</div>
 			<div class="col-5">
-				<FlyUp {...flyUps('expertise', 'p1')}>
+				<IntersectableTransition {...IntersectableTransitions('expertise', 'p1')}>
 					<h3>Management</h3>
 					<p>
 						Organization. Processes. I can't live without them and I need to structure my work in other to succeed. I help my teams automate, centralize knowledge and reduze inefficiencies.
 					</p>
-				</FlyUp>
+				</IntersectableTransition>
 			</div>
 		</div>
 </section>
 
 <section id="skills">
-	<FlyUp {...flyUps('skills', 'h2')}>
+	<IntersectableTransition {...IntersectableTransitions('skills', 'h2')}>
 		<h2>
 			Tools of the craftsman<br>
 			<span>— What I use to build the web</span>
 		</h2>
-	</FlyUp>
+	</IntersectableTransition>
 
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<FlyUp  {...flyUps('skills', 'h3')}>
+			<IntersectableTransition  {...IntersectableTransitions('skills', 'h3')}>
 				<h3>Languages</h3>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Javascript - ES.Next</li>
 					<li>Javascript - Node.js</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Html 5</li>
 					<li>CSS3, SASS, PostCSS</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 	</div>
 
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<FlyUp  {...flyUps('skills', 'h3')}>
+			<IntersectableTransition  {...IntersectableTransitions('skills', 'h3')}>
 				<h3>MV frameworks</h3>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>React</li>
 					<li>Svelte</li>
 					<li>Single SPA</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Vue.js</li>
 					<li>jQuery</li>
 					<li>Vanila.js ;)</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 	</div>
 
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<FlyUp  {...flyUps('skills', 'h3')}>
+			<IntersectableTransition  {...IntersectableTransitions('skills', 'h3')}>
 				<h3>JS Libraries</h3>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-4">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Paper.js</li>
 					<li>GreenSock GSAP</li>
 					<li>Styled Components</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-4">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Anime.js</li>
 					<li>Scroll Magic</li>
 					<li>React 360</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 	</div>
 
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<FlyUp  {...flyUps('skills', 'h3')}>
+			<IntersectableTransition  {...IntersectableTransitions('skills', 'h3')}>
 				<h3>State Managers</h3>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-4">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Redux</li>
 					<li>Vuex</li>
 					<li>Immutable.js</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-4">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>RxJS</li>
 					<li>Redux Saga</li>
 					<li>Immer.js</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 	</div>
 
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<FlyUp  {...flyUps('skills', 'h3')}>
+			<IntersectableTransition  {...IntersectableTransitions('skills', 'h3')}>
 				<h3>Tools</h3>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-4">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Webpack</li>
 					<li>Rollup</li>
 					<li>Grunt</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		<div class="col-4">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<ul>
 					<li>Parcel</li>
 					<li>Gulp</li>
 				</ul>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 	</div>
 
@@ -237,18 +237,18 @@
 		<div class="col-2">
 		</div>
 		<div class="col-8">
-			<FlyUp {...flyUps('skills', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('skills', 'p1')}>
 				<p>And much more I've used or will!</p>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 	</div>
 </section>
 
 <script>
-	import FlyUp from '../helpers/FlyUp.svelte';
+	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			intro: {
 				h2: {
 					top: 0,
@@ -315,10 +315,10 @@
 			}
 		}
 
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 </script>
 
 <style lang="scss">

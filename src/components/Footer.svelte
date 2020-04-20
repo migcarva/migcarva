@@ -1,17 +1,17 @@
 <svelte:window bind:scrollY={y}/>
 
 <footer>
-	<FlyUp {...flyUps('footer', 'h2')}>
+	<IntersectableTransition {...IntersectableTransitions('footer', 'h2')}>
 		<h2>
 			Want to get in touch?<br>
 			<span>Use my email<br><a href="mailto:info@migcarva.com">info@migcarva</a></span>
 		</h2>
-	</FlyUp>
+	</IntersectableTransition>
 	<SocialLinks />
 </footer>
 
 <script>
-	import FlyUp from '../helpers/FlyUp.svelte';
+	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import SocialLinks from './SocialLinks.svelte';
 	const links = [
 		{
@@ -35,8 +35,8 @@
 	let y;
 	let year = new Date().getFullYear();
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			footer: {
 				h2: {
 					top: -48,
@@ -53,10 +53,10 @@
 			}
 		};
 
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 </script>
 
 <style lang="scss">

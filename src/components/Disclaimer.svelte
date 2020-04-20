@@ -1,10 +1,10 @@
 <div class="{invert ? 'isMenu disclaimer' : 'disclaimer'}">
-	<FlyUp {...flyUps('disclaimer', 'h4')}>
+	<IntersectableTransition {...IntersectableTransitions('disclaimer', 'h4')}>
 		<h4>{year} | migcarva.com ™</h4>
-	</FlyUp>
+	</IntersectableTransition>
 	{#if !invert}
 		<div class="logo" on:click={goToTop}>
-			<FlyUp {...flyUps('disclaimer', 'logo')}>
+			<IntersectableTransition {...IntersectableTransitions('disclaimer', 'logo')}>
 				<div class="top">
 					<span>go to top</span>
 				</div>
@@ -14,20 +14,20 @@
 						<path d="M10 10H14V21L10 17V10Z" fill="black"/>
 					</svg>
 				</div>
-			</FlyUp>
+			</IntersectableTransition>
 		</div>
 		{/if}
 </div>
 
 <script>
-	import FlyUp from '../helpers/FlyUp.svelte';
+	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
 	export let invert;
 
 	let year = new Date().getFullYear();
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			disclaimer: {
 				h4: {
 					top: -32,
@@ -40,10 +40,10 @@
 			}
 		};
 
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 
 	function goToTop() {
 		window.scrollTo({

@@ -28,26 +28,26 @@
 	</IntersectableTransition>
 	<div class="row 5a justify-content-center">
 		<div class="col-2">
-			<IntersectableTransition {...flyUps('about', 'h3')}>
+			<IntersectableTransition {...IntersectableTransitions('about', 'h3')}>
 				<h3>About me</h3>
 			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<IntersectableTransition {...flyUps('about', 'p1')}>
+			<IntersectableTransition {...IntersectableTransitions('about', 'p1')}>
 				<p>
 					I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. I spend a lot of my time programming. Not just for work, but as a general hobby. I have a strong passion for learning new things, and I’m always taking time out of my day to pick up something new.
 				</p>
 			</IntersectableTransition>
 		</div>
 		<div class="col-5">
-			<IntersectableTransition {...flyUps('about', 'p2')}>
+			<IntersectableTransition {...IntersectableTransitions('about', 'p2')}>
 				<p>
 					I'm currently working as a senior frontend developer at <a href="https://unbabel.com">Unbabel</a>, where I'm part of the Language Operations Team, a crucial team supporting Unbabel's clients. I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.
 				</p>
 			</IntersectableTransition>
 		</div>
 	</div>
-	<ActionLink href="/about" options={flyUps('about', 'a')}>Discover more</ActionLink>
+	<ActionLink href="/about" options={IntersectableTransitions('about', 'a')}>Discover more</ActionLink>
 </section>
 
 <WorksList />
@@ -59,10 +59,9 @@
 	import WorksList from '../components/WorksList.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
-	import FadeIn from '../helpers/FadeIn.svelte';
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			about: {
 				h2: {
 					anchor: '#about',
@@ -92,10 +91,10 @@
 			}
 		}
 
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 
 	let showScrollText = false;
 

@@ -1,14 +1,14 @@
 <section>
-	<FlyUp {...flyUps('works','h2')}>
+	<IntersectableTransition {...IntersectableTransitions('works','h2')}>
 		<h2>
 			Selected work<br>
 			<span>— Both personal and professional work</span>
 		</h2>
-	</FlyUp>
+	</IntersectableTransition>
 	<ul class="row">
 		{#each works as work, i}
 			<li class="col col-6">
-				<FlyUp {...flyUps('works','li', i)}>
+				<IntersectableTransition {...IntersectableTransitions('works','li', i)}>
 					<a href={`/works/${work.slug}.html`}>
 						<figure>
 							<div>
@@ -27,15 +27,15 @@
 							</figcaption>
 						</figure>
 					</a>
-				</FlyUp>
+				</IntersectableTransition>
 			</li>
 		{/each}
 	</ul>
-		<ActionLink href="/about" options={flyUps('works', 'a')}>Discover more</ActionLink>
+		<ActionLink href="/about" options={IntersectableTransitions('works', 'a')}>Discover more</ActionLink>
 </section>
 
 <script>
-	import FlyUp from '../helpers/FlyUp.svelte';
+	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import ActionLink from './ActionLink.svelte';
 	let works = [
 		{
@@ -64,8 +64,8 @@
 		},
 	];
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			works: {
 				h2: {
 					top: -192,
@@ -82,10 +82,10 @@
 				}
 			}
 		};
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 </script>
 
 <style lang="scss">

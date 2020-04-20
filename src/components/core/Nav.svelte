@@ -2,9 +2,9 @@
 <nav>
 	<ul>
 		{#each links as link, i}
-			<FlyUp {...flyUps('nav', 'li', i)}>
+			<IntersectableTransition {...IntersectableTransitions('nav', 'li', i)}>
 				<NavItem segment={link === 'home' ? '' : link}>{link}</NavItem>
-			</FlyUp>
+			</IntersectableTransition>
 		{/each}
 	</ul>
 </nav>
@@ -13,15 +13,15 @@
 	import { onMount, setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 	import NavItem from './NavItem.svelte';
-	import FlyUp from '../../helpers/FlyUp.svelte';
+	import IntersectableTransition from '../../helpers/IntersectableTransition.svelte';
 
 	export let segment;
 	export let page;
 
 	const links = [ 'home', 'about', 'works', 'blog'];
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			nav: {
 				li: {
 					top: -48,
@@ -30,10 +30,10 @@
 			},
 		};
 
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 
 	const current = writable(null);
 	setContext('nav', current);

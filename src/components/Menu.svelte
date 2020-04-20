@@ -1,9 +1,9 @@
 <div class="button" >
-	<FlyUp {...flyUps('menu', 'button')}>
+	<IntersectableTransition {...IntersectableTransitions('menu', 'button')}>
 		<button on:click={() => open = !open}>
 			<Icon name={open ? 'close' : 'hamburger'} />
 		</button>
-	</FlyUp>
+	</IntersectableTransition>
 </div>
 
 {#if open}
@@ -25,7 +25,7 @@
 	import { quintOut } from 'svelte/easing';
 	import { slide, fade, fly } from 'svelte/transition';
 
-	import FlyUp from '../helpers/FlyUp.svelte';
+	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import Hoverable from '../helpers/Hoverable.svelte';
 	import Logo from './Logo.svelte';
 	import SocialLinks from './SocialLinks.svelte';
@@ -53,8 +53,8 @@
 
 	const links = [ 'home', 'about', 'works', 'blog'];
 
-	const flyUpsMobile = (section, tag, i) => {
-		const flyUps = {
+	const IntersectableTransitionsMobile = (section, tag, i) => {
+		const IntersectableTransitions = {
 			menu: {
 				button: {
 					top: 0,
@@ -63,10 +63,10 @@
 			},
 		};
 
-		return flyUps[section][tag];
+		return IntersectableTransitions[section][tag];
 	};
 
-	let flyUps = flyUpsMobile;
+	let IntersectableTransitions = IntersectableTransitionsMobile;
 
 	$: $current = segment;
 </script>
