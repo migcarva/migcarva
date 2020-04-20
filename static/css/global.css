@@ -137,13 +137,6 @@ a.action {
 	transition: 0.3s;
 }
 
-section {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: var(--sections-bottom-margin);
-	position: relative;
-}
-
 ul {
 	list-style: none;
 	margin: 0;
