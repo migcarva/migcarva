@@ -1,10 +1,10 @@
-<div class="{invert ? 'isMenu disclaimer' : 'disclaimer'}">
-	<IntersectableTransition options={{ delay: invert ? 1024 : 256 }}>
+<div class:isMenu={$menuIsOpen}>
+	<IntersectableTransition options={{ delay: $menuIsOpen ? 1024 : 256 }}>
 		<h4>{year} | migcarva.com ™</h4>
 	</IntersectableTransition>
-	{#if !invert}
+	{#if !$menuIsOpen}
 		<div class="logo" on:click={goToTop}>
-			<IntersectableTransition options={{ delay: invert ? 1024 : 256 }}>
+			<IntersectableTransition options={{ delay: $menuIsOpen ? 1024 : 256 }}>
 				<div class="top">
 					<span>go to top</span>
 				</div>
@@ -21,8 +21,7 @@
 
 <script>
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
-
-	export let invert;
+	import { menuIsOpen } from '../store.js';
 
 	let year = new Date().getFullYear();
 
@@ -35,7 +34,7 @@
 </script>
 
 <style lang="scss">
-	.disclaimer {
+	div {
 		display: flex;
 		justify-content: space-between;
 		margin: 6em 0 0;

@@ -1,6 +1,6 @@
-<div class={invert ? 'invert row' : 'row'}>
+<div class={$menuIsOpen ? 'invert row' : 'row'}>
 	<div class="col-4">
-		<IntersectableTransition options={{ x: 256, y: 0, duration: 1280, delay: invert ? 1024 : 256 }}>
+		<IntersectableTransition options={{ x: 256, y: 0, duration: 1280, delay: $menuIsOpen ? 1024 : 256 }}>
 			<h3>On the interweb</h3>
 		</IntersectableTransition>
 	</div>
@@ -17,14 +17,14 @@
 		</ul>
 	</div>
 </div>
-<Disclaimer invert />
+<Disclaimer />
 
 <script>
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import Disclaimer from './Disclaimer.svelte';
 	import Logo from './Logo.svelte';
 
-	export let invert;
+	import { menuIsOpen } from '../store.js';
 
 	const links = [
 		{
@@ -46,7 +46,7 @@
 	];
 
 	const liDelay = (i) => {
-		return invert ? 1024 : 256 + (128 * (i + 1));
+		return menuIsOpen ? 1024 : 256 + (128 * (i + 1));
 	};
 </script>
 

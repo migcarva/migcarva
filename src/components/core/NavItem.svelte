@@ -20,10 +20,6 @@
 
 	export let segment = null;
 	const current = getContext('nav');
-	console.log(current);
-	console.log(segment);
-
-
 </script>
 
 <style lang="scss">

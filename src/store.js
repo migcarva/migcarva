@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-function createMenuOpen() {
+function createMenuIsOpen() {
   const { subscribe, set, update } = writable(false);
 
   return {
@@ -10,4 +10,4 @@ function createMenuOpen() {
   };
 }
 
-export const menuOpen = createMenuOpen();
+export const menuIsOpen = createMenuIsOpen();

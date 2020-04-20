@@ -1,19 +1,19 @@
 <div class="button" >
 	<IntersectableTransition options={{ x: -128, y: 0, delay: 512 }}>
-		<button on:click={() => open = !open}>
-			<Icon name={open ? 'close' : 'hamburger'} />
+		<button on:click={menuIsOpen.toggle}>
+			<Icon name={$menuIsOpen ? 'close' : 'hamburger'} />
 		</button>
 	</IntersectableTransition>
 </div>
 
-{#if open}
+{#if $menuIsOpen}
 	<section transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
 		<div>
 			<div class="logo">
 				<Logo invert />
 			</div>
 			<Nav {segment} {page} />
-			<SocialLinks invert />
+			<SocialLinks />
 		</div>
 	</section>
 {/if}
@@ -32,15 +32,10 @@
 	import Icon from './core/Icon.svelte';
 	import Nav from './core/Nav.svelte';
 
+	import { menuIsOpen } from '../store.js';
+
 	export let segment;
 	export let page;
-
-	let open = false;
-	let visible = true;
-
-	page.subscribe(() => {
-		open = false;
-	});
 
 	const current = writable(null);
 	setContext('nav', current);
