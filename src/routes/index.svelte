@@ -26,7 +26,7 @@
 			<span>— I enjoy simple, concise and readable code</span>
 		</h2>
 	</FlyUp>
-	<!-- <div class="row 5a justify-content-center">
+	<div class="row 5a justify-content-center">
 		<div class="col-2">
 			<FlyUp {...flyUps('about', 'h3')}>
 				<h3>About me</h3>
@@ -46,7 +46,7 @@
 				</p>
 			</FlyUp>
 		</div>
-	</div> -->
+	</div>
 	<ActionLink href="/about" options={flyUps('about', 'a')}>Discover more</ActionLink>
 </section>
 
@@ -63,7 +63,6 @@
 
 	const flyUpsMobile = (section, tag, i) => {
 		const flyUps = {
-
 			about: {
 				h2: {
 					anchor: '#about',

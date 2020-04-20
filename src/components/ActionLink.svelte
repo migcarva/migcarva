@@ -1,5 +1,5 @@
 <FadeIn {...options}>
-	<a class="action" href={href}><slot></slot>></a>
+	<a class="action" href={href}><slot></slot></a>
 </FadeIn>
 
 <script>
