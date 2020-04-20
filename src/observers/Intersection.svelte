@@ -6,8 +6,8 @@
 	import { onMount } from 'svelte';
 
 	export let once = false;
-	export let debug;
-	export let anchor;
+	export let debug = false;
+	export let anchor = '';
 	export let threshold = 0;
 	export let top = 0;
 	export let bottom = 0;
@@ -18,7 +18,7 @@
 	let container;
 
 	onMount(() => {
-		let lAnchor = anchor !== undefined ? document.querySelector(anchor) : container;
+		let lAnchor = anchor !== '' ? document.querySelector(anchor) : container;
 		if (debug) lAnchor.style.border = '1px solid red';
 		if (typeof IntersectionObserver !== 'undefined') {
 			const rootMargin = `${bottom}px ${left}px ${top}px ${right}px`;

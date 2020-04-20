@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section id="hero">
-	<FlyUp options={ y: 128, duration: 1280, delay: 0 }>
+	<FlyUp options={{ y: 128, duration: 1280, delay: 0 }}>
 		<h2>
 			I'm Miguel Carvalho<br>
 			<span>— Perpetually curious and forever learning</span>
@@ -20,15 +20,13 @@
 {/if}
 
 <section id="about">
-	<FlyUp anchor='#about',
-		threshold={.5},
-		options={ y: 128, duration: 1280, delay: 0 }>
+	<FlyUp anchor='#about' threshold={.5} options={{ y: 128, duration: 1280, delay: 0 }}>
 		<h2>
 			A frontend developer from Lisbon<br>
 			<span>— I enjoy simple, concise and readable code</span>
 		</h2>
 	</FlyUp>
-	<div class="row 5a justify-content-center">
+	<!-- <div class="row 5a justify-content-center">
 		<div class="col-2">
 			<FlyUp {...flyUps('about', 'h3')}>
 				<h3>About me</h3>
@@ -48,14 +46,15 @@
 				</p>
 			</FlyUp>
 		</div>
-	</div>
-	<ActionLink href="/about" options={flyUps('about', 'a')} />
+	</div> -->
+	<ActionLink href="/about" options={flyUps('about', 'a')}>Discover more</ActionLink>
 </section>
 
 <WorksList />
 
 <script>
 	import { fade, fly } from 'svelte/transition';
+	import { bounceIn } from 'svelte/easing';
 	import Logo from '../components/Logo.svelte';
 	import WorksList from '../components/WorksList.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
@@ -89,7 +88,7 @@
 				a: {
 					anchor: '#about',
 					threshold: .95,
-					options: { duration: 1280, delay: 512 },
+					options: { duration: 640, delay: 0, easing: bounceIn },
 				}
 			}
 		}

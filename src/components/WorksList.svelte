@@ -31,11 +31,12 @@
 			</li>
 		{/each}
 	</ul>
-	<ActionLink href="/works" options={flyUps('works', 'a')} />
+		<ActionLink href="/about" options={flyUps('works', 'a')}>Discover more</ActionLink>
 </section>
 
 <script>
 	import FlyUp from '../helpers/FlyUp.svelte';
+	import ActionLink from './ActionLink.svelte';
 	let works = [
 		{
 			slug: 'work',
@@ -121,10 +122,6 @@
 		&:link,
 		&:visited {
 			text-decoration: none;
-		}
-
-		&.action {
-			margin-top: 0;
 		}
 	}
 

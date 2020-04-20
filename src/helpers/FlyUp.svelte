@@ -9,9 +9,9 @@
 <script>
 	import { fly } from 'svelte/transition';
   import Intersection from '../observers/Intersection.svelte';
-  export let top;
-  export let anchor;
-  export let threshold;
+  export let top = 0;
+  export let anchor = '';
+  export let threshold = 0;
   export let options;
-  export let debug;
+  export let debug = false;
 </script>
