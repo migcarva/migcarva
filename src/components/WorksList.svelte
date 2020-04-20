@@ -31,9 +31,7 @@
 			</li>
 		{/each}
 	</ul>
-	<FlyUp {...flyUps('works','a')}>
-		<a class="action" href="/works">Discover more</a>
-	</FlyUp>
+	<ActionLink href="/works" options={flyUps('works', 'a')} />
 </section>
 
 <script>
@@ -90,6 +88,11 @@
 </script>
 
 <style lang="scss">
+	section {
+		min-height: 100vh;
+		padding-top: 25vh;
+	}
+
 	li {
 		font-size: var(--font-base);
     transition: transform .3s;

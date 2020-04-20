@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section id="hero">
-	<FlyUp {...flyUps('hero', 'h2')}>
+	<FlyUp options={ y: 128, duration: 1280, delay: 0 }>
 		<h2>
 			I'm Miguel Carvalho<br>
 			<span>— Perpetually curious and forever learning</span>
@@ -20,7 +20,9 @@
 {/if}
 
 <section id="about">
-	<FlyUp {...flyUps('about', 'h2')}>
+	<FlyUp anchor='#about',
+		threshold={.5},
+		options={ y: 128, duration: 1280, delay: 0 }>
 		<h2>
 			A frontend developer from Lisbon<br>
 			<span>— I enjoy simple, concise and readable code</span>
@@ -47,9 +49,7 @@
 			</FlyUp>
 		</div>
 	</div>
-	<FlyUp {...flyUps('about', 'a')}>
-		<a class="action" href="/about">Discover more</a>
-	</FlyUp>
+	<ActionLink href="/about" options={flyUps('about', 'a')} />
 </section>
 
 <WorksList />
@@ -58,16 +58,13 @@
 	import { fade, fly } from 'svelte/transition';
 	import Logo from '../components/Logo.svelte';
 	import WorksList from '../components/WorksList.svelte';
+	import ActionLink from '../components/ActionLink.svelte';
 	import FlyUp from '../helpers/FlyUp.svelte';
+	import FadeIn from '../helpers/FadeIn.svelte';
 
 	const flyUpsMobile = (section, tag, i) => {
 		const flyUps = {
-			hero: {
-				h2: {
-					top: 0,
-					options: { y: 128, duration: 1280, delay: 0 },
-				},
-			},
+
 			about: {
 				h2: {
 					anchor: '#about',
@@ -82,17 +79,17 @@
 				p1: {
 					anchor: '#about',
 					threshold: .75,
-					options: { y: 256, duration: 1280, delay: 256},
+					options: { y: 128, duration: 1280, delay: 256},
 				},
 				p2: {
 					anchor: '#about',
 					threshold: .75,
-					options: { y: 256, duration: 1280, delay: 384 },
+					options: { y: 128, duration: 1280, delay: 384 },
 				},
 				a: {
 					anchor: '#about',
 					threshold: .95,
-					options: { x: -256, duration: 1280, delay: 0 },
+					options: { duration: 1280, delay: 512 },
 				}
 			}
 		}
@@ -111,13 +108,13 @@
 	function animateScrollText() {
 		setTimeout(() => {
 			toggleScrollText();
-		}, 4800);
+		}, 1280);
 	}
 
 	setTimeout(() => {
 		toggleScrollText();
 		animateScrollText();
-	}, 1280);
+	}, 512);
 </script>
 
 <style lang="scss">
