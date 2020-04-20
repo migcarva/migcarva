@@ -207,12 +207,6 @@ button {
 	max-width:100%;
 }
 
-#hero > div:last-child {
-	flex: 1;
-	display: flex;
-	align-items: center
-}
-
 .scroll div {
 	display: flex;
 	justify-content: center;
