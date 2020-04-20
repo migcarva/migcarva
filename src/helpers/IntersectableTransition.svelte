@@ -32,6 +32,8 @@
 
   const fadeOptions = {
     //  easing: cubicOut,
+    duration: 640,
+    delay: 1024,
     ...options
   };
 </script>

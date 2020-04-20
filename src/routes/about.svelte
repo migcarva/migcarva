@@ -42,7 +42,7 @@
 			</IntersectableTransition>
 		</div>
 	</div>
-	<ActionLink href="/works" anchor="#about" threshold={.75}>
+	<ActionLink href="/works" anchor="#history" threshold={.75}>
 		Discover my work
 	</ActionLink>
 </section>

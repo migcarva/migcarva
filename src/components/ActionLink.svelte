@@ -1,4 +1,4 @@
-<IntersectableTransition isFade {...lOptions}>
+<IntersectableTransition {...lOptions}>
 	<a class="action" href={href}><slot></slot></a>
 </IntersectableTransition>
 
@@ -9,10 +9,11 @@
 	export let threshold = 0;
 
 	const lOptions = {
-		options: { duration: 640, delay: 1024 },
-		...anchor,
-		...threshold,
-  };
+		isFade: true,
+		anchor: anchor,
+		threshold,
+	};
+
 </script>
 
 <style lang="scss">
