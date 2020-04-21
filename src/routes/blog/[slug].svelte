@@ -1,3 +1,37 @@
+<svelte:head>
+	<title>migcarva. {post.title}</title>
+</svelte:head>
+
+<section id="{post.slug}">
+	<IntersectableTransition>
+		<h2>
+			{post.title}<br>
+			<span>tl:dr — {@html post.summary}</span>
+		</h2>
+	</IntersectableTransition>
+	<div class="row">
+		<div class="col-12">
+			<a href="/blog">go back</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-8">
+			<div class='content'>
+				{@html post.html}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<a href="/blog">go back</a>
+			<a href="/blog/{post.next}">next</a>
+		</div>
+	</div>
+
+</section>
+
+
+
 <script context="module">
 	export async function preload({ params, query }) {
 		// the `slug` parameter is available because
@@ -14,10 +48,31 @@
 </script>
 
 <script>
+	import IntersectableTransition from '../../helpers/IntersectableTransition.svelte';
+
 	export let post;
 </script>
 
-<style>
+<style lang="scss">
+	section {
+		padding-top: 25vh;
+
+		h2 {
+			span {
+				font-size: calc(var(--font-h3) * 0.75);
+			}
+		}
+		a {
+			display: block;
+			float: right;
+			transition: 0.3s;
+			margin-bottom: 2em;
+
+			&:hover {
+				color: var(--action);
+			}
+		}
+	}
 	/*
 		By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
@@ -26,10 +81,17 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
-	.content :global(h2) {
+	.content :global(h3) {
 		font-size: 1.4em;
 		font-weight: 500;
 	}
+
+	.content :global(p) {
+		font-size: var(--font-blog-p);
+		line-height: var(--line-height-big);
+		margin-bottom: 2rem;
+	}
+
 
 	.content :global(pre) {
 		background-color: #f9f9f9;
@@ -45,20 +107,12 @@
 	}
 
 	.content :global(ul) {
-		line-height: 1.5;
+		line-height: var(--line-height-small);
+		list-style: circle;
+		margin-bottom: 2rem;
 	}
 
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
 	}
 </style>
-
-<svelte:head>
-	<title>{post.title}</title>
-</svelte:head>
-
-<h1>{post.title}</h1>
-
-<div class='content'>
-	{@html post.html}
-</div>

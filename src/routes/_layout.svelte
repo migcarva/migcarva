@@ -46,12 +46,14 @@
 		--font-h2: 2em;
 		--font-h3: var(--font-base);
 		--font-h4: 0.80em;
+		--font-blog-p: 1.3em;
 		--font-normal: 300;
 		--font-medium: 400;
 		--font-bold: 600;
 		--font-bolder: 700;
 		--line-height-small: 1;
 		--line-height-base: 1.5;
+		--line-height-big: 1.7;
 		--letter-spacing-small: -2px;
 		--letter-spacing-base: 0;
 

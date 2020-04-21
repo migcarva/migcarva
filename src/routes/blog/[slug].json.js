@@ -1,8 +1,12 @@
 import posts from './_posts.js';
 
 const lookup = new Map();
-posts.forEach(post => {
-	lookup.set(post.slug, JSON.stringify(post));
+posts.forEach((post, i) => {
+	const j = i >= posts.length - 1 ? 0 : i + 1;
+	console.log(j);
+
+	const lPost = { ...post, next: posts[j].slug};
+	lookup.set(post.slug, JSON.stringify(lPost));
 });
 
 export function get(req, res, next) {
