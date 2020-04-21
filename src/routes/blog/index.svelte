@@ -57,7 +57,10 @@
 		line-height: 1.5;
 
 		li {
-			margin-bottom: 6rem;
+			margin-bottom: 2rem;
+			@media (min-width: 48em) {
+				margin-bottom: 4rem;
+			}
 
 			h3 {
 				font-size: calc(var(--font-h3) * 1.35);
