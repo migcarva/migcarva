@@ -26,7 +26,7 @@
 			<span>— I enjoy simple, concise and readable code</span>
 		</h2>
 	</IntersectableTransition>
-	<div class="row 5a justify-content-center">
+	<div class="row">
 		<div class="col-2">
 			<IntersectableTransition anchor='#about' threshold={.75}>
 				<h3>About me</h3>

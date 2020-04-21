@@ -6,7 +6,7 @@
 	<IntersectableTransition>
 		<h2>
 			My thoughts<br>
-			<span>— Perpetually curious and forever learning</span>
+			<span>— Ideas, writtings and sometimes rants!</span>
 		</h2>
 	</IntersectableTransition>
 
@@ -16,7 +16,20 @@
 					tell Sapper to load the data for the page as soon as
 					the user hovers over the link or taps it, instead of
 					waiting for the 'click' event -->
-			<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
+			<li id="{post.slug}">
+				<IntersectableTransition anchor="#{post.slug}" threshold={1}>
+					<a rel='prefetch' href='blog/{post.slug}'>
+						<div class="row">
+							<div class="col-8">
+								<h3>{post.title}</h3>
+							</div>
+							<div class="col-8">
+								<p>{@html post.summary}</p>
+							</div>
+						</div>
+					</a>
+				</IntersectableTransition>
+			</li>
 		{/each}
 	</ul>
 </section>
@@ -42,5 +55,13 @@
 	ul {
 		margin: 0 0 1em 0;
 		line-height: 1.5;
+
+		li {
+			margin-bottom: 6rem;
+
+			h3 {
+				font-size: calc(var(--font-h3) * 1.35);
+			}
+		}
 	}
 </style>

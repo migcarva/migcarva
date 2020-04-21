@@ -22,7 +22,7 @@
 			<span>— Now a virtual space architect</span>
 		</h2>
 	</IntersectableTransition>
-	<div class="row 5a justify-content-center">
+	<div class="row">
 		<div class="col-2">
 			<IntersectableTransition anchor='#history' threshold={.5} options={{ delay: 256 }}>
 				<h3>My history</h3>
@@ -54,7 +54,7 @@
 			<span>— What I bring to a team</span>
 		</h2>
 	</IntersectableTransition>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2">
 				<IntersectableTransition anchor='#expertise' threshold={.5} options={{ delay: 0 }}>
 					<h3>I'm good at</h3>
@@ -77,7 +77,7 @@
 				</IntersectableTransition>
 			</div>
 		</div>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2"></div>
 			<div class="col-5">
 				<IntersectableTransition  anchor='#expertise' threshold={.65} options={{ delay: 256 * 2 }}>
@@ -107,7 +107,7 @@
 	</IntersectableTransition>
 
 	<IntersectableTransition anchor='#skills' threshold={.3} options={{ delay: 256 }}>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2">
 					<h3>Languages</h3>
 			</div>
@@ -127,7 +127,7 @@
 	</IntersectableTransition>
 
 	<IntersectableTransition anchor='#skills' threshold={.3} options={{ delay: 256 * 2 }}>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2">
 				<h3>MV frameworks</h3>
 			</div>
@@ -149,7 +149,7 @@
 	</IntersectableTransition>
 
 	<IntersectableTransition anchor='#skills' threshold={.3} options={{ delay: 256 * 3 }}>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2">
 				<h3>JS Libraries</h3>
 			</div>
@@ -171,7 +171,7 @@
 	</IntersectableTransition>
 
 	<IntersectableTransition anchor='#skills' threshold={.3} options={{ delay: 256 * 4 }}>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2">
 				<h3>State Managers</h3>
 			</div>
@@ -193,7 +193,7 @@
 	</IntersectableTransition>
 
 	<IntersectableTransition anchor='#skills' threshold={.3} options={{ delay: 256 * 5 }}>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2">
 				<h3>Tools</h3>
 			</div>
@@ -214,7 +214,7 @@
 	</IntersectableTransition>
 
 	<IntersectableTransition anchor='#skills' threshold={.3} options={{ delay: 256 * 10 }}>
-		<div class="row 5a justify-content-center">
+		<div class="row">
 			<div class="col-2">
 			</div>
 			<div class="col-8">
