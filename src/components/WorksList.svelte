@@ -1,5 +1,5 @@
 <section id={sectionId}>
-	<IntersectableTransition anchor={`#${sectionId}`} threshold={.5}>
+	<IntersectableTransition>
 		{#if isSelected}
 			<h2>
 				Selected work<br>
@@ -14,20 +14,25 @@
 	</IntersectableTransition>
 	<ul class="row">
 		{#each works as work, i}
-			<li class="col col-6">
-				<IntersectableTransition
-					anchor={`#${sectionId}`} threshold={.5}
-					options={{ x: 256, duration: 640, delay: 128 }}
-				>
-					<a href={`/works/${work.slug}.html`}>
-						<figure>
-							<div>
+			<li class="col col-6" id="work-{i}">
+				<a href={`/works/${work.slug}.html`}>
+					<figure>
+						<div>
+							<IntersectableTransition
+								anchor="#work-{i}" threshold={.25}
+								options={{ y: 256, duration: 1280, delay: 256 + 128 * i}}
+							>
 								<img
 									srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
 									alt={work.title}
 								/>
 								<p class="hover">view more</p>
-							</div>
+							</IntersectableTransition>
+						</div>
+						<IntersectableTransition
+							anchor="#work-{i}" threshold={.25} isFade
+							options={{ duration: 1920, delay: 256 + 256 * i}}
+						>
 							<figcaption>
 								<h3>{work.title}</h3>
 								<div>
@@ -35,9 +40,9 @@
 									<p>{work.tech}</p>
 								</div>
 							</figcaption>
-						</figure>
-					</a>
-				</IntersectableTransition>
+						</IntersectableTransition>
+					</figure>
+				</a>
 			</li>
 		{/each}
 	</ul>
@@ -102,10 +107,10 @@
 	figure {
 		margin: 0;
 		position: relative;
+		height: 640px;
 
 		div {
 			width: 100%;
-			max-height: 640px;
 			height: auto;
 			overflow: hidden;
 			margin-bottom: 1.2em;
