@@ -20,21 +20,20 @@
 
 <style lang="scss">
 	#top {
-		position: absolute;
-		top: 2rem;
-		left: 15%;
-		width: 2rem;
-		height: 2rem;
+		width: 100%;
+		max-width: var(--breakpoint-xl);
+		padding: 2rem 10% 0 15%;
+		margin: 0 auto;
 		z-index: 10;
 		@media (min-width: 48em) {
-			top: 4rem;
-			left: 10%;
+			padding: 2rem 10% 0 10%;
 		}
 
 		a {
+			position: absolute;
 			display: block;
-			width: 100%;
-			height: 100%;
+			width: 2rem;
+			height: 2rem;
 			transition: transform .3s var(--ease-for-hover);
 
 			&:hover {
