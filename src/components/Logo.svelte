@@ -1,5 +1,5 @@
 <div id="top">
-	<div>
+	<a href='/'>
 		<svg
 			width="128" height="128"
 			viewBox="0 0 128 128" fill="none"
@@ -11,7 +11,7 @@
 				<path d="M91.4286 18.2857L128 0V128H109.714V29.7143L91.4286 38.8571V18.2857Z"/>
 			</g>
 		</svg>
-	</div>
+	</a>
 </div>
 
 <script>
@@ -31,7 +31,7 @@
 			left: 10%;
 		}
 
-		div {
+		a {
 			display: block;
 			width: 100%;
 			height: 100%;
