@@ -59,7 +59,6 @@
 
 
 <script>
-	import { onMount, onDestroy } from 'svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import ActionLink from './ActionLink.svelte';
 
@@ -69,9 +68,6 @@
 	const sectionId = isSelected ? 'selected-works' : 'works' ;
 
 	let list = works;
-	onDestroy(() => {
-		let list;
-	})
 </script>
 
 <style lang="scss">
