@@ -231,7 +231,6 @@
 
 <style lang="scss">
 	section {
-		min-height: 100vh;
 		padding-top: 25vh;
 	}
 	#intro {
