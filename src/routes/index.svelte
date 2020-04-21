@@ -52,7 +52,7 @@
 	</ActionLink>
 </section>
 
-<WorksList />
+<WorksList isSelected works={selectedWorks} />
 
 <script>
 	import { fade, fly } from 'svelte/transition';
@@ -78,6 +78,33 @@
 		toggleScrollText();
 		animateScrollText();
 	}, 1024);
+
+	let selectedWorks = [
+		{
+			slug: 'work',
+			title: 'Work 1',
+			client: 'Client A',
+			tech: 'react + python'
+		},
+		{
+			slug: 'work',
+			title: 'Work Adasd',
+			client: 'Client A',
+			tech: 'react + python'
+		},
+		{
+			slug: 'work',
+			title: 'Work lsdfj',
+			client: 'Client A',
+			tech: 'react + python'
+		},
+		{
+			slug: 'work',
+			title: 'Work for Business',
+			client: 'Client A',
+			tech: 'react + python'
+		},
+	];
 </script>
 
 <style lang="scss">

@@ -1,15 +1,22 @@
-<section id="works">
-	<IntersectableTransition anchor='#works' threshold={.5}>
-		<h2>
-			Selected work<br>
-			<span>— Both personal and professional work</span>
-		</h2>
+<section id={sectionId}>
+	<IntersectableTransition anchor={`#${sectionId}`} threshold={.5}>
+		{#if isSelected}
+			<h2>
+				Selected work<br>
+				<span>— A curated list of my best work</span>
+			</h2>
+		{:else}
+			<h2>
+				All my work<br>
+				<span>— Both personal and professional work</span>
+			</h2>
+		{/if}
 	</IntersectableTransition>
 	<ul class="row">
 		{#each works as work, i}
 			<li class="col col-6">
 				<IntersectableTransition
-					anchor='#works' threshold={.5}
+					anchor={`#${sectionId}`} threshold={.5}
 					options={{ x: 256, duration: 640, delay: 128 }}
 				>
 					<a href={`/works/${work.slug}.html`}>
@@ -34,39 +41,22 @@
 			</li>
 		{/each}
 	</ul>
-	<ActionLink href="/works">
-		Discover more
-	</ActionLink></section>
+	{#if isSelected}
+		<ActionLink href="/works">
+			Discover more
+		</ActionLink>
+	{/if}
+</section>
+
 
 <script>
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import ActionLink from './ActionLink.svelte';
-	let works = [
-		{
-			slug: 'work',
-			title: 'Work 1',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work Adasd',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work lsdfj',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work for Business',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-	];
+
+	export let works;
+	export let isSelected = false;
+
+	const sectionId = isSelected ? 'selected-works' : 'works' ;
 </script>
 
 <style lang="scss">
