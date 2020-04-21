@@ -13,13 +13,13 @@
 		{/if}
 	</IntersectableTransition>
 	<ul class="row">
-		{#each works as work, i}
-			<li class="col col-6" id="work-{i}">
+		{#each list as work, i}
+			<li class="col col-6" id="{work.slug}-{i}">
 				<a href={`/works/${work.slug}.html`}>
 					<figure>
 						<div>
 							<IntersectableTransition
-								anchor="#work-{i}" threshold={.25}
+								anchor="#{work.slug}-{i}" threshold={.25}
 								options={{ y: 256, duration: 1280, delay: 256 + 128 * i}}
 							>
 								<img
@@ -55,6 +55,7 @@
 
 
 <script>
+	import { onMount, onDestroy } from 'svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import ActionLink from './ActionLink.svelte';
 
@@ -62,6 +63,15 @@
 	export let isSelected = false;
 
 	const sectionId = isSelected ? 'selected-works' : 'works' ;
+
+	let list = [];
+	onMount(() => {
+		list = works;
+	});
+
+	onDestroy(() => {
+		list = [];
+	});
 </script>
 
 <style lang="scss">
@@ -107,11 +117,11 @@
 	figure {
 		margin: 0;
 		position: relative;
-		height: 640px;
+		min-height: 70vh;
 
-		div {
+		> div {
 			width: 100%;
-			height: auto;
+			height: 100%;
 			overflow: hidden;
 			margin-bottom: 1.2em;
 

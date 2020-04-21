@@ -10,13 +10,13 @@
 	let works = [
 		{
 			slug: 'work',
-			title: 'Work 1',
+			title: 'Work Adasd',
 			client: 'Client A',
 			tech: 'react + python'
 		},
 		{
 			slug: 'work',
-			title: 'Work Adasd',
+			title: 'Work 1',
 			client: 'Client A',
 			tech: 'react + python'
 		},
