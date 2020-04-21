@@ -31,6 +31,7 @@ const posts = [
 	{
 		title: 'How to use Sapper',
 		slug: 'how-to-use-sapper',
+		summary: `Simples four steps to create a Sapper website`,
 		html: `
 			<h2>Step one</h2>
 			<p>Create a new project, using <a href='https://github.com/Rich-Harris/degit'>degit</a>:</p>
@@ -55,6 +56,7 @@ const posts = [
 	{
 		title: 'Why the name?',
 		slug: 'why-the-name',
+		summary: `In war, the soldiers who build bridges, repair roads, clear minefields and conduct demolitions — all under combat conditions — are known as <em>sappers</em>.`,
 		html: `
 			<p>In war, the soldiers who build bridges, repair roads, clear minefields and conduct demolitions — all under combat conditions — are known as <em>sappers</em>.</p>
 
@@ -65,6 +67,7 @@ const posts = [
 	{
 		title: 'How is Sapper different from Next.js?',
 		slug: 'how-is-sapper-different-from-next',
+		summary: `<a href='https://github.com/zeit/next.js'>Next.js</a> is a React framework from <a href='https://zeit.co'>Zeit</a>, and is the inspiration for Sapper.`,
 		html: `
 			<p><a href='https://github.com/zeit/next.js'>Next.js</a> is a React framework from <a href='https://zeit.co'>Zeit</a>, and is the inspiration for Sapper. There are a few notable differences, however:</p>
 
@@ -80,6 +83,7 @@ const posts = [
 	{
 		title: 'How can I get involved?',
 		slug: 'how-can-i-get-involved',
+		summary: ``,
 		html: `
 			<p>We're so glad you asked! Come on over to the <a href='https://github.com/sveltejs/svelte'>Svelte</a> and <a href='https://github.com/sveltejs/sapper'>Sapper</a> repos, and join us in the <a href='https://svelte.dev/chat'>Discord chatroom</a>. Everyone is welcome, especially you!</p>
 		`
