@@ -19,8 +19,8 @@
 					<figure>
 						<div>
 							<IntersectableTransition
-								anchor="#{work.slug}-{i}" threshold={.25}
-								options={{ y: 256, duration: 1280, delay: 256 + 128 * i}}
+								anchor="#{work.slug}-{i}" threshold={.1}
+								options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
 							>
 								<img
 									srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
@@ -30,8 +30,8 @@
 							</IntersectableTransition>
 						</div>
 						<IntersectableTransition
-							anchor="#work-{i}" threshold={.25} isFade
-							options={{ duration: 1920, delay: 256 + 256 * i}}
+							anchor="#work-{i}" threshold={.1} isFade
+							options={{ duration: 1920, delay: i % 2 === 0 ? 0 : 256}}
 						>
 							<figcaption>
 								<h3>{work.title}</h3>
@@ -124,6 +124,7 @@
 			height: 100%;
 			overflow: hidden;
 			margin-bottom: 1.2em;
+			position: relative;
 
 			img {
 				width: 100%;
@@ -137,7 +138,7 @@
 			.hover {
 				width: 100%;
 				position: absolute;
-				top: 44%;
+				top: 50%;
 				left: 50%;
 				text-align: center;
 				transform: translate(-50%, -50%);
