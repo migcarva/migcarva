@@ -19,8 +19,8 @@
 									srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
 									alt={work.title}
 								/>
+								<p class="hover">view more</p>
 							</div>
-							<p>view more</p>
 							<figcaption>
 								<h3>{work.title}</h3>
 								<div>
@@ -82,14 +82,17 @@
 
 		&:hover {
 			figure {
-				img {
-					transform: scale3d(1.16, 1.16, 1);
-					transition: transform 2.2s cubic-bezier(0, 0.55, 0.45, 1);
+				div {
+					img {
+						transform: scale3d(1.16, 1.16, 1);
+						transition: transform 2.2s cubic-bezier(0, 0.55, 0.45, 1);
+					}
+					.hover {
+						opacity: .9;
+						transition: opacity 1.1s cubic-bezier(0, 0.55, 0.45, 1);
+					}
 				}
-				> p {
-					opacity: .9;
-					transition: opacity 1.1s cubic-bezier(0, 0.55, 0.45, 1);
-				}
+
 				h3:after {
 					width: 100%;
 				}
@@ -125,21 +128,21 @@
 				user-select: none;
 				transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
 			}
-		}
 
-		> p {
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 50%;
-			text-align: center;
-			transform: translate(-50%, -50%);
-			color: white;
-			font-size: 3em;
-			font-weight: var(--font-medium);
-			text-shadow: 0 4px 4px var(--grey-light);
-			opacity: 0;
-			transition: opacity .3s cubic-bezier(0, 0.55, 0.45, 1);
+			.hover {
+				width: 100%;
+				position: absolute;
+				top: 44%;
+				left: 50%;
+				text-align: center;
+				transform: translate(-50%, -50%);
+				color: white;
+				font-size: 3em;
+				font-weight: var(--font-medium);
+				text-shadow: 0 4px 4px var(--grey-light);
+				opacity: 0;
+				transition: opacity .3s cubic-bezier(0, 0.55, 0.45, 1);
+			}
 		}
 
 		figcaption {
