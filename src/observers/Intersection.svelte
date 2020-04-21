@@ -18,6 +18,8 @@
 	let container;
 
 	onMount(() => {
+		console.log(anchor);
+
 		let lAnchor = anchor !== '' ? document.querySelector(anchor) : container;
 		if (debug) lAnchor.style.border = '1px solid red';
 

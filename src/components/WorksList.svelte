@@ -13,9 +13,9 @@
 		{/if}
 	</IntersectableTransition>
 	<ul class="row">
-		{#each list as work, i}
+		{#each works as work, i}
 			<li class="col col-6" id="{work.slug}-{i}">
-				<a href={`/works/${work.slug}.html`}>
+				<a href={`/works/${work.slug}`}>
 					<figure>
 						<div>
 							<IntersectableTransition
@@ -23,14 +23,14 @@
 								options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
 							>
 								<img
-									srcset={`images/works/${work.slug}_cover_home.png 1x, images/works/${work.slug}_cover_home@2x.png 2x`}
+									src="/images/works/{work.slug}/thumb.png"
 									alt={work.title}
 								/>
 								<p class="hover">view more</p>
 							</IntersectableTransition>
 						</div>
 						<IntersectableTransition
-							anchor="#work-{i}" threshold={.1} isFade
+							anchor="#{work.slug}-{i}" threshold={.1} isFade
 							options={{ duration: 1920, delay: i % 2 === 0 ? 0 : 256}}
 						>
 							<figcaption>
@@ -55,7 +55,7 @@
 
 
 <script>
-	import { onMount, onDestroy } from 'svelte';
+	// import { onMount, onDestroy } from 'svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import ActionLink from './ActionLink.svelte';
 
@@ -64,14 +64,7 @@
 
 	const sectionId = isSelected ? 'selected-works' : 'works' ;
 
-	let list = [];
-	onMount(() => {
-		list = works;
-	});
-
-	onDestroy(() => {
-		list = [];
-	});
+	let list = works;
 </script>
 
 <style lang="scss">

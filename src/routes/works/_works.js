@@ -1,9 +1,8 @@
 const works = [
 
-	// X portugaldesigual
 	{
 		isSelected: true,
-		slug: 'portugaldesigual',
+		slug: 'portugal-desigual',
 		title: 'Portugal Desigual',
 		url: 'https://portugaldesigual.ffms.pt/',
 		client: {
@@ -36,7 +35,6 @@ const works = [
 		],
 	},
 
-	//generation M
 	{
 		isSelected: false,
 		slug: 'generation-m',
@@ -72,7 +70,6 @@ const works = [
 		],
 	},
 
-	//theke
 	{
 		isSelected: false,
 		slug: 'theke',
@@ -108,7 +105,6 @@ const works = [
 		],
 	},
 
-	// X Station
 	{
 		isSelected: true,
 		slug: 'station',
@@ -144,7 +140,6 @@ const works = [
 		],
 	},
 
-	//educacao em exame
 	{
 		isSelected: false,
 		slug: 'educacao-em-exame',
@@ -180,7 +175,6 @@ const works = [
 		],
 	},
 
-	// X Serious
 	{
 		isSelected: true,
 		slug: 'serious',
@@ -216,7 +210,6 @@ const works = [
 		],
 	},
 
-	// X BPStat
 	{
 		isSelected: true,
 		slug: 'bpstat',
@@ -252,7 +245,6 @@ const works = [
 		],
 	},
 
-	//brpx
 	{
 		isSelected: false,
 		slug: 'brpx',
@@ -288,9 +280,5 @@ const works = [
 		],
 	},
 ];
-
-works.forEach(work => {
-	work.description = work.html.replace(/^\t{3}/gm, '');
-});
 
 export default works;

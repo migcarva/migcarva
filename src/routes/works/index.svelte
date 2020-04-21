@@ -1,62 +1,20 @@
 <svelte:head>
 	<title>migcarva. Works</title>
 </svelte:head>
-
 <WorksList {works} />
+
+<script context="module">
+	export function preload({ params, query }) {
+		return this.fetch(`works.json`).then(r => r.json()).then(works => {
+			return { works };
+		});
+	}
+</script>
 
 <script>
 	import WorksList from '../../components/WorksList.svelte';
 
-	let works = [
-		{
-			slug: 'work',
-			title: 'Work Adasd',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work 1',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work lsdfj',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work for Business',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work 1',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work Adasd',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work lsdfj',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work for Business',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-	];
+	export let works;
 </script>
 
 <style>

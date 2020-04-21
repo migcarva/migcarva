@@ -52,7 +52,7 @@
 	</ActionLink>
 </section>
 
-<WorksList isSelected works={selectedWorks} />
+<!-- <WorksList isSelected works={selectedWorks} /> -->
 
 <script>
 	import { fade, fly } from 'svelte/transition';
