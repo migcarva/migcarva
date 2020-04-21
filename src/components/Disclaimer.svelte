@@ -3,16 +3,11 @@
 		<h4>{year} | migcarva.com ™</h4>
 	</IntersectableTransition>
 	{#if !$menuIsOpen}
-		<div class="logo" on:click={goToTop}>
+		<div class="logo">
 			<IntersectableTransition options={{ delay: $menuIsOpen ? 1024 : 256 }}>
-				<div class="top">
+				<Icon name="go-up" />
+				<div class="top" on:click={goToTop}>
 					<span>go to top</span>
-				</div>
-				<div class="goUp">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M12 3L18.9282 10.5H5.0718L12 3Z" fill="#171717"/>
-						<path d="M10 10H14V21L10 17V10Z" fill="black"/>
-					</svg>
 				</div>
 			</IntersectableTransition>
 		</div>
@@ -21,6 +16,7 @@
 
 <script>
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
+	import Icon from './core/Icon.svelte';
 	import { menuIsOpen } from '../store.js';
 
 	let year = new Date().getFullYear();
@@ -48,6 +44,7 @@
 
 		.top {
 			position: absolute;
+			margin: 0;
 			width: 2em;
 			height: 2em;
 			top: 0;
@@ -58,6 +55,7 @@
 					opacity: 1;
 				}
 			}
+
 			span {
 				text-align: right;
 				font-size: .75em;
@@ -69,9 +67,9 @@
 			}
 		}
 
-		.goUp {
-			max-width: 1rem;
+		.logo {
 			margin: 0;
+			z-index: 100;
 		}
 	}
 </style>
