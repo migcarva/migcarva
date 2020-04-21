@@ -16,10 +16,12 @@
 <style lang="scss">
 	footer {
 		width: 100%;
+		max-width: var(--breakpoint-xl);
+		margin: 0 auto;
 		padding: 8em 10% 6em 15%;
+
 		@media (min-width: 375px) {
-			padding: 6em 0;
-			padding-left: 10%;
+			padding: 6em 10% 6em 15%;
 		}
 		@media (min-width: 768px) {
 			padding: var(--sections-bottom-margin) 10% calc(var(--sections-bottom-margin) / 4);

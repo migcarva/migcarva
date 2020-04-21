@@ -1,4 +1,4 @@
-import works from './_works.js';
+import works from './works/_works.js';
 
 const contents = JSON.stringify(works.map(work => {
 	return {

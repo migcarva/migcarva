@@ -52,7 +52,15 @@
 	</ActionLink>
 </section>
 
-<!-- <WorksList isSelected works={selectedWorks} /> -->
+<WorksList isSelected works={selectedWorks} />
+
+<script context="module">
+	export function preload({ params, query }) {
+		return this.fetch(`works.json`).then(r => r.json()).then(works => {
+			return { works };
+		});
+	}
+</script>
 
 <script>
 	import { fade, fly } from 'svelte/transition';
@@ -61,6 +69,8 @@
 	import WorksList from '../components/WorksList.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
+
+	export let works;
 
 	let showScrollText = false;
 
@@ -79,32 +89,7 @@
 		animateScrollText();
 	}, 1024);
 
-	let selectedWorks = [
-		{
-			slug: 'work',
-			title: 'Work 1',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work Adasd',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work lsdfj',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-		{
-			slug: 'work',
-			title: 'Work for Business',
-			client: 'Client A',
-			tech: 'react + python'
-		},
-	];
+	let selectedWorks = works.filter(work => work.isSelected);
 </script>
 
 <style lang="scss">

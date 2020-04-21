@@ -16,32 +16,34 @@
 		{#each works as work, i}
 			<li class="col col-6" id="{work.slug}-{i}">
 				<a href={`/works/${work.slug}`}>
-					<figure>
-						<div>
+					<div>
+						<figure>
+							<div>
+								<IntersectableTransition
+									anchor="#{work.slug}-{i}" threshold={.1}
+									options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
+								>
+									<img
+										src="/images/works/{work.slug}/thumb.png"
+										alt={work.title}
+									/>
+									<p class="hover">view more</p>
+								</IntersectableTransition>
+							</div>
 							<IntersectableTransition
-								anchor="#{work.slug}-{i}" threshold={.1}
-								options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
+								anchor="#{work.slug}-{i}" threshold={.1} isFade
+								options={{ duration: 1920, delay: i % 2 === 0 ? 0 : 256}}
 							>
-								<img
-									src="/images/works/{work.slug}/thumb.png"
-									alt={work.title}
-								/>
-								<p class="hover">view more</p>
+								<figcaption>
+									<h3>{work.title}</h3>
+									<div>
+										<p>{work.client.name}</p>
+										<p>{work.tech}</p>
+									</div>
+								</figcaption>
 							</IntersectableTransition>
-						</div>
-						<IntersectableTransition
-							anchor="#{work.slug}-{i}" threshold={.1} isFade
-							options={{ duration: 1920, delay: i % 2 === 0 ? 0 : 256}}
-						>
-							<figcaption>
-								<h3>{work.title}</h3>
-								<div>
-									<p>{work.client}</p>
-									<p>{work.tech}</p>
-								</div>
-							</figcaption>
-						</IntersectableTransition>
-					</figure>
+						</figure>
+					</div>
 				</a>
 			</li>
 		{/each}
@@ -76,7 +78,7 @@
 	li {
 		font-size: var(--font-base);
     transition: transform .3s;
-		margin-bottom: 2em;
+		margin-bottom: 8em;
 
 		&:hover {
 			figure {
@@ -105,12 +107,25 @@
 		&:visited {
 			text-decoration: none;
 		}
+
+		> div {
+			position: relative;
+			width: 100%;
+
+			&:before {
+				content: "";
+				display: block;
+				padding-top: 100%;
+			}
+		}
 	}
 
 	figure {
-		margin: 0;
-		position: relative;
-		min-height: 70vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
 
 		> div {
 			width: 100%;
@@ -145,8 +160,6 @@
 		}
 
 		figcaption {
-			margin-bottom: 3em;
-
 			div {
 				display: flex;
 				justify-content: space-between;
