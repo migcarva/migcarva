@@ -1,5 +1,5 @@
 <IntersectableTransition {...lOptions}>
-	<a class="action" href={href}><slot></slot></a>
+	<a href={href}><slot></slot></a>
 </IntersectableTransition>
 
 <script>
@@ -17,4 +17,13 @@
 </script>
 
 <style lang="scss">
+	a {
+		display: block;
+		float: right;
+		transition: 0.3s;
+
+		&:hover {
+			color: var(--action);
+		}
+	}
 </style>
