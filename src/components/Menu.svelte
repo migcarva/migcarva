@@ -53,10 +53,17 @@
 		z-index: 100;
 		width: 100%;
 		height: 100%;
-		padding: 0 10% 0 15%;
 		overflow: hidden;
-		@media (min-width: 768px)  {
-			padding-left: 10%;
+
+		> div {
+			width: 100%;
+			max-width: var(--breakpoint-xl);
+			padding: 0 10% 0 15%;
+			margin: 0 auto;
+			z-index: 10;
+			@media (min-width: 48em) {
+				padding: 0 10% 0 10%;
+			}
 		}
 
 		.logo {
