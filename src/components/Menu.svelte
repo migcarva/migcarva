@@ -20,7 +20,7 @@
 
 <script>
 	import { stores } from '@sapper/app';
-	import { onMount, setContext } from 'svelte';
+	import { onMount, getContext } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { quintOut } from 'svelte/easing';
 	import { slide, fade, fly } from 'svelte/transition';
@@ -34,8 +34,10 @@
 
 	import { menuIsOpen } from '../store.js';
 
-	const current = writable(null);
-	setContext('nav', current);
+	const page = getContext('page');
+	page.subscribe(() => {
+		menuIsOpen.reset();
+	});
 
 	let wWidth;
 

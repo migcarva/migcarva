@@ -10,15 +10,23 @@
 <Footer />
 
 <script>
+	import { stores } from '@sapper/app';
+	import { setContext } from 'svelte';
+	import { writable } from 'svelte/store';
 	import Icons from '../components/core/Icons.svelte';
 	import Menu from '../components/Menu.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
 	import Logo from '../components/Logo.svelte';
 	import Footer from '../components/Footer.svelte';
-	import { currentPage } from '../store.js';
 
 	export let segment;
-	currentPage.set(segment);
+	const { page } = stores();
+
+	const current = writable(null);
+	$: $current = segment;
+
+	setContext('page', page);
+	setContext('current', current);
 </script>
 
 <style lang="scss">

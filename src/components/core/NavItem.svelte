@@ -1,22 +1,19 @@
-<li class:active={$currentPage === segment || (segment === 'home' && $currentPage === undefined)}>
-	<a rel="prefetch" href={segment === 'home' ? '/' : segment} on:click={(e) => togglePage(e, segment)}>
+<div class:active={$current === segment || (segment === 'home' && $current === undefined)}>
+	<a rel="prefetch" href={segment === 'home' ? '/' : segment}>
 		<slot></slot>
 	</a>
-</li>
+</div>
 
 <script>
+	import { getContext } from 'svelte';
 	import { menuIsOpen, currentPage } from '../../store.js';
 
 	export let segment;
-
-	function togglePage(e, page) {
-		currentPage.set(page);
-		menuIsOpen.toggle();
-	}
+	const current = getContext('current');
 </script>
 
 <style lang="scss">
-	li {
+	div {
 		&.active {
 			font-weight: 600;
 		}
