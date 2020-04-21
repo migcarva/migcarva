@@ -1,5 +1,5 @@
 <script>
-	let hovering;
+	let hovering = false;
 
 	function enter() {
 		hovering = true;

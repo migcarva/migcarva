@@ -12,7 +12,7 @@
 			<div class="logo">
 				<Logo invert />
 			</div>
-			<Nav {segment} {page} />
+			<Nav />
 			<SocialLinks />
 		</div>
 	</section>
@@ -34,9 +34,6 @@
 
 	import { menuIsOpen } from '../store.js';
 
-	export let segment;
-	export let page;
-
 	const current = writable(null);
 	setContext('nav', current);
 
@@ -45,10 +42,6 @@
 	onMount(() => {
     wWidth = window.innerWidth;
   });
-
-	const links = [ 'home', 'about', 'works', 'blog'];
-
-	$: $current = segment;
 </script>
 
 <style lang="scss">

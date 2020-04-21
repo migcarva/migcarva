@@ -1,31 +1,24 @@
-<Hoverable let:hovering={hover}>
-	{#if hover}
-		<li class:active="{$current === segment || segment === ''}">
-			<a rel="prefetch" href={segment} class:hover>
-				<slot></slot>
-			</a>
-		</li>
-	{:else}
-		<li class:active="{$current === segment || segment === ''}">
-			<a rel="prefetch" href={segment}>
-				<slot></slot>
-			</a>
-		</li>
-	{/if}
-</Hoverable>
+<li class:active={$currentPage === segment || (segment === 'home' && $currentPage === undefined)}>
+	<a rel="prefetch" href={segment === 'home' ? '/' : segment} on:click={(e) => togglePage(e, segment)}>
+		<slot></slot>
+	</a>
+</li>
 
 <script>
-	import { getContext } from 'svelte';
-	import Hoverable from '../../helpers/Hoverable.svelte';
+	import { menuIsOpen, currentPage } from '../../store.js';
 
-	export let segment = null;
-	const current = getContext('nav');
+	export let segment;
+
+	function togglePage(e, page) {
+		currentPage.set(page);
+		menuIsOpen.toggle();
+	}
 </script>
 
 <style lang="scss">
-	li :hover {
-		a:after {
-			width: 100%;
+	li {
+		&.active {
+			font-weight: 600;
 		}
 	}
 	a {
@@ -37,12 +30,6 @@
 				width: 100%;
 			}
 		}
-	}
-	.active {
-		font-weight: 600;
-	}
-
-	.hover {
 		&:after {
 			position: absolute;
 			content: "";

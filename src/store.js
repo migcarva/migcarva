@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import { stores } from '@sapper/app';
 
 function createMenuIsOpen() {
   const { subscribe, set, update } = writable(false);
@@ -11,3 +12,14 @@ function createMenuIsOpen() {
 }
 
 export const menuIsOpen = createMenuIsOpen();
+
+function createCurrentPage() {
+  const { subscribe, set, update } = writable(null);
+  return {
+    subscribe,
+    set: (page) => set(page),
+    reset: () => set(null)
+  };
+}
+
+export const currentPage = createCurrentPage();
