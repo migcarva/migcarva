@@ -14,13 +14,13 @@
 	</IntersectableTransition>
 	<ul class="row">
 		{#each works as work, i}
-			<li class="col col-6" id="{work.slug}-{i}">
+			<li class="col col-6" id="{sectionId}-{work.slug}">
 				<a href={`/works/${work.slug}`}>
 					<div>
 						<figure>
 							<div>
 								<IntersectableTransition
-									anchor="#{work.slug}-{i}" threshold={.1}
+									anchor="#{sectionId}-{work.slug}" threshold={.1}
 									options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
 								>
 									<img
@@ -30,18 +30,20 @@
 									<p class="hover">view more</p>
 								</IntersectableTransition>
 							</div>
-							<IntersectableTransition
-								anchor="#{work.slug}-{i}" threshold={.1} isFade
-								options={{ duration: 1920, delay: i % 2 === 0 ? 0 : 256}}
-							>
-								<figcaption>
-									<h3>{work.title}</h3>
-									<div>
-										<p>{work.client.name}</p>
-										<p>{work.tech}</p>
-									</div>
-								</figcaption>
-							</IntersectableTransition>
+							<figcaption>
+								<div class="caption">
+									<IntersectableTransition
+										anchor="#{sectionId}-{work.slug}" threshold={.1} isFade
+										options={{ duration: 1920, delay: i % 2 === 0 ? 0 : 256}}
+									>
+										<h3>{work.title}</h3>
+										<div>
+											<p>{work.client.name}</p>
+											<p>{work.tech}</p>
+										</div>
+									</IntersectableTransition>
+								</div>
+							</figcaption>
 						</figure>
 					</div>
 				</a>
@@ -57,7 +59,7 @@
 
 
 <script>
-	// import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import ActionLink from './ActionLink.svelte';
 
@@ -67,6 +69,9 @@
 	const sectionId = isSelected ? 'selected-works' : 'works' ;
 
 	let list = works;
+	onDestroy(() => {
+		let list;
+	})
 </script>
 
 <style lang="scss">
@@ -126,6 +131,10 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
+
+		.caption {
+			max-height: 4em;
+		}
 
 		> div {
 			width: 100%;
