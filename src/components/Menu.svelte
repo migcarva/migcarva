@@ -60,10 +60,8 @@
 		}
 
 		.logo {
-			padding-top: 2rem;
 			width: 2rem;
 			@media (min-width: 48em) {
-				padding-top: 4rem;
 				width: 3rem;
 			}
 		}

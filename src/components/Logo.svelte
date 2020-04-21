@@ -26,7 +26,7 @@
 		margin: 0 auto;
 		z-index: 10;
 		@media (min-width: 48em) {
-			padding: 2rem 10% 0 10%;
+			padding: 4rem 10% 0 10%;
 		}
 
 		a {
@@ -35,6 +35,10 @@
 			width: 2rem;
 			height: 2rem;
 			transition: transform .3s var(--ease-for-hover);
+			@media (min-width: 48em) {
+				width: 3rem;
+				height: 3rem;
+			}
 
 			&:hover {
 				transform: var(--scale-lg);
