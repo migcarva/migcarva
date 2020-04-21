@@ -1,6 +1,8 @@
 const works = [
-	// portugaldesigual
+
+	// X portugaldesigual
 	{
+		isSelected: true,
 		slug: 'portugaldesigual',
 		title: 'Portugal Desigual',
 		url: 'https://portugaldesigual.ffms.pt/',
@@ -36,6 +38,7 @@ const works = [
 
 	//generation M
 	{
+		isSelected: false,
 		slug: 'generation-m',
 		title: 'Migros Generation M',
 		url: 'https://generation-m.migros.ch/de.html',
@@ -69,8 +72,9 @@ const works = [
 		],
 	},
 
-	//generation M
+	//theke
 	{
+		isSelected: false,
 		slug: 'theke',
 		title: 'Migros Theke',
 		url: 'https://theke.migros.ch/de',
@@ -104,8 +108,9 @@ const works = [
 		],
 	},
 
-	//Station
+	// X Station
 	{
+		isSelected: true,
 		slug: 'station',
 		title: 'Station',
 		url: 'https://station.ch/de',
@@ -139,8 +144,9 @@ const works = [
 		],
 	},
 
-	//Station
+	//educacao em exame
 	{
+		isSelected: false,
 		slug: 'educacao-em-exame',
 		title: 'Educação em Exame',
 		url: 'https://educacaoemexame.pt/',
@@ -174,8 +180,9 @@ const works = [
 		],
 	},
 
-	//Serious
+	// X Serious
 	{
+		isSelected: true,
 		slug: 'serious',
 		title: 'Serious Work',
 		url: 'https://serious.work',
@@ -209,8 +216,9 @@ const works = [
 		],
 	},
 
-	//BPStat
+	// X BPStat
 	{
+		isSelected: true,
 		slug: 'bpstat',
 		title: 'Bank of Portugal Stats',
 		url: 'https://bpstat.bportugal.pt',
@@ -246,6 +254,7 @@ const works = [
 
 	//brpx
 	{
+		isSelected: false,
 		slug: 'brpx',
 		title: 'Bright Pixel',
 		url: 'https://brpx.com/',
@@ -280,13 +289,8 @@ const works = [
 	},
 ];
 
-/*
-https://bpstat.bportugal.pt
-https://brpx.com/
-*/
-
 works.forEach(work => {
-	work.html = work.html.replace(/^\t{3}/gm, '');
+	work.description = work.html.replace(/^\t{3}/gm, '');
 });
 
 export default works;
