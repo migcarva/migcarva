@@ -10,22 +10,24 @@
 		</h2>
 	</IntersectableTransition>
 	<div class="row">
-		<div class="col-12">
-			<a href="/blog">go back</a>
-		</div>
-	</div>
-	<div class="row">
 		<div class="col-8">
 			<div class='content'>
 				{@html post.html}
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-12">
-			<a href="/blog">go back</a>
-			<a href="/blog/{post.next}">next</a>
-		</div>
+	<div class="row next">
+		{#if post.next.slug !== null}
+			<div class="col-12">
+				<p>up next</p>
+				<a href="/blog/{post.next.slug}">{post.next.title}</a>
+			</div>
+		{:else}
+			<div class="col-12">
+				<p>no more posts</p>
+				<a href="/blog">go back to the list</a>
+			</div>
+		{/if}
 	</div>
 
 </section>
@@ -62,16 +64,33 @@
 				font-size: calc(var(--font-h3) * 0.75);
 			}
 		}
-		a {
-			display: block;
-			float: right;
-			transition: 0.3s;
-			margin-bottom: 2em;
 
-			&:hover {
-				color: var(--action);
+		.next {
+			div {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: flex-end;
+
+				p {
+					margin: 0;
+				}
+
+				a {
+					display: block;
+					float: right;
+					transition: 0.3s;
+					margin-bottom: 2em;
+					font-size: var(--font-blog-p);
+					font-weight: var(--font-bold);
+
+					&:hover {
+						color: var(--action);
+					}
+				}
 			}
 		}
+
 	}
 	/*
 		By default, CSS is locally scoped to the component,

@@ -2,10 +2,13 @@ import posts from './_posts.js';
 
 const lookup = new Map();
 posts.forEach((post, i) => {
-	const j = i >= posts.length - 1 ? 0 : i + 1;
-	console.log(j);
+	const j = i >= posts.length - 1 ? null : i + 1;
+	const next = j === null ? { slug: null } : {
+		slug: posts[j].slug,
+		title: posts[j].title,
+	};
 
-	const lPost = { ...post, next: posts[j].slug};
+	const lPost = { ...post, next };
 	lookup.set(post.slug, JSON.stringify(lPost));
 });
 
