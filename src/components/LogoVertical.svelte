@@ -1,6 +1,6 @@
 <svelte:window bind:scrollY={y}/>
 
-{#if y > 800}
+{#if y > threshold}
 	<div transition:fly="{{ y: -20, duration: 500 }}">
 		<h1>
 			<a href="/">migcarva.</a>
@@ -10,7 +10,12 @@
 
 <script>
 	import { fly } from 'svelte/transition';
+	import { getContext } from 'svelte';
+
+	const current = getContext('current');
+
 	let y;
+	$: threshold = $current !== undefined ? 200 : 800;
 </script>
 
 <style lang="scss">

@@ -11,7 +11,7 @@
 
 <script>
 	import { stores } from '@sapper/app';
-	import { setContext } from 'svelte';
+	import { afterUpdate, setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 	import Icons from '../components/core/Icons.svelte';
 	import Menu from '../components/Menu.svelte';
@@ -27,6 +27,11 @@
 
 	setContext('page', page);
 	setContext('current', current);
+
+	afterUpdate(() => {
+		// console.log(segment);
+		// console.log($current);
+	})
 </script>
 
 <style lang="scss">

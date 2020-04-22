@@ -20,6 +20,7 @@
 
 <style lang="scss">
 	#top {
+		position: relative;
 		width: 100%;
 		max-width: var(--breakpoint-xl);
 		padding: 2rem 10% 0 15%;
