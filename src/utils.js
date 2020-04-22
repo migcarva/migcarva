@@ -15,7 +15,7 @@ export const getLookupMap = (list) => {
   return lookup;
 }
 
-export const setLookupHeaders = (req, res) => {
+export const setLookupHeaders = (req, res, lookup) => {
   const { slug } = req.params;
 
   if (lookup.has(slug)) {

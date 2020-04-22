@@ -4,5 +4,5 @@ import works from './_works.js';
 const lookup = getLookupMap(works);
 
 export function get(req, res, next) {
-	setLookupHeaders(req, res);
+	setLookupHeaders(req, res, lookup);
 }

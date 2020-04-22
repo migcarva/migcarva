@@ -29,10 +29,7 @@
 			</div>
 		{/if}
 	</div>
-
 </section>
-
-
 
 <script context="module">
 	export async function preload({ params, query }) {
