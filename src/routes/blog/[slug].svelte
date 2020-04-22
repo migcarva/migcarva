@@ -2,34 +2,36 @@
 	<title>migcarva. {post.title}</title>
 </svelte:head>
 
-<section id="{post.slug}">
-	<IntersectableTransition>
-		<h2>
-			{post.title}<br>
-			<span>tl:dr — {@html post.summary}</span>
-		</h2>
-	</IntersectableTransition>
-	<div class="row">
-		<div class="col-8">
-			<div class='content'>
-				{@html post.html}
+<div class="container">
+	<section id="{post.slug}">
+		<IntersectableTransition>
+			<h2>
+				{post.title}<br>
+				<span>tl:dr — {@html post.summary}</span>
+			</h2>
+		</IntersectableTransition>
+		<div class="row">
+			<div class="col-8">
+				<div class='content'>
+					{@html post.html}
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row next">
-		{#if post.next.slug !== null}
-			<div class="col-12">
-				<p>up next</p>
-				<a href="/blog/{post.next.slug}">{post.next.title}</a>
-			</div>
-		{:else}
-			<div class="col-12">
-				<p>no more posts</p>
-				<a href="/blog">go back to the list</a>
-			</div>
-		{/if}
-	</div>
-</section>
+		<div class="row next">
+			{#if post.next.slug !== null}
+				<div class="col-12">
+					<p>up next</p>
+					<a href="/blog/{post.next.slug}">{post.next.title}</a>
+				</div>
+			{:else}
+				<div class="col-12">
+					<p>no more posts</p>
+					<a href="/blog">go back to the list</a>
+				</div>
+			{/if}
+		</div>
+	</section>
+</div>
 
 <script context="module">
 	export async function preload({ params, query }) {
