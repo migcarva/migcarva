@@ -7,7 +7,7 @@
 		<div>
 			<IntersectableTransition
 				anchor="#hero-{work.slug}" threshold={.1}
-				options={{ y: 1280, duration: 1280, delay: 1024 * 2}}
+				options={{ y: 1280, duration: 1280, delay: 1024}}
 			>
 				<img
 					src="/images/works/{work.slug}/thumb.png"
@@ -18,7 +18,7 @@
 		<figcaption>
 			<IntersectableTransition
 				anchor="#hero-{work.slug}" threshold={.1} isFade
-				options={{ duration: 1920, delay: 1024 * 2 + 256}}
+				options={{ duration: 1920, delay: 1024 + 256}}
 			>
 				<h2>{work.title}</h2>
 				<a href="{work.url}" target="_blank">
