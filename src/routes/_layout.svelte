@@ -88,7 +88,7 @@
 		margin: -2rem auto 0;
 	}
 
-	@media (min-width: 768px)  {
+	@media (min-width: 48em)  {
 		main {
 			padding-left: 10%;
 			margin: -4rem auto 0;
