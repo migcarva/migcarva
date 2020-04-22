@@ -85,12 +85,13 @@
 		width: 100%;
 		padding: 0 10% 0 15%;
 		max-width: var(--breakpoint-xl);
-		margin: 0 auto;
+		margin: -2rem auto 0;
 	}
 
 	@media (min-width: 768px)  {
 		main {
 			padding-left: 10%;
+			margin: -4rem auto 0;
 		}
 	}
 </style>
