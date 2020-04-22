@@ -162,6 +162,13 @@ button {
 	outline: none;
 }
 
+.container {
+	width: 100%;
+	padding: var(--container-padding);
+	max-width: var(--breakpoint-xl);
+	margin: var(--container-margin);
+}
+
 .row {
 	display: -ms-flexbox;
 	display: flex;
@@ -204,6 +211,8 @@ button {
 		--font-h2: 2.4em;
 		--font-h4: .875em;
 		--title-bottom-margin: 3em;
+		--container-padding: var(--container-padding-laptop);
+		--container-margin: var(--container-margin-laptop);
 	}
 
   .col-2 {

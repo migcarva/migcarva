@@ -2,57 +2,59 @@
 	<title>migcarva.</title>
 </svelte:head>
 
-<section id="hero">
-	<IntersectableTransition>
-		<h2>
-			I'm Miguel Carvalho<br>
-			<span>— Perpetually curious and forever learning</span>
-		</h2>
-	</IntersectableTransition>
-</section>
+<div class="container">
+	<section id="hero">
+		<IntersectableTransition>
+			<h2>
+				I'm Miguel Carvalho<br>
+				<span>— Perpetually curious and forever learning</span>
+			</h2>
+		</IntersectableTransition>
+	</section>
 
-{#if showScrollText}
-	<div class="scroll">
-		<p in:fly="{{ y: -64, delay: 1024, duration: 1280 }}" out:fade="{{ duration: 1280, delay: 0 }}">
-			scroll down
-		</p>
-	</div>
-{/if}
+	{#if showScrollText}
+		<div class="scroll">
+			<p in:fly="{{ y: -64, delay: 1024, duration: 1280 }}" out:fade="{{ duration: 1280, delay: 0 }}">
+				scroll down
+			</p>
+		</div>
+	{/if}
 
-<section id="about">
-	<IntersectableTransition anchor='#about' threshold={.5}>
-		<h2>
-			A frontend developer from Lisbon<br>
-			<span>— I enjoy simple, concise and readable code</span>
-		</h2>
-	</IntersectableTransition>
-	<div class="row">
-		<div class="col-2">
-			<IntersectableTransition anchor='#about' threshold={.75}>
-				<h3>About me</h3>
-			</IntersectableTransition>
+	<section id="about">
+		<IntersectableTransition anchor='#about' threshold={.5}>
+			<h2>
+				A frontend developer from Lisbon<br>
+				<span>— I enjoy simple, concise and readable code</span>
+			</h2>
+		</IntersectableTransition>
+		<div class="row">
+			<div class="col-2">
+				<IntersectableTransition anchor='#about' threshold={.75}>
+					<h3>About me</h3>
+				</IntersectableTransition>
+			</div>
+			<div class="col-5">
+				<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 256 }}>
+					<p>
+						I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. I spend a lot of my time programming. Not just for work, but as a general hobby. I have a strong passion for learning new things, and I’m always taking time out of my day to pick up something new.
+					</p>
+				</IntersectableTransition>
+			</div>
+			<div class="col-5">
+				<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 384 }}>
+					<p>
+						I'm currently working as a senior frontend developer at <a href="https://unbabel.com">Unbabel</a>, where I'm part of the Language Operations Team, a crucial team supporting Unbabel's clients. I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.
+					</p>
+				</IntersectableTransition>
+			</div>
 		</div>
-		<div class="col-5">
-			<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 256 }}>
-				<p>
-					I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. I spend a lot of my time programming. Not just for work, but as a general hobby. I have a strong passion for learning new things, and I’m always taking time out of my day to pick up something new.
-				</p>
-			</IntersectableTransition>
-		</div>
-		<div class="col-5">
-			<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 384 }}>
-				<p>
-					I'm currently working as a senior frontend developer at <a href="https://unbabel.com">Unbabel</a>, where I'm part of the Language Operations Team, a crucial team supporting Unbabel's clients. I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.
-				</p>
-			</IntersectableTransition>
-		</div>
-	</div>
-	<ActionLink href="/about" anchor="#about" threshold={.75}>
-		Discover more
-	</ActionLink>
-</section>
+		<ActionLink href="/about" anchor="#about" threshold={.75}>
+			Discover more
+		</ActionLink>
+	</section>
 
-<WorksList isSelected works={selectedWorks} />
+	<WorksList isSelected works={selectedWorks} />
+</div>
 
 <script context="module">
 	export function preload({ params, query }) {

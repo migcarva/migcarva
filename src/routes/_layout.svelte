@@ -65,6 +65,11 @@
 		--sections-bottom-margin: 20vh;
 		--title-bottom-margin: 3rem;
 
+		--container-padding: 0 15% 0 10%;
+		--container-padding-laptop: 0 10%;
+		--container-margin: -2rem auto 0;
+		--container-margin-laptop: -4rem auto 0;
+
 		--scale-sm: scale3d(0.98, 0.98, 1);
 		--scale-md: scale3d(0.96, 0.96, 1);
 		--scale-lg: scale3d(0.90, 0.90, 1);
@@ -82,16 +87,12 @@
 	}
 
 	main {
-		width: 100%;
-		padding: 0 10% 0 15%;
-		max-width: var(--breakpoint-xl);
-		margin: -2rem auto 0;
+		margin: var(--container-margin);
 	}
 
-	@media (min-width: 48em)  {
+	@media (min-width: 48em) {
 		main {
-			padding-left: 10%;
-			margin: -4rem auto 0;
+			margin: var(--container-margin-laptop);
 		}
 	}
 </style>

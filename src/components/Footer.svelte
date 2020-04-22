@@ -1,4 +1,4 @@
-<footer>
+<footer class="container">
 	<IntersectableTransition options={{delay: 256}}>
 		<h2>
 			Want to get in touch?<br>
@@ -15,13 +15,11 @@
 
 <style lang="scss">
 	footer {
-		width: 100%;
-		max-width: var(--breakpoint-xl);
-		margin: 0 auto;
-		padding: 8em 10% 6em 15%;
+		padding-top: 8rem;
+		padding-bottom: 6rem;
 
 		@media (min-width: 375px) {
-			padding: 6em 10% 6em 15%;
+			padding-top: 6rem;
 		}
 		@media (min-width: 768px) {
 			padding: var(--sections-bottom-margin) 10% calc(var(--sections-bottom-margin) / 4);

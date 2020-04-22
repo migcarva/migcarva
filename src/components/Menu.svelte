@@ -8,7 +8,7 @@
 
 {#if $menuIsOpen}
 	<section transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
-		<div>
+		<div class="container">
 			<div class="logo">
 				<Logo invert />
 			</div>
@@ -56,13 +56,11 @@
 		overflow: hidden;
 
 		> div {
-			width: 100%;
-			max-width: var(--breakpoint-xl);
-			padding: 0 10% 0 15%;
-			margin: 0 auto;
 			z-index: 10;
+			height: 100vh;
+			margin: 0 auto;
 			@media (min-width: 48em) {
-				padding: 0 10% 0 10%;
+				margin: 0 auto;
 			}
 		}
 
