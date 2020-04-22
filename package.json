@@ -1,6 +1,11 @@
 {
   "name": "migcarva.com",
   "description": "Miguel Carvalho portfolio",
+  "license": "UNLICENSED",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/migcarva/migcarva.git"
+  },
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
