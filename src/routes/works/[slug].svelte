@@ -81,10 +81,36 @@
 	</div>
 </section>
 
-<section id="galery" class="container">
-	<IntersectableTransition>
-		<h3>{work.punchline}</h3>
-	</IntersectableTransition>
+<section id="galery">
+	<div class="container">
+		<IntersectableTransition
+			anchor="#hero" threshold={0}
+			options={{ y: 1280, duration: 1280, delay: 0}}
+		>
+			<h3>{work.punchline}</h3>
+		</IntersectableTransition>
+	</div>
+	<div>
+		{#each work.images as image}
+			<img src="/images/works/{work.slug}/{image.srcx1}" alt="">
+		{/each}
+	</div>
+</section>
+
+<section id="next" class="container">
+	<div class="row next">
+		{#if work.next.slug !== null}
+			<div class="col-12">
+				<p>up next</p>
+				<a href="/works/{work.next.slug}">{work.next.title}</a>
+			</div>
+		{:else}
+			<div class="col-12">
+				<p>no more works</p>
+				<a href="/works">go back to the list</a>
+			</div>
+		{/if}
+	</div>
 </section>
 
 <script context="module">
@@ -231,9 +257,41 @@
 	}
 
 	#galery {
-		margin-top: 15vh;
+		margin-top: 25vh;
+
 		h3 {
 			font-size: calc(var(--font-h2) * .85);
+			margin-bottom: 10rem;
+		}
+	}
+
+	#next {
+		margin-top: 10vh;
+
+		.next {
+			div {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: flex-end;
+
+				p {
+					margin: 0;
+				}
+
+				a {
+					display: block;
+					float: right;
+					transition: 0.3s;
+					margin-bottom: 2em;
+					font-size: var(--font-blog-p);
+					font-weight: var(--font-bold);
+
+					&:hover {
+						color: var(--action);
+					}
+				}
+			}
 		}
 	}
 </style>

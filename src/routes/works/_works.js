@@ -21,8 +21,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
@@ -49,8 +60,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
@@ -77,8 +99,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
@@ -105,8 +138,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
@@ -133,8 +177,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
@@ -161,8 +216,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
@@ -189,8 +255,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
@@ -217,8 +294,19 @@ const works = [
 		`,
 		images: [
 			{
-				x1: '',
-				x2: '',
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: 'cover.png',
+				srcx2: '',
+				alt: 'altext altext'
 			}
 		],
 	},
