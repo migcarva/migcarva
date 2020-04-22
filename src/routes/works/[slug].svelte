@@ -2,12 +2,12 @@
 	<title>migcarva. {work.title}</title>
 </svelte:head>
 
-<div id="hero" class="hero">
+<div id="hero-{work.slug}" class="hero">
 	<figure>
 		<div>
 			<IntersectableTransition
-				anchor="#hero" threshold={.1}
-				options={{ y: 1280, duration: 1280, delay: 0}}
+				anchor="#hero-{work.slug}" threshold={.1}
+				options={{ y: 1280, duration: 1280, delay: 1024 * 2}}
 			>
 				<img
 					src="/images/works/{work.slug}/thumb.png"
@@ -17,11 +17,11 @@
 		</div>
 		<figcaption>
 			<IntersectableTransition
-				anchor="#hero" threshold={.1} isFade
-				options={{ duration: 1920, delay: 1024}}
+				anchor="#hero-{work.slug}" threshold={.1} isFade
+				options={{ duration: 1920, delay: 1024 * 2 + 256}}
 			>
 				<h2>{work.title}</h2>
-				<a href="{work.url}">
+				<a href="{work.url}" target="_blank">
 					<p>see website</p>
 					<div>
 						<div class="left"></div>
@@ -84,7 +84,7 @@
 <section id="galery">
 	<div class="container">
 		<IntersectableTransition
-			anchor="#hero" threshold={0}
+			anchor="#details" threshold={0}
 			options={{ y: 1280, duration: 1280, delay: 0}}
 		>
 			<h3>{work.punchline}</h3>
@@ -138,7 +138,7 @@
 	.hero {
 		position: relative;
 		width: 100%;
-		height: 75vh;
+		height: 640px;
 
 		figure {
 			position: absolute;
