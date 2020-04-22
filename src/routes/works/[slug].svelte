@@ -21,7 +21,14 @@
 				options={{ duration: 1920, delay: 1024}}
 			>
 				<h2>{work.title}</h2>
-				<a href="{work.url}">see website</a>
+				<a href="{work.url}">
+					<p>see website</p>
+					<div>
+						<div class="left"></div>
+						<div class="center"></div>
+						<div class="right"></div>
+					</div>
+				</a>
 			</IntersectableTransition>
 		</figcaption>
 	</figure>
@@ -105,7 +112,7 @@
 			width: 100%;
 			height: 100%;
 
-			:global(div div) {
+			:global(> div div) {
 				width: 100%;
 				height: 100%;
 				display: flex;
@@ -122,21 +129,50 @@
 
 			a {
 				position: relative;
-				color: white;
-				font-size: calc(var(--font-h3) * 1.5);
+
 				&:hover {
-					&:after {
-						width: 100%;
+					.left, .right {
+						width: 45%;
 					}
 				}
-				&:after {
-					position: absolute;
-					content: "";
-					bottom: 0;
-					left: 0;
-					border-bottom: 2px solid white;
-					width: 0;
-					transition: width .4s var(--ease-for-hover);
+
+				p {
+					color: white;
+					font-size: calc(var(--font-h3) * 1.5);
+					margin-bottom: 0;
+				}
+
+				div {
+					position: relative;
+					width: 100%;
+					height: 2px;
+
+					div {
+						display: flex;
+						height: 2px;
+						background: white;
+						top: 0;
+						transition: width .25s ease-in;
+
+						&.center {
+							max-width: 24%;
+						}
+
+						&.left, &.right {
+							position: absolute;
+							top: 0;
+							width: 0;
+						}
+
+						&.left {
+							left: 0;
+							// animation: xpandAndContractLeft .25s linear 0 1 alternate forwards;
+						}
+
+						&.right {
+							right: 0;
+						}
+					}
 				}
 			}
 		}
