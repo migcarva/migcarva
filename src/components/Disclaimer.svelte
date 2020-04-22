@@ -3,15 +3,15 @@
 		<h4>{year} | migcarva.com ™</h4>
 	</IntersectableTransition>
 	{#if !$menuIsOpen}
-		<div class="logo">
+		<button class="logo" on:click={goToTop}>
 			<IntersectableTransition options={{ delay: $menuIsOpen ? 1024 : 256 }}>
 				<Icon name="go-up" />
-				<div class="top" on:click={goToTop}>
-					<span>go to top</span>
+				<div class="top">
+					<span>top</span>
 				</div>
 			</IntersectableTransition>
-		</div>
-		{/if}
+		</button>
+	{/if}
 </div>
 
 <script>
@@ -45,10 +45,11 @@
 		.top {
 			position: absolute;
 			margin: 0;
-			width: 2em;
-			height: 2em;
+			width: 24px;
+			height: 24px;
 			top: 0;
 			right: 0;
+			cursor: pointer;
 
 			&:hover {
 				span {
@@ -61,15 +62,25 @@
 				font-size: .75em;
 				position: absolute;
 				top: -2em;
-				right: -64%;
-				opacity: 0;
+				right: 50%;
+				opacity: 1;
+				transform: translateX(50%);
 				transition: opacity .3s ease-in;
+				cursor: pointer;
+
+				@media (min-width: 768px)  {
+					opacity: 0;
+				}
 			}
 		}
 
 		.logo {
 			margin: 0;
 			z-index: 100;
+		}
+
+		button {
+			padding: 0;
 		}
 	}
 </style>
