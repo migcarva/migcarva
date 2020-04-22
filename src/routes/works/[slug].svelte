@@ -6,7 +6,7 @@
 	<IntersectableTransition>
 		<h2>
 			{work.title}<br>
-			<span>tl:dr — {@html work.summary}</span>
+			<span>— {@html work.punchline}</span>
 		</h2>
 	</IntersectableTransition>
 </section>
@@ -67,6 +67,5 @@
 				}
 			}
 		}
-
 	}
 </style>
