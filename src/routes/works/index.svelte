@@ -1,7 +1,9 @@
 <svelte:head>
 	<title>migcarva. Works</title>
 </svelte:head>
-<WorksList {works} />
+<div class="container">
+	<WorksList {works} />
+</div>
 
 <script context="module">
 	export function preload({ params, query }) {

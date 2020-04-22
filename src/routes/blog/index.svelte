@@ -2,37 +2,39 @@
 	<title>migcarva. blog</title>
 </svelte:head>
 
-<section id="posts">
-	<IntersectableTransition>
-		<h2>
-			My thoughts<br>
-			<span>— Ideas, writtings and sometimes rants!</span>
-		</h2>
-	</IntersectableTransition>
+<div class="container">
+	<section id="posts">
+		<IntersectableTransition>
+			<h2>
+				My thoughts<br>
+				<span>— Ideas, writtings and sometimes rants!</span>
+			</h2>
+		</IntersectableTransition>
 
-	<ul>
-		{#each posts as post}
-			<!-- we're using the non-standard `rel=prefetch` attribute to
-					tell Sapper to load the data for the page as soon as
-					the user hovers over the link or taps it, instead of
-					waiting for the 'click' event -->
-			<li id="{post.slug}">
-				<IntersectableTransition anchor="#{post.slug}" threshold={1}>
-					<a rel='prefetch' href='blog/{post.slug}'>
-						<div class="row">
-							<div class="col-8">
-								<h3>{post.title}</h3>
+		<ul>
+			{#each posts as post}
+				<!-- we're using the non-standard `rel=prefetch` attribute to
+						tell Sapper to load the data for the page as soon as
+						the user hovers over the link or taps it, instead of
+						waiting for the 'click' event -->
+				<li id="{post.slug}">
+					<IntersectableTransition anchor="#{post.slug}" threshold={1}>
+						<a rel='prefetch' href='blog/{post.slug}'>
+							<div class="row">
+								<div class="col-8">
+									<h3>{post.title}</h3>
+								</div>
+								<div class="col-8">
+									<p>{@html post.summary}</p>
+								</div>
 							</div>
-							<div class="col-8">
-								<p>{@html post.summary}</p>
-							</div>
-						</div>
-					</a>
-				</IntersectableTransition>
-			</li>
-		{/each}
-	</ul>
-</section>
+						</a>
+					</IntersectableTransition>
+				</li>
+			{/each}
+		</ul>
+	</section>
+</div>
 
 <script context="module">
 	export function preload({ params, query }) {
