@@ -1,7 +1,6 @@
 <Icons/>
 <Menu />
 <LogoVertical />
-<Logo invert={false} />
 
 <main>
 	<slot></slot>
@@ -16,7 +15,6 @@
 	import Icons from '../components/core/Icons.svelte';
 	import Menu from '../components/Menu.svelte';
 	import LogoVertical from '../components/LogoVertical.svelte';
-	import Logo from '../components/Logo.svelte';
 	import Footer from '../components/Footer.svelte';
 
 	export let segment;
@@ -67,8 +65,8 @@
 
 		--container-padding: 0 7.5% 0 17.5%;
 		--container-padding-laptop: 0 10%;
-		--container-margin: -3rem auto 0;
-		--container-margin-laptop: -4rem auto 0;
+		--container-margin: 0 auto;
+		--container-margin-laptop: -0 auto;
 
 		--scale-sm: scale3d(0.98, 0.98, 1);
 		--scale-md: scale3d(0.96, 0.96, 1);

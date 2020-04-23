@@ -3,13 +3,18 @@
 </svelte:head>
 
 <div class="container">
+	<Logo invert={false} />
 	<section id="{post.slug}">
-		<IntersectableTransition>
-			<h2>
-				{post.title}<br>
-				<span>tl:dr — {@html post.summary}</span>
-			</h2>
-		</IntersectableTransition>
+		<div class="row">
+			<div class="col-8">
+				<IntersectableTransition>
+					<h2>
+						{post.title}<br>
+						<span>tl:dr — {@html post.summary}</span>
+					</h2>
+				</IntersectableTransition>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-8">
 				<div class='content'>
@@ -49,6 +54,7 @@
 </script>
 
 <script>
+	import Logo from '../../components/Logo.svelte';
 	import IntersectableTransition from '../../helpers/IntersectableTransition.svelte';
 
 	export let post;

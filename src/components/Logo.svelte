@@ -20,15 +20,15 @@
 
 <style lang="scss">
 	#top {
-		position: relative;
-		width: 100%;
-		max-width: var(--breakpoint-xl);
-		padding: var(--container-padding);
-		margin: 3em auto 0;
+		position: absolute;
+		// width: 100%;
+		// max-width: var(--breakpoint-xl);
+		// padding: var(--container-padding);
+		top: 3em;
 		z-index: 10;
 
 		@media (min-width: 48em) {
-			margin: 4em auto 0;
+			top: 4em;
 		}
 
 		a {

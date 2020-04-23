@@ -3,6 +3,7 @@
 </svelte:head>
 
 <div class="container">
+	<Logo invert={false} />
 	<section id="hero">
 		<IntersectableTransition>
 			<h2>

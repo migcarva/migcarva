@@ -3,6 +3,7 @@
 </svelte:head>
 
 <div class="container">
+	<Logo invert={false} />
 	<section id="posts">
 		<IntersectableTransition>
 			<h2>
@@ -46,6 +47,7 @@
 
 <script>
 	import IntersectableTransition from '../../helpers/IntersectableTransition.svelte';
+	import Logo from '../../components/Logo.svelte';
 
 	export let posts;
 </script>

@@ -2,6 +2,7 @@
 	<title>migcarva. Works</title>
 </svelte:head>
 <div class="container">
+	<Logo invert={false} />
 	<WorksList {works} />
 </div>
 
@@ -15,6 +16,7 @@
 
 <script>
 	import WorksList from '../../components/WorksList.svelte';
+	import Logo from '../../components/Logo.svelte';
 
 	export let works;
 </script>
