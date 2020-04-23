@@ -65,7 +65,7 @@
 		--sections-bottom-margin: 20vh;
 		--title-bottom-margin: 3rem;
 
-		--container-padding: 0 15% 0 10%;
+		--container-padding: 0 7.5% 0 17.5%;
 		--container-padding-laptop: 0 10%;
 		--container-margin: -2rem auto 0;
 		--container-margin-laptop: -4rem auto 0;
