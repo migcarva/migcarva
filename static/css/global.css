@@ -164,8 +164,8 @@ button {
 
 .container {
 	width: 100%;
-	padding: var(--container-padding);
 	max-width: var(--breakpoint-xl);
+	padding: var(--container-padding);
 	margin: var(--container-margin);
 }
 
@@ -212,7 +212,6 @@ button {
 		--font-h4: .875em;
 		--title-bottom-margin: 3em;
 		--container-padding: var(--container-padding-laptop);
-		--container-margin: var(--container-margin-laptop);
 	}
 
   .col-2 {

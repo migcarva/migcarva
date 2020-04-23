@@ -66,7 +66,6 @@
 		--container-padding: 0 7.5% 0 17.5%;
 		--container-padding-laptop: 0 10%;
 		--container-margin: 0 auto;
-		--container-margin-laptop: -0 auto;
 
 		--scale-sm: scale3d(0.98, 0.98, 1);
 		--scale-md: scale3d(0.96, 0.96, 1);

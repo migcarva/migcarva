@@ -7,9 +7,9 @@
 </div>
 
 {#if $menuIsOpen}
-	<section transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
+	<section id="#menu" transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
 		<div class="container">
-			<!-- <Logo invert /> -->
+			<Logo invert={true} />
 			<Nav />
 			<SocialLinks />
 		</div>
@@ -52,6 +52,10 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+
+		@media (min-width: 48em) {
+			--container-padding: var(--container-padding-laptop);
+		}
 
 		> div {
 			z-index: 10;
