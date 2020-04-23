@@ -23,11 +23,12 @@
 		position: relative;
 		width: 100%;
 		max-width: var(--breakpoint-xl);
-		padding: 2rem 10% 0 15%;
-		margin: 0 auto;
+		padding: var(--container-padding);
+		margin: 3em auto 0;
 		z-index: 10;
+
 		@media (min-width: 48em) {
-			padding: 4rem 10% 0 10%;
+			margin: 4em auto 0;
 		}
 
 		a {
