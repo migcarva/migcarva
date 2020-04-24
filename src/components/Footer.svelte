@@ -15,15 +15,15 @@
 
 <style lang="scss">
 	footer {
-		padding-top: 8rem;
-		padding-bottom: 6rem;
-
+		margin-top: 6rem;
+		margin-bottom: 2rem;
 		@media (min-width: 375px) {
-			padding-top: 6rem;
+			margin-top: 10rem;
 		}
-		@media (min-width: 768px) {
-			padding: var(--sections-bottom-margin) 10% calc(var(--sections-bottom-margin) / 4);
+		@media (min-width: 48em) {
+			--container-padding: var(--container-padding-laptop);
 		}
+
 
 		h2 {
 			padding-top: 0;

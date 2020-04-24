@@ -3,6 +3,7 @@
 </svelte:head>
 
 <div class="container">
+	<Logo invert={false} />
 	<section id="hero">
 		<IntersectableTransition>
 			<h2>
@@ -12,7 +13,7 @@
 		</IntersectableTransition>
 	</section>
 
-	<!-- {#if showScrollText}
+	{#if showScrollText}
 		<div class="scroll">
 			<p in:fly="{{ y: -64, delay: 1024, duration: 1280 }}" out:fade="{{ duration: 1280, delay: 0 }}">
 				scroll down
@@ -53,16 +54,22 @@
 		</ActionLink>
 	</section>
 
-	<WorksList isSelected works={selectedWorks} /> -->
+
+	<WorksList isSelected works={selectedWorks} />
+
+	<div class="hidden">
+		<a href="/about">about</a>
+		<a href="/blog">blog</a>
+	</div>
 </div>
 
-<!-- <script context="module">
+<script context="module">
 	export function preload({ params, query }) {
 		return this.fetch(`works.json`).then(r => r.json()).then(works => {
 			return { works };
 		});
 	}
-</script> -->
+</script>
 
 <script>
 	import { fade, fly } from 'svelte/transition';
@@ -72,26 +79,26 @@
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
-	// export let works;
+  export let works;
 
-	// let showScrollText = false;
+	let showScrollText = false;
 
-	// function toggleScrollText() {
-	// 	showScrollText = !showScrollText;
-	// }
+	function toggleScrollText() {
+	  showScrollText = !showScrollText;
+	}
 
-	// function animateScrollText() {
-	// 	setTimeout(() => {
-	// 		toggleScrollText();
-	// 	}, 1024 * 3);
-	// }
+	function animateScrollText() {
+		setTimeout(() => {
+		  toggleScrollText();
+	  }, 1024 * 3);
+	}
 
-	// setTimeout(() => {
-	// 	toggleScrollText();
-	// 	animateScrollText();
-	// }, 1024);
+	setTimeout(() => {
+	  toggleScrollText();
+	  animateScrollText();
+	}, 1024);
 
-	// let selectedWorks = works.filter(work => work.isSelected);
+	let selectedWorks = works.filter(work => work.isSelected);
 </script>
 
 <style lang="scss">

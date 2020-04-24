@@ -138,7 +138,12 @@
 	.hero {
 		position: relative;
 		width: 100%;
-		height: 640px;
+		height: 100vh;
+		max-height: 384px;
+
+		@media (min-width: 48em) {
+			max-height: 640px;
+		}
 
 		figure {
 			position: absolute;
@@ -181,8 +186,12 @@
 
 				h2 {
 					color: white;
-					font-size: calc(var(--font-h2) * 1.25);
+					font-size: calc(var(--font-h2) / 1.25);
 					margin-bottom: 1rem;
+
+					@media (min-width: 48em) {
+						font-size: calc(var(--font-h2) * 1.25);
+					}
 				}
 
 				a {

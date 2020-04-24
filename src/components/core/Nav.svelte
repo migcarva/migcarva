@@ -2,7 +2,7 @@
 	<ul>
 		{#each links as link, i}
 			<li>
-				<IntersectableTransition options={{ x: 256, y: 0, delay: 256 + 128 * (i + 1) }}>
+				<IntersectableTransition options={{ x: 256, y: 0, delay: 128 + 64 * (i + 1) }}>
 					<NavItem segment={link}>{link}</NavItem>
 				</IntersectableTransition>
 			</li>
@@ -20,9 +20,9 @@
 <style lang="scss">
 	nav {
 		overflow: hidden;
-		margin: 7.5vh 0;
-		@media (min-width: 375px) {
-			margin: 15vh 0;
-		}
+		padding: calc(7.5vh + 6rem) 0 7.5vh;
+		// @media (min-width: 375px) {
+		// 	padding: 10vh 0 7.5vh;
+		// }
 	}
 </style>

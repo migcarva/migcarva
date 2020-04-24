@@ -1,5 +1,5 @@
 <IntersectableTransition {...lOptions}>
-	<a href={href}><slot></slot></a>
+	<a rel="prefetch" href={href}><slot></slot></a>
 </IntersectableTransition>
 
 <script>

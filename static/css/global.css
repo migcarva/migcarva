@@ -130,6 +130,16 @@ a:hover {
 	color: inherit;
 }
 
+a.action {
+	display: block;
+	float: right;
+	transition: 0.3s;
+}
+
+a.action:hover {
+	color: var(--action);
+}
+
 ul {
 	list-style: none;
 	margin: 0;
@@ -164,8 +174,8 @@ button {
 
 .container {
 	width: 100%;
-	padding: var(--container-padding);
 	max-width: var(--breakpoint-xl);
+	padding: var(--container-padding);
 	margin: var(--container-margin);
 }
 
@@ -205,6 +215,11 @@ button {
 	justify-content: center;
 }
 
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
 @media (min-width: 48em) {
 	main {
 		--font-base: 1.1em;
@@ -212,7 +227,6 @@ button {
 		--font-h4: .875em;
 		--title-bottom-margin: 3em;
 		--container-padding: var(--container-padding-laptop);
-		--container-margin: var(--container-margin-laptop);
 	}
 
   .col-2 {

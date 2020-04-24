@@ -7,11 +7,9 @@
 </div>
 
 {#if $menuIsOpen}
-	<section transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
+	<section id="#menu" transition:fly="{{delay: 100, duration: 600, x: -wWidth }}">
 		<div class="container">
-			<div class="logo">
-				<Logo invert />
-			</div>
+			<Logo invert={true} />
 			<Nav />
 			<SocialLinks />
 		</div>
@@ -55,21 +53,21 @@
 		height: 100%;
 		overflow: hidden;
 
+		@media (min-width: 48em) {
+			--container-padding: var(--container-padding-laptop);
+		}
+
 		> div {
 			z-index: 10;
 			height: 100vh;
-			margin: 0 auto;
-			@media (min-width: 48em) {
-				margin: 0 auto;
-			}
 		}
 
-		.logo {
-			width: 2rem;
-			@media (min-width: 48em) {
-				width: 3rem;
-			}
-		}
+		// .logo {
+		// 	width: 2rem;
+		// 	@media (min-width: 48em) {
+		// 		width: 3rem;
+		// 	}
+		// }
 	}
 
 	.button {

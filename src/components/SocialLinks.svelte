@@ -1,6 +1,6 @@
 <div class={$menuIsOpen ? 'invert row' : 'row'}>
 	<div class="col-4">
-		<IntersectableTransition options={{ x: 256, y: 0, duration: 1280, delay: $menuIsOpen ? 1024 : 256 }}>
+		<IntersectableTransition options={{ x: 256, y: 0, duration: 1280, delay: $menuIsOpen ? 512 : 256 }}>
 			<h3>On the interweb</h3>
 		</IntersectableTransition>
 	</div>
@@ -46,7 +46,7 @@
 	];
 
 	const liDelay = (i) => {
-		return menuIsOpen ? 1024 : 256 + (128 * (i + 1));
+		return 512 + (64 * (i + 1));
 	};
 </script>
 

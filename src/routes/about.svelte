@@ -3,6 +3,7 @@
 </svelte:head>
 
 <div class="container">
+	<Logo invert={false} />
 	<section id="intro">
 		<IntersectableTransition>
 			<h2>
@@ -97,6 +98,9 @@
 					</IntersectableTransition>
 				</div>
 			</div>
+			<ActionLink href="/blog" anchor="#expertise" threshold={.65}>
+				Discover my ideas
+			</ActionLink>
 	</section>
 
 	<section id="skills">
@@ -228,6 +232,7 @@
 
 <script>
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
+	import Logo from '../components/Logo.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
 </script>
 
