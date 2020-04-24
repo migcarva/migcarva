@@ -35,7 +35,7 @@
 
 <script context="module">
 	export async function preload({ params, query }) {
-		return this.fetch(`posts.json`).then(r => r.json()).then(posts => {
+		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
 			return { posts };
 		});
 	}

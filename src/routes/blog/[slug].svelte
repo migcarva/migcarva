@@ -26,12 +26,12 @@
 			{#if post.next.slug !== null}
 				<div class="col-12">
 					<p>up next</p>
-					<a href="/posts/{post.next.slug}">{post.next.title}</a>
+					<a href="/blog/{post.next.slug}">{post.next.title}</a>
 				</div>
 			{:else}
 				<div class="col-12">
-					<p>no more posts</p>
-					<a href="/posts">go back to the list</a>
+					<p>no more blog</p>
+					<a href="/blog">go back to the list</a>
 				</div>
 			{/if}
 		</div>

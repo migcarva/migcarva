@@ -98,6 +98,9 @@
 					</IntersectableTransition>
 				</div>
 			</div>
+			<ActionLink href="/blog" anchor="#expertise" threshold={.65}>
+				Discover my ideas
+			</ActionLink>
 	</section>
 
 	<section id="skills">
