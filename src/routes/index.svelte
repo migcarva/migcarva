@@ -55,6 +55,11 @@
 	</section>
 
 	<WorksList isSelected works={selectedWorks} />
+
+	<div class="hidden">
+		<a href="/about">about</a>
+		<a href="/blog">blog</a>
+	</div>
 </div>
 
 <script context="module">

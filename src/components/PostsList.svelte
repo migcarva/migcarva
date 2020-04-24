@@ -9,6 +9,9 @@
 		<ul>
 			{#each posts as post}
 				<li id="{post.slug}">
+				<div class="hidden">
+					<a href="blog/{post.slug}">{post.slug}</a>
+				</div>
 					<IntersectableTransition anchor="#{post.slug}" threshold={1}>
 						<a rel='prefetch' href='blog/{post.slug}'>
 							<div class="row">

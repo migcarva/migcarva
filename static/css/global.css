@@ -130,6 +130,16 @@ a:hover {
 	color: inherit;
 }
 
+a.action {
+	display: block;
+	float: right;
+	transition: 0.3s;
+}
+
+a.action:hover {
+	color: var(--action);
+}
+
 ul {
 	list-style: none;
 	margin: 0;
@@ -203,6 +213,11 @@ button {
 .scroll div {
 	display: flex;
 	justify-content: center;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
 }
 
 @media (min-width: 48em) {
