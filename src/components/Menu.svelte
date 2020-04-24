@@ -1,6 +1,6 @@
 <div class="button" >
 	<IntersectableTransition options={{ x: -128, y: 0, delay: 512 }}>
-		<button on:click={menuIsOpen.toggle}>
+		<button on:click={menuIsOpen.toggle} aria-label="toggle menu">
 			<Icon name={$menuIsOpen ? 'close' : 'hamburger'} />
 		</button>
 	</IntersectableTransition>
