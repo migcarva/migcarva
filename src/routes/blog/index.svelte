@@ -46,7 +46,6 @@
 	import Logo from '../../components/Logo.svelte';
 
 	export let posts;
-			console.log(posts);
 </script>
 
 <style lang="scss">

@@ -116,7 +116,7 @@
 			&:before {
 				content: "";
 				display: block;
-				padding-top: 100%;
+				padding-top: 120%;
 			}
 		}
 	}
