@@ -6,7 +6,7 @@
 	<slot></slot>
 </main>
 
-<!-- <Footer /> -->
+<Footer />
 
 <script>
 	import { stores } from '@sapper/app';

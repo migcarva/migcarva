@@ -54,7 +54,6 @@
 		</ActionLink>
 	</section>
 
-
 	<WorksList isSelected works={selectedWorks} />
 
 	<div class="hidden">
