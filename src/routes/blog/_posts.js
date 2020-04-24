@@ -4,7 +4,7 @@ const posts = [
 		slug: 'post-001',
 		summary: `Initial Commit`,
 		html: `
-			<p>So this is my first post... So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...</p>
+			<p>So this is my first post... So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post...So this is my first post......</p>
 		`
 	}
 ];
