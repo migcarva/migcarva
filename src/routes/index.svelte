@@ -54,6 +54,7 @@
 		</ActionLink>
 	</section>
 
+
 	<WorksList isSelected works={selectedWorks} />
 
 	<div class="hidden">
@@ -78,23 +79,23 @@
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
-	export let works;
+  export let works;
 
 	let showScrollText = false;
 
 	function toggleScrollText() {
-		showScrollText = !showScrollText;
+	  showScrollText = !showScrollText;
 	}
 
 	function animateScrollText() {
 		setTimeout(() => {
-			toggleScrollText();
-		}, 1024 * 3);
+		  toggleScrollText();
+	  }, 1024 * 3);
 	}
 
 	setTimeout(() => {
-		toggleScrollText();
-		animateScrollText();
+	  toggleScrollText();
+	  animateScrollText();
 	}, 1024);
 
 	let selectedWorks = works.filter(work => work.isSelected);
