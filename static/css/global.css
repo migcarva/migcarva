@@ -77,11 +77,11 @@ h1 a {
 }
 
 h2 span {
-	color: var(--grey-light);
+	color: var(--action);
 }
 
 h2 a {
-	color: var(--grey-light);
+	color: var(--action);
 	transition: 0.3s;
 	display: inline-block;
 	text-overflow: ellipsis;
