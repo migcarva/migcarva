@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>migcarva. Works</title>
+	<title>migcarva. works</title>
 </svelte:head>
 <div class="container">
 	<Logo invert={false} />
