@@ -35,9 +35,18 @@
 
 <script context="module">
 	export async function preload({ params, query }) {
-		return this.fetch(`posts.json`).then(r => r.json()).then(posts => {
-			return { posts };
-		});
+		// return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+		// 	return { posts };
+		// });
+		const res = await this.fetch(`blog.json`);
+		const data = await res.json();
+		console.log(data);
+
+		if (res.status === 200) {
+			return { posts: data };
+		} else {
+			this.error(res.status, data.message);
+		}
 	}
 </script>
 

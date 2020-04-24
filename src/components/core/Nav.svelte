@@ -14,7 +14,7 @@
 	import NavItem from './NavItem.svelte';
 	import IntersectableTransition from '../../helpers/IntersectableTransition.svelte';
 
-	const links = [ 'home', 'about', 'works', 'blog'];
+	const links = [ 'home', 'about', 'works', 'posts'];
 </script>
 
 <style lang="scss">
