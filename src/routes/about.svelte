@@ -44,9 +44,13 @@
 				</IntersectableTransition>
 			</div>
 		</div>
-		<ActionLink href="/works" anchor="#history" threshold={.75}>
-			Discover my work
-		</ActionLink>
+		<div class="row">
+			<div class="col-12">
+				<ActionLink href="/works" anchor="#history" threshold={.75}>
+					Discover my work
+				</ActionLink>
+			</div>
+		</div>
 	</section>
 
 	<section id="expertise">

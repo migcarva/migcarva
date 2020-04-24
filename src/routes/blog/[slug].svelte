@@ -17,21 +17,27 @@
 		</div>
 		<div class="row">
 			<div class="col-8">
-				<div class='content'>
-					{@html post.html}
-				</div>
+				<IntersectableTransition options={{ delay: 512 }}>
+					<div class='content'>
+						{@html post.html}
+					</div>
+				</IntersectableTransition>
 			</div>
 		</div>
 		<div class="row next">
 			{#if post.next.slug !== null}
 				<div class="col-12">
-					<p>up next</p>
-					<a href="/blog/{post.next.slug}">{post.next.title}</a>
+					<IntersectableTransition options={{ delay: 1024 }}>
+						<p>up next</p>
+						<a href="/blog/{post.next.slug}">{post.next.title}</a>
+					</IntersectableTransition>
 				</div>
 			{:else}
 				<div class="col-12">
-					<p>no more blog</p>
-					<a href="/blog">go back to the list</a>
+					<IntersectableTransition options={{ delay: 1024 }}>
+						<p>no more blog</p>
+						<a href="/blog">go back to the list</a>
+					</IntersectableTransition>
 				</div>
 			{/if}
 		</div>
