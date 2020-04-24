@@ -1,5 +1,5 @@
 <div class:active={$current === segment || (segment === 'home' && $current === undefined)}>
-	<a rel="prefetch" href={segment === 'home' ? '/' : segment}>
+	<a href={segment === 'home' ? '/' : segment}>
 		<slot></slot>
 	</a>
 </div>
