@@ -1,13 +1,13 @@
-<Icons/>
-<Menu />
-<LogoVertical />
+<!-- <Icons/> -->
+<!-- <Menu /> -->
+<!-- <LogoVertical /> -->
 <Logo invert={false} />
 
 <main>
 	<slot></slot>
 </main>
 
-<Footer />
+<!-- <Footer /> -->
 
 <script>
 	import { stores } from '@sapper/app';
