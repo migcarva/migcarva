@@ -15,7 +15,7 @@
 				/>
 			</IntersectableTransition>
 		</div>
-		<figcaption>
+		<!-- <figcaption>
 			<IntersectableTransition
 				anchor="#hero-{work.slug}" threshold={.1} isFade
 				options={{ duration: 1920, delay: 1024 + 256}}
@@ -30,7 +30,7 @@
 					</div>
 				</a>
 			</IntersectableTransition>
-		</figcaption>
+		</figcaption> -->
 	</figure>
 </div>
 
@@ -169,80 +169,80 @@
 				}
 			}
 
-			figcaption {
-				position: absolute;
-				top: 0;
-				width: 100%;
-				height: 100%;
+			// figcaption {
+			// 	position: absolute;
+			// 	top: 0;
+			// 	width: 100%;
+			// 	height: 100%;
 
-				:global(> div div) {
-					width: 100%;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-				}
+			// 	:global(> div div) {
+			// 		width: 100%;
+			// 		height: 100%;
+			// 		display: flex;
+			// 		flex-direction: column;
+			// 		justify-content: center;
+			// 		align-items: center;
+			// 	}
 
-				h2 {
-					color: white;
-					font-size: calc(var(--font-h2) / 1.25);
-					margin-bottom: 1rem;
+			// 	h2 {
+			// 		color: white;
+			// 		font-size: calc(var(--font-h2) / 1.25);
+			// 		margin-bottom: 1rem;
 
-					@media (min-width: 48em) {
-						font-size: calc(var(--font-h2) * 1.25);
-					}
-				}
+			// 		@media (min-width: 48em) {
+			// 			font-size: calc(var(--font-h2) * 1.25);
+			// 		}
+			// 	}
 
-				a {
-					position: relative;
+			// 	a {
+			// 		position: relative;
 
-					&:hover {
-						.left, .right {
-							width: 45%;
-						}
-					}
+			// 		&:hover {
+			// 			.left, .right {
+			// 				width: 45%;
+			// 			}
+			// 		}
 
-					p {
-						color: white;
-						font-size: calc(var(--font-h3) * 1.5);
-						margin-bottom: 0;
-					}
+			// 		p {
+			// 			color: white;
+			// 			font-size: calc(var(--font-h3) * 1.5);
+			// 			margin-bottom: 0;
+			// 		}
 
-					div {
-						position: relative;
-						width: 100%;
-						height: 2px;
+			// 		div {
+			// 			position: relative;
+			// 			width: 100%;
+			// 			height: 2px;
 
-						div {
-							display: flex;
-							height: 2px;
-							background: white;
-							top: 0;
-							transition: width .25s ease-in;
+			// 			div {
+			// 				display: flex;
+			// 				height: 2px;
+			// 				background: white;
+			// 				top: 0;
+			// 				transition: width .25s ease-in;
 
-							&.center {
-								max-width: 24%;
-							}
+			// 				&.center {
+			// 					max-width: 24%;
+			// 				}
 
-							&.left, &.right {
-								position: absolute;
-								top: 0;
-								width: 0;
-							}
+			// 				&.left, &.right {
+			// 					position: absolute;
+			// 					top: 0;
+			// 					width: 0;
+			// 				}
 
-							&.left {
-								left: 0;
-								// animation: xpandAndContractLeft .25s linear 0 1 alternate forwards;
-							}
+			// 				&.left {
+			// 					left: 0;
+			// 					// animation: xpandAndContractLeft .25s linear 0 1 alternate forwards;
+			// 				}
 
-							&.right {
-								right: 0;
-							}
-						}
-					}
-				}
-			}
+			// 				&.right {
+			// 					right: 0;
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
 		}
 	}
 

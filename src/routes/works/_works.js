@@ -22,27 +22,63 @@ const works = [
 		images: [
 			{
 				srcx1: '1.png',
-				srcx2: '',
 				alt: 'altext altext'
 			},
 			{
 				srcx1: '2.png',
-				srcx2: '',
 				alt: 'altext altext'
 			},
 			{
 				srcx1: '3.png',
-				srcx2: '',
 				alt: 'altext altext'
 			},
 			{
 				srcx1: '4.png',
-				srcx2: '',
 				alt: 'altext altext'
 			},
 			{
 				srcx1: '5.png',
-				srcx2: '',
+				alt: 'altext altext'
+			},
+		],
+	},
+
+
+	// serious
+	{
+		isSelected: true,
+		slug: 'serious',
+		title: 'Serious Work',
+		url: 'https://serious.work',
+		client: {
+			name: 'Serious Work',
+			url: 'https://serious.work',
+		},
+		employer: {
+			name: 'East Atlantic Engineering',
+			url: 'https://eae.pt',
+		},
+		tech: 'Vue.js',
+		punchline: 'Lorem ipsum dolor sit amet',
+		description: `
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		`,
+		images: [
+			{
+				srcx1: '1.png',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: '2.png',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: '3.png',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: '4.png',
 				alt: 'altext altext'
 			},
 		],
@@ -70,38 +106,40 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '1.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '2.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '3.png',
 				alt: 'altext altext'
-			}
+			},
+			{
+				srcx1: '4.png',
+				alt: 'altext altext'
+			},
 		],
 	},
 
-	// serious
+
+	// station
 	{
 		isSelected: true,
-		slug: 'serious',
-		title: 'Serious Work',
-		url: 'https://serious.work',
+		slug: 'station',
+		title: 'Station',
+		url: 'https://station.ch/de',
 		client: {
-			name: 'Serious Work',
-			url: 'https://serious.work',
+			name: 'Station',
+			url: 'https://station.ch/de',
 		},
 		employer: {
 			name: 'East Atlantic Engineering',
 			url: 'https://eae.pt',
 		},
-		tech: 'Vue.js',
+		tech: 'Drupal',
 		punchline: 'Lorem ipsum dolor sit amet',
 		description: `
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -109,20 +147,25 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '1.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '2.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '3.png',
 				alt: 'altext altext'
-			}
+			},
+			{
+				srcx1: '4.png',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: '5.png',
+				alt: 'altext altext'
+			},
 		],
 	},
 
@@ -148,38 +191,40 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '1.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '2.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '3.png',
 				alt: 'altext altext'
-			}
+			},
+			{
+				srcx1: '4.png',
+				alt: 'altext altext'
+			},
 		],
 	},
 
-	// station
+
+	// portugal-desigual
 	{
 		isSelected: true,
-		slug: 'station',
-		title: 'Station',
-		url: 'https://station.ch/de',
+		slug: 'portugal-desigual',
+		title: 'Portugal Desigual',
+		url: 'https://portugaldesigual.ffms.pt/',
 		client: {
-			name: 'Station',
-			url: 'https://station.ch/de',
+			name: 'Fundação Francisco Manuel dos Santos',
+			url: 'https://ffms.pt/',
 		},
 		employer: {
 			name: 'East Atlantic Engineering',
 			url: 'https://eae.pt',
 		},
-		tech: 'Drupal',
+		tech: 'Vue.js',
 		punchline: 'Lorem ipsum dolor sit amet',
 		description: `
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -187,20 +232,25 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '1.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '2.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '3.png',
 				alt: 'altext altext'
-			}
+			},
+			{
+				srcx1: '4.png',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: '5.png',
+				alt: 'altext altext'
+			},
 		],
 	},
 
@@ -226,20 +276,21 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '1.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '2.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '3.png',
 				alt: 'altext altext'
-			}
+			},
+			{
+				srcx1: '4.png',
+				alt: 'altext altext'
+			},
 		],
 	},
 
@@ -265,61 +316,24 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '1.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '2.png',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
-				srcx2: '',
+				srcx1: '3.png',
 				alt: 'altext altext'
-			}
+			},
+			{
+				srcx1: '4.png',
+				alt: 'altext altext'
+			},
 		],
 	},
 
-	// portugal-desigual
-	{
-		isSelected: true,
-		slug: 'portugal-desigual',
-		title: 'Portugal Desigual',
-		url: 'https://portugaldesigual.ffms.pt/',
-		client: {
-			name: 'Fundação Francisco Manuel dos Santos',
-			url: 'https://ffms.pt/',
-		},
-		employer: {
-			name: 'East Atlantic Engineering',
-			url: 'https://eae.pt',
-		},
-		tech: 'Vue.js',
-		punchline: 'Lorem ipsum dolor sit amet',
-		description: `
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		`,
-		images: [
-			{
-				srcx1: 'cover.png',
-				srcx2: '',
-				alt: 'altext altext'
-			},
-			{
-				srcx1: 'cover.png',
-				srcx2: '',
-				alt: 'altext altext'
-			},
-			{
-				srcx1: 'cover.png',
-				srcx2: '',
-				alt: 'altext altext'
-			}
-		],
-	},
 ];
 
 export default works;
