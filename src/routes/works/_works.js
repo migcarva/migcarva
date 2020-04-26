@@ -21,20 +21,30 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: 'cover.png',
+				srcx1: '1.png',
 				srcx2: '',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
+				srcx1: '2.png',
 				srcx2: '',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: 'cover.png',
+				srcx1: '3.png',
 				srcx2: '',
 				alt: 'altext altext'
-			}
+			},
+			{
+				srcx1: '4.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
+			{
+				srcx1: '5.png',
+				srcx2: '',
+				alt: 'altext altext'
+			},
 		],
 	},
 

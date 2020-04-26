@@ -10,7 +10,7 @@
 				options={{ y: 1280, duration: 1280, delay: 1024}}
 			>
 				<img
-					src="/images/works/{work.slug}/thumb.png"
+					src="/images/works/{work.slug}/cover.png"
 					alt={work.title}
 				/>
 			</IntersectableTransition>
@@ -90,7 +90,7 @@
 			<h3>{work.punchline}</h3>
 		</IntersectableTransition>
 	</div>
-	<div>
+	<div class="gallery">
 		{#each work.images as image}
 			<img src="/images/works/{work.slug}/{image.srcx1}" alt="">
 		{/each}
@@ -271,6 +271,15 @@
 		h3 {
 			font-size: calc(var(--font-h2) * .85);
 			margin-bottom: 10rem;
+		}
+
+		.gallery {
+			display: flex;
+			flex-direction: column;
+
+			img {
+				width: 100%;
+			}
 		}
 	}
 
