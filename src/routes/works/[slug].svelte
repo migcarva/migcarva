@@ -15,7 +15,7 @@
 				/>
 			</IntersectableTransition>
 		</div>
-		<figcaption>
+		<!-- <figcaption>
 			<IntersectableTransition
 				anchor="#hero-{work.slug}" threshold={.1} isFade
 				options={{ duration: 1920, delay: 1024 + 256}}
@@ -30,7 +30,7 @@
 					</div>
 				</a>
 			</IntersectableTransition>
-		</figcaption>
+		</figcaption> -->
 	</figure>
 </div>
 
