@@ -12,7 +12,11 @@
 			</h2>
 		</IntersectableTransition>
 		<IntersectableTransition options={{ x: 1024, y: 0, duration: 2048, delay: 256}}>
-			<img src="images/about_cover.png" alt="">
+			<img
+				src="images/about_cover.webp"
+				srcset="images/about_cover_s.webp 480w, images/about_cover_m.webp 1024w, images/about_cover.webp 1200w"
+				alt="Miguel Carvalho in the nature" sizes="100vw"
+			>
 		</IntersectableTransition>
 		<!-- <a class="freccia" href="#list"></a> -->
 	</section>
@@ -36,17 +40,21 @@
 						I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. After 2014 I made a shift in my career and entered the entrepreneurial world. I was trying to build a SaaS logistics startup, with 2 other friends. I was focused on the business and financial plans while also developing the webapp frontend architecture.
 					</p>
 					<p>
-						In the end, the startup didn't work, mainly because of timming, but I figured out that I could had a career as a developer, just need some more fundamental knowledge. That's when I entered <a href="https://www.academiadecodigo.org/">Academira de Código</a>, a Java and Javascript Bootcamp and sky rocketed my personal growth.
+						In the end, the startup didn't work, mainly because of timming, but I figured out that I could had a career as a developer, just need some more fundamental knowledge. That's when I entered <a rel="external" href="https://www.academiadecodigo.org/">Academia de Código</a>, a Java and Javascript Bootcamp and sky rocketed my personal growth.
 					</p>
 					<p>
-						I've been working in all kind of companies ever since. <a href="https://eae.pt/">East Atlantic Engineering</a> is an portuguese agency, with both local portuguese clients and internacional clients. <a href="https://brpx.com/">Bright Pixel</a> is a very special company. A group of very experienced builders, creative thinkers and investors. With a big fund to invest in startups while helping them with technical knowledge, using in house talent. <a href="https://unbabel.com/">Unbabel</a> is a portuguese startup, in it's way to unicorn level, trying to 'create universal understanding'.
+						I've been working in all kind of companies ever since. <a rel="external" href="https://eae.pt/">East Atlantic Engineering</a> is an portuguese agency, with both local portuguese clients and internacional clients. <a rel="external" href="https://brpx.com/">Bright Pixel</a> is a very special company. A group of very experienced builders, creative thinkers and investors. With a big fund to invest in startups while helping them with technical knowledge, using in house talent. <a rel="external" href="https://unbabel.com/">Unbabel</a> is a portuguese startup, in it's way to unicorn level, trying to 'create universal understanding'.
 					</p>
 				</IntersectableTransition>
 			</div>
 		</div>
-		<ActionLink href="/works" anchor="#history" threshold={.75}>
-			Discover my work
-		</ActionLink>
+		<div class="row">
+			<div class="col-12">
+				<ActionLink href="/works" anchor="#history" threshold={.75}>
+					Discover my work
+				</ActionLink>
+			</div>
+		</div>
 	</section>
 
 	<section id="expertise">
@@ -245,6 +253,8 @@
 
 		img {
 			max-height: 50vh;
+			width: 90vw;
+    	object-fit: cover;
 		}
 	}
 

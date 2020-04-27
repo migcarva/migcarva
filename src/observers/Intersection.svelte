@@ -1,4 +1,4 @@
-<div bind:this={container}>
+<div class="intersector" bind:this={container}>
 	<slot {intersecting}></slot>
 </div>
 
@@ -44,7 +44,7 @@
 				(bcr.top - top) < window.innerHeight &&
 				(bcr.left - left) < window.innerWidth
 			);
- 
+
 			if (intersecting && once) {
 				window.removeEventListener('scroll', handler);
 			}
@@ -57,7 +57,7 @@
 </script>
 
 <style>
-	div {
+	.intersector {
 		width: 100%;
 		height: 100%;
 	}

@@ -16,6 +16,7 @@
 		{#each works as work, i}
 			<li class="col col-6" id="{sectionId}-{work.slug}">
 				<a href={`/works/${work.slug}`}>
+					<div class="hidden">Visit {work.title} work page</div>
 					<div>
 						<figure>
 							<div>
@@ -24,10 +25,10 @@
 									options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
 								>
 									<img
-										src="/images/works/{work.slug}/thumb.png"
+										src="/images/works/{work.slug}/thumb.webp"
 										alt={work.title}
 									/>
-									<p class="hover">view more</p>
+									<!-- <p class="hover">view more</p> -->
 								</IntersectableTransition>
 							</div>
 							<figcaption>
@@ -88,10 +89,10 @@
 						transform: scale3d(1.16, 1.16, 1);
 						transition: transform 2.2s cubic-bezier(0, 0.55, 0.45, 1);
 					}
-					.hover {
-						opacity: .9;
-						transition: opacity 1.1s cubic-bezier(0, 0.55, 0.45, 1);
-					}
+					// .hover {
+					// 	opacity: .9;
+					// 	transition: opacity 1.1s cubic-bezier(0, 0.55, 0.45, 1);
+					// }
 				}
 
 				h3:after {
@@ -148,20 +149,20 @@
 				transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
 			}
 
-			.hover {
-				width: 100%;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				text-align: center;
-				transform: translate(-50%, -50%);
-				color: white;
-				font-size: 3em;
-				font-weight: var(--font-medium);
-				text-shadow: 0 4px 4px var(--grey-light);
-				opacity: 0;
-				transition: opacity .3s cubic-bezier(0, 0.55, 0.45, 1);
-			}
+			// .hover {
+			// 	width: 100%;
+			// 	position: absolute;
+			// 	top: 50%;
+			// 	left: 50%;
+			// 	text-align: center;
+			// 	transform: translate(-50%, -50%);
+			// 	color: white;
+			// 	font-size: 3em;
+			// 	font-weight: var(--font-medium);
+			// 	text-shadow: 0 4px 4px var(--grey-light);
+			// 	opacity: 0;
+			// 	transition: opacity .3s cubic-bezier(0, 0.55, 0.45, 1);
+			// }
 		}
 
 		figcaption {

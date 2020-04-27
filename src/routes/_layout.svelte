@@ -53,7 +53,6 @@
 		--font-normal: 300;
 		--font-medium: 400;
 		--font-bold: 600;
-		--font-bolder: 700;
 		--line-height-small: 1;
 		--line-height-base: 1.5;
 		--line-height-big: 1.7;

@@ -57,8 +57,8 @@
 	<WorksList isSelected works={selectedWorks} />
 
 	<div class="hidden">
-		<a href="/about">about</a>
-		<a href="/blog">blog</a>
+		<a href="/about">visit the about page</a>
+		<a href="/blog">visit the blog page</a>
 	</div>
 </div>
 

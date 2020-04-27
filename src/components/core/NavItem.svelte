@@ -1,5 +1,6 @@
 <div class:active={$current === segment || (segment === 'home' && $current === undefined)}>
 	<a href={segment === 'home' ? '/' : segment}>
+		<div class="hidden">Go to {segment} page</div>
 		<slot></slot>
 	</a>
 </div>

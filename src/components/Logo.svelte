@@ -1,5 +1,6 @@
 <div id="top">
 	<a href='/'>
+		<div class="hidden">Go to the homepage</div>
 		<IntersectableTransition isFade options={{ delay: 0 }}>
 			<svg
 				width="128" height="128"
