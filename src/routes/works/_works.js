@@ -21,23 +21,33 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '5.webp',
+				src: '5.webp',
+				src_m: '5m.webp',
+				src_s: '5s.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -66,19 +76,27 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -106,19 +124,27 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -147,23 +173,33 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '5.webp',
+				src: '5.webp',
+				src_m: '5m.webp',
+				src_s: '5s.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -191,19 +227,27 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -232,23 +276,33 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '5.webp',
+				src: '5.webp',
+				src_m: '5m.webp',
+				src_s: '5s.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -276,19 +330,27 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -316,19 +378,27 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.webp',
+				src: '1.webp',
+				src_m: '1m.webp',
+				src_s: '1s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.webp',
+				src: '2.webp',
+				src_m: '2m.webp',
+				src_s: '2s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.webp',
+				src: '3.webp',
+				src_m: '3m.webp',
+				src_s: '3s.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.webp',
+				src: '4.webp',
+				src_m: '4m.webp',
+				src_s: '4s.webp',
 				alt: 'altext altext'
 			},
 		],

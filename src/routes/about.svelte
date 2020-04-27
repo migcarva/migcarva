@@ -12,7 +12,11 @@
 			</h2>
 		</IntersectableTransition>
 		<IntersectableTransition options={{ x: 1024, y: 0, duration: 2048, delay: 256}}>
-			<img src="images/about_cover.webp" alt="">
+			<img
+				src="images/about_cover.webp"
+				srcset="images/about_cover_s.webp 480w, images/about_cover_m.webp 1024w, images/about_cover.webp 1200w"
+				alt="Miguel Carvalho in the nature" sizes="100vw"
+			>
 		</IntersectableTransition>
 		<!-- <a class="freccia" href="#list"></a> -->
 	</section>

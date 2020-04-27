@@ -10,8 +10,10 @@
 				options={{ y: 1280, duration: 1280, delay: 1024}}
 			>
 				<img
+
 					src="/images/works/{work.slug}/cover.webp"
-					alt={work.title}
+					srcset="/images/works/{work.slug}/cover_s.webp 480w, /images/works/{work.slug}/cover_m.webp 1024w, /images/works/{work.slug}/cover.webp 1200w"
+					alt={work.title} sizes="100vw"
 				/>
 			</IntersectableTransition>
 		</div>
@@ -102,8 +104,8 @@
 	<div class="gallery">
 		{#each work.images as image}
 			<img
-				src="/images/works/{work.slug}/{image.srcx1}"
-				srcset="/images/works/{work.slug}/{image.srcx1}, /images/works/{work.slug}/{image.srcx1}, /images/works/{work.slug}/{image.srcx1}"
+				src="/images/works/{work.slug}/{image.src}"
+				srcset="/images/works/{work.slug}/{image.src_s} 480w, /images/works/{work.slug}/{image.src_m} 1024w, /images/works/{work.slug}/{image.src} 1200w"
 				alt="image.alt" sizes="100vw">
 		{/each}
 	</div>
