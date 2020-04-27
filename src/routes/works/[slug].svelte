@@ -101,7 +101,10 @@
 	</div>
 	<div class="gallery">
 		{#each work.images as image}
-			<img src="/images/works/{work.slug}/{image.srcx1}" alt="">
+			<img
+				src="/images/works/{work.slug}/{image.srcx1}"
+				srcset="/images/works/{work.slug}/{image.srcx1}, /images/works/{work.slug}/{image.srcx1}, /images/works/{work.slug}/{image.srcx1}"
+				alt="image.alt" sizes="100vw">
 		{/each}
 	</div>
 </section>

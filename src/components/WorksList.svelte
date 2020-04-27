@@ -8,7 +8,7 @@
 		{:else}
 			<h2>
 				All my work<br>
-				<span>— Both personal and professional work</span>\
+				<span>— Both personal and professional work</span>
 			</h2>
 		{/if}
 	</IntersectableTransition>
