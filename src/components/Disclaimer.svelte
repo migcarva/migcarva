@@ -3,7 +3,7 @@
 		<h4>{year} | migcarva.com ™</h4>
 	</IntersectableTransition>
 	{#if !$menuIsOpen}
-		<button class="logo" on:click={goToTop}>
+		<button aria-label="go to home" class="logo" on:click={goToTop}>
 			<IntersectableTransition options={{ delay: $menuIsOpen ? 1024 : 256 }}>
 				<Icon name="go-up" />
 				<div class="top">

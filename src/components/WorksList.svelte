@@ -8,7 +8,7 @@
 		{:else}
 			<h2>
 				All my work<br>
-				<span>— Both personal and professional work</span>
+				<span>— Both personal and professional work</span>\
 			</h2>
 		{/if}
 	</IntersectableTransition>
@@ -16,6 +16,7 @@
 		{#each works as work, i}
 			<li class="col col-6" id="{sectionId}-{work.slug}">
 				<a href={`/works/${work.slug}`}>
+					<div class="hidden">Visit {work.title} work page</div>
 					<div>
 						<figure>
 							<div>

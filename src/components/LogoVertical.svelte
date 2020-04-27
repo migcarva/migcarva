@@ -3,7 +3,10 @@
 {#if y > threshold}
 	<div transition:fly="{{ y: -20, duration: 500 }}">
 		<h1>
-			<a href="/">migcarva.</a>
+			<a href="/">
+				<div class="hidden">Go to the homepage</div>
+				migcarva.
+			</a>
 		</h1>
 	</div>
 {/if}

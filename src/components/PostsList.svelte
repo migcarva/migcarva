@@ -10,7 +10,7 @@
 			{#each posts as post}
 				<li id="{post.slug}">
 				<div class="hidden">
-					<a href="blog/{post.slug}">{post.slug}</a>
+					<a href="blog/{post.slug}">Read the post: {post.title}</a>
 				</div>
 					<IntersectableTransition anchor="#{post.slug}" threshold={1}>
 						<a rel='prefetch' href='blog/{post.slug}'>
