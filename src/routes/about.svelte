@@ -12,7 +12,7 @@
 			</h2>
 		</IntersectableTransition>
 		<IntersectableTransition options={{ x: 1024, y: 0, duration: 2048, delay: 256}}>
-			<img src="images/about_cover.png" alt="">
+			<img src="images/about_cover.webp" alt="">
 		</IntersectableTransition>
 		<!-- <a class="freccia" href="#list"></a> -->
 	</section>
@@ -249,6 +249,8 @@
 
 		img {
 			max-height: 50vh;
+			width: 90vw;
+    	object-fit: cover;
 		}
 	}
 
