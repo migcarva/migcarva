@@ -24,31 +24,31 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 			{
 				src: '5.webp',
 				src_m: '5m.webp',
 				src_s: '5s.webp',
-				alt: 'altext altext'
+				alt: 'Several mobiles views of the website'
 			},
 		],
 	},
@@ -79,25 +79,25 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 		],
 	},
@@ -127,25 +127,25 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 		],
 	},
@@ -176,31 +176,31 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 			{
 				src: '5.webp',
 				src_m: '5m.webp',
 				src_s: '5s.webp',
-				alt: 'altext altext'
+				alt: 'Several mobiles views of the website'
 			},
 		],
 	},
@@ -230,25 +230,25 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 		],
 	},
@@ -279,31 +279,31 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 			{
 				src: '5.webp',
 				src_m: '5m.webp',
 				src_s: '5s.webp',
-				alt: 'altext altext'
+				alt: 'Several mobiles views of the website'
 			},
 		],
 	},
@@ -333,25 +333,25 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 		],
 	},
@@ -381,25 +381,25 @@ const works = [
 				src: '1.webp',
 				src_m: '1m.webp',
 				src_s: '1s.webp',
-				alt: 'altext altext'
+				alt: 'Fullpage view of the website'
 			},
 			{
 				src: '2.webp',
 				src_m: '2m.webp',
 				src_s: '2s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '3.webp',
 				src_m: '3m.webp',
 				src_s: '3s.webp',
-				alt: 'altext altext'
+				alt: '3 tablets views of the website'
 			},
 			{
 				src: '4.webp',
 				src_m: '4m.webp',
 				src_s: '4s.webp',
-				alt: 'altext altext'
+				alt: 'Single page and mobile view'
 			},
 		],
 	},
