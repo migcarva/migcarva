@@ -9,7 +9,7 @@
 			{#each links as link, i}
 				<li>
 					<IntersectableTransition options={{ x: 256, y: 0, duration: 1280, delay: liDelay(i) }}>
-						<a class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
+						<a rel="noreferrer" class={link.name.toLowerCase()} href={link.url} target="_blank">{link.name}</a>
 						<span>/</span>
 					</IntersectableTransition>
 				</li>
