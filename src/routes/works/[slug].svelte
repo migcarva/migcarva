@@ -40,7 +40,7 @@
 						options={{ y: 128, duration: 1280, delay: 0}}
 					>
 						<p class="title">CLIENT</p>
-						<a href="{work.client.url}">{work.client.name}</a>
+						<a rel="noreferrer" href="{work.client.url}">{work.client.name}</a>
 					</IntersectableTransition>
 				</div>
 				<div class="col-6 group">
@@ -49,7 +49,7 @@
 						options={{ y: 128, duration: 1280, delay: 256}}
 					>
 						<p class="title">EMPLOYER</p>
-						<a href="{work.employer.url}">{work.employer.name}</a>
+						<a rel="noreferrer" href="{work.employer.url}">{work.employer.name}</a>
 					</IntersectableTransition>
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 						anchor="#details" threshold={.75}
 						options={{ y: 128, duration: 1280, delay: 256 * 3}}
 					>
-						<a href="{work.url}" target="_blank">
+						<a rel="noreferrer" href="{work.url}" target="_blank">
 							<p>see website</p>
 							<div>
 								<div class="left"></div>
