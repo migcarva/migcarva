@@ -21,23 +21,23 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '5.png',
+				srcx1: '5.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -66,19 +66,19 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -106,19 +106,19 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -147,23 +147,23 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '5.png',
+				srcx1: '5.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -191,19 +191,19 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -232,23 +232,23 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '5.png',
+				srcx1: '5.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -276,19 +276,19 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 		],
@@ -316,19 +316,19 @@ const works = [
 		`,
 		images: [
 			{
-				srcx1: '1.png',
+				srcx1: '1.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '2.png',
+				srcx1: '2.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '3.png',
+				srcx1: '3.webp',
 				alt: 'altext altext'
 			},
 			{
-				srcx1: '4.png',
+				srcx1: '4.webp',
 				alt: 'altext altext'
 			},
 		],

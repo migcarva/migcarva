@@ -10,27 +10,11 @@
 				options={{ y: 1280, duration: 1280, delay: 1024}}
 			>
 				<img
-					src="/images/works/{work.slug}/cover.png"
+					src="/images/works/{work.slug}/cover.webp"
 					alt={work.title}
 				/>
 			</IntersectableTransition>
 		</div>
-		<!-- <figcaption>
-			<IntersectableTransition
-				anchor="#hero-{work.slug}" threshold={.1} isFade
-				options={{ duration: 1920, delay: 1024 + 256}}
-			>
-				<h2>{work.title}</h2>
-				<a href="{work.url}" target="_blank">
-					<p>see website</p>
-					<div>
-						<div class="left"></div>
-						<div class="center"></div>
-						<div class="right"></div>
-					</div>
-				</a>
-			</IntersectableTransition>
-		</figcaption> -->
 	</figure>
 </div>
 

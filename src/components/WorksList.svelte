@@ -24,7 +24,7 @@
 									options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
 								>
 									<img
-										src="/images/works/{work.slug}/thumb.png"
+										src="/images/works/{work.slug}/thumb.webp"
 										alt={work.title}
 									/>
 									<!-- <p class="hover">view more</p> -->
