@@ -21,33 +21,33 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 			{
-				src: '5.webp',
-				src_m: '5m.webp',
-				src_s: '5s.webp',
+				src: '5',
+				src_m: '5m',
+				src_s: '5s',
 				alt: 'Several mobiles views of the website'
 			},
 		],
@@ -75,27 +75,27 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 		],
@@ -123,27 +123,27 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 		],
@@ -172,33 +172,33 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 			{
-				src: '5.webp',
-				src_m: '5m.webp',
-				src_s: '5s.webp',
+				src: '5',
+				src_m: '5m',
+				src_s: '5s',
 				alt: 'Several mobiles views of the website'
 			},
 		],
@@ -226,27 +226,27 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 		],
@@ -275,33 +275,33 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 			{
-				src: '5.webp',
-				src_m: '5m.webp',
-				src_s: '5s.webp',
+				src: '5',
+				src_m: '5m',
+				src_s: '5s',
 				alt: 'Several mobiles views of the website'
 			},
 		],
@@ -329,27 +329,27 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 		],
@@ -377,27 +377,27 @@ const works = [
 		`,
 		images: [
 			{
-				src: '1.webp',
-				src_m: '1m.webp',
-				src_s: '1s.webp',
+				src: '1',
+				src_m: '1m',
+				src_s: '1s',
 				alt: 'Fullpage view of the website'
 			},
 			{
-				src: '2.webp',
-				src_m: '2m.webp',
-				src_s: '2s.webp',
+				src: '2',
+				src_m: '2m',
+				src_s: '2s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '3.webp',
-				src_m: '3m.webp',
-				src_s: '3s.webp',
+				src: '3',
+				src_m: '3m',
+				src_s: '3s',
 				alt: '3 tablets views of the website'
 			},
 			{
-				src: '4.webp',
-				src_m: '4m.webp',
-				src_s: '4s.webp',
+				src: '4',
+				src_m: '4m',
+				src_s: '4s',
 				alt: 'Single page and mobile view'
 			},
 		],
