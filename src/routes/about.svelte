@@ -17,7 +17,7 @@
 						sizes="100vw"
 						srcset="images/about_cover_m.webp 1024w,
                   	images/about_cover.webp 1200w">
-					<img src="images/about_cover.jpg" alt="{image.alt}"
+					<img src="images/about_cover.jpg" alt="Miguel Carvalho in the nature"
 							sizes="100vw"
 							srcset="images/about_cover_s.jpg 480w,
 											images/about_cover_m.jpg 1024w,

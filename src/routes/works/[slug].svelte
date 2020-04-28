@@ -20,7 +20,7 @@
 						sizes="100vw"
 						srcset="images/works/{work.slug}/cover.webp 1024w,
                   	images/works/{work.slug}/cover.webp 1200w">
-					<img src="images/works/{work.slug}/cover.jpg" alt="{image.alt}"
+					<img src="images/works/{work.slug}/cover.jpg" alt="{work.alt}"
 							sizes="100vw"
 							srcset="images/works/{work.slug}/cover.jpg 480w,
 											images/works/{work.slug}/cover.jpg 1024w,
@@ -119,7 +119,7 @@
 						sizes="100vw"
 						srcset="images/works/{work.slug}/{image.src_m}.webp 1024w,
                   	images/works/{work.slug}/{image.src}.webp 1200w">
-					<img src="images/works/{work.slug}/{image.src}.jpg" alt="{image.alt}"
+					<img src="images/works/{work.slug}/{image.src}.jpg" alt="{work.alt}"
 							sizes="100vw"
 							srcset="images/works/{work.slug}/{image.src_s}.jpg 480w,
 											images/works/{work.slug}/{image.src_m}.jpg 1024w,
