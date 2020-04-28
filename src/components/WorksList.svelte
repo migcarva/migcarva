@@ -25,7 +25,7 @@
 									options={{ y: 256, duration: 1280, delay: i % 2 === 0 ? 0 : 256}}
 								>
 									<picture>
-										<source type="image/webp" srcset="images/butterfly.webp">
+										<source type="image/webp" srcset="images/works/{work.slug}/thumb.webp">
   									<img src="images/works/{work.slug}/thumb.jpg" alt="{work.title}">
 									</picture>
 									<!-- <p class="hover">view more</p> -->
