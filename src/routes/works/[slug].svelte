@@ -15,6 +15,17 @@
 					srcset="/images/works/{work.slug}/cover_s.webp 480w, /images/works/{work.slug}/cover_m.webp 1024w, /images/works/{work.slug}/cover.webp 1200w"
 					alt={work.title} sizes="100vw"
 				/>
+				<picture>
+					<source media="(min-width: 1024px)"
+						sizes="100vw"
+						srcset="images/works/{work.slug}/cover.webp 1024w,
+                  	images/works/{work.slug}/cover.webp 1200w">
+					<img src="images/works/{work.slug}/cover.jpg" alt="{work.alt}"
+							sizes="100vw"
+							srcset="images/works/{work.slug}/cover.jpg 480w,
+											images/works/{work.slug}/cover.jpg 1024w,
+											images/works/{work.slug}/cover.jpg 1200w">
+			</picture>
 			</IntersectableTransition>
 		</div>
 	</figure>
@@ -103,10 +114,17 @@
 	</div>
 	<div class="gallery">
 		{#each work.images as image}
-			<img
-				src="/images/works/{work.slug}/{image.src}"
-				srcset="/images/works/{work.slug}/{image.src_s} 480w, /images/works/{work.slug}/{image.src_m} 1024w, /images/works/{work.slug}/{image.src} 1200w"
-				alt="image.alt" sizes="100vw">
+			<picture>
+					<source media="(min-width: 1024px)"
+						sizes="100vw"
+						srcset="images/works/{work.slug}/{image.src_m}.webp 1024w,
+                  	images/works/{work.slug}/{image.src}.webp 1200w">
+					<img src="images/works/{work.slug}/{image.src}.jpg" alt="{work.alt}"
+							sizes="100vw"
+							srcset="images/works/{work.slug}/{image.src_s}.jpg 480w,
+											images/works/{work.slug}/{image.src_m}.jpg 1024w,
+											images/works/{work.slug}/{image.src}.jpg 1200w">
+			</picture>
 		{/each}
 	</div>
 </section>
