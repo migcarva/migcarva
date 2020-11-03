@@ -44,7 +44,7 @@
 			<div class="col-5">
 				<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 384 }}>
 					<p>
-						I'm currently working as a senior frontend developer at <a href="https://unbabel.com">Unbabel</a>, where I'm part of the Language Operations Team, a crucial team supporting Unbabel's clients. I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.
+						I'm currently working as an agile engineer at <a href="https://www.iammoneysmart.com/">IAmMoney</a>, building a new kind of banking experience. <strike>I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.</strike> I spent most of my time reviewing code, mentoring younger developers and chilling out with my family.
 					</p>
 				</IntersectableTransition>
 			</div>

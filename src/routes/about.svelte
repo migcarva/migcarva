@@ -41,7 +41,7 @@
 				</IntersectableTransition>
 			</div>
 			<div class="col-8">
-				<IntersectableTransition  anchor='#history' threshold={.5} options={{ delay: 512 }}>
+				<IntersectableTransition anchor='#history' threshold={.5} options={{ delay: 512 }}>
 					<p>
 						I started doing frontend development a long time ago, when it was my hobby and I was studying to become an architect. After 2014 I made a shift in my career and entered the entrepreneurial world. I was trying to build a SaaS logistics startup, with 2 other friends. I was focused on the business and financial plans while also developing the webapp frontend architecture.
 					</p>
@@ -50,6 +50,9 @@
 					</p>
 					<p>
 						I've been working in all kind of companies ever since. <a rel="external" href="https://eae.pt/">East Atlantic Engineering</a> is an portuguese agency, with both local portuguese clients and internacional clients. <a rel="external" href="https://brpx.com/">Bright Pixel</a> is a very special company. A group of very experienced builders, creative thinkers and investors. With a big fund to invest in startups while helping them with technical knowledge, using in house talent. <a rel="external" href="https://unbabel.com/">Unbabel</a> is a portuguese startup, in it's way to unicorn level, trying to 'create universal understanding'.
+					</p>
+					<p>
+						I'm currently working at <a rel="external" href="https://www.iammoneysmart.com/">IAmMoney</a> building new banking solutions for the new age. As part of it's inital team, I'm thrilled to help develop the inital foundation of a big list of products.
 					</p>
 				</IntersectableTransition>
 			</div>
@@ -130,13 +133,13 @@
 				<div class="col-2">
 						<h3>Languages</h3>
 				</div>
-				<div class="col-5">
+				<div class="col-4">
 					<ul>
 						<li>Javascript - ES.Next</li>
 						<li>Javascript - Node.js</li>
 					</ul>
 				</div>
-				<div class="col-5">
+				<div class="col-4">
 					<ul>
 						<li>Html 5</li>
 						<li>CSS3, SASS, PostCSS</li>
@@ -150,14 +153,14 @@
 				<div class="col-2">
 					<h3>MV frameworks</h3>
 				</div>
-				<div class="col-5">
+				<div class="col-4">
 					<ul>
 						<li>React</li>
 						<li>Svelte</li>
 						<li>Single SPA</li>
 					</ul>
 				</div>
-				<div class="col-5">
+				<div class="col-4">
 					<ul>
 						<li>Vue.js</li>
 						<li>jQuery</li>
@@ -261,6 +264,12 @@
 			max-height: 50vh;
 			width: 90vw;
     	object-fit: cover;
+		}
+	}
+
+	#history {
+		p > a {
+			position: relative;
 		}
 	}
 
