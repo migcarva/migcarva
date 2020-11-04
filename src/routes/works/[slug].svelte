@@ -9,22 +9,18 @@
 				anchor="#hero-{work.slug}" threshold={.1}
 				options={{ y: 1280, duration: 1280, delay: 1024}}
 			>
-				<img
-
-					src="/images/works/{work.slug}/cover.webp"
-					srcset="/images/works/{work.slug}/cover_s.webp 480w, /images/works/{work.slug}/cover_m.webp 1024w, /images/works/{work.slug}/cover.webp 1200w"
-					alt={work.title} sizes="100vw"
-				/>
 				<picture>
-					<source media="(min-width: 1024px)"
+					<img
+						src="/images/works/{work.slug}/cover.jpg"
+						alt="{work.alt}"
 						sizes="100vw"
-						srcset="images/works/{work.slug}/cover.webp 1024w,
-                  	images/works/{work.slug}/cover.webp 1200w">
-					<img src="images/works/{work.slug}/cover.jpg" alt="{work.alt}"
-							sizes="100vw"
-							srcset="images/works/{work.slug}/cover.jpg 480w,
-											images/works/{work.slug}/cover.jpg 1024w,
-											images/works/{work.slug}/cover.jpg 1200w">
+						srcset="/images/works/{work.slug}/cover.jpg 480w, /images/works/{work.slug}/cover.jpg 1024w, /images/works/{work.slug}/cover.jpg 1200w"
+					/>
+					<source
+						media="(min-width: 1024px)"
+						sizes="100vw"
+						srcset="/images/works/{work.slug}/cover.webp 1024w, /images/works/{work.slug}/cover.webp 1200w"
+					/>
 			</picture>
 			</IntersectableTransition>
 		</div>
@@ -115,15 +111,29 @@
 	<div class="gallery">
 		{#each work.images as image}
 			<picture>
-					<source media="(min-width: 1024px)"
-						sizes="100vw"
-						srcset="images/works/{work.slug}/{image.src_m}.webp 1024w,
-                  	images/works/{work.slug}/{image.src}.webp 1200w">
-					<img src="images/works/{work.slug}/{image.src}.jpg" alt="{work.alt}"
-							sizes="100vw"
-							srcset="images/works/{work.slug}/{image.src_s}.jpg 480w,
-											images/works/{work.slug}/{image.src_m}.jpg 1024w,
-											images/works/{work.slug}/{image.src}.jpg 1200w">
+				<source 
+					media="(min-width: 1024px)"
+					sizes="100vw"
+					type="image/webp"
+					srcset="
+						/images/works/{work.slug}/{image.src_m}.webp 1024w, 
+						/images/works/{work.slug}/{image.src}.webp 1200w
+					"
+				>
+				<source 
+					media="(min-width: 480px)"
+					sizes="100vw"
+					type="image/jpeg"
+					srcset="
+						/images/works/{work.slug}/{image.src_s}.jpg 480w, 
+						/images/works/{work.slug}/{image.src_m}.jpg 1024w, 
+						/images/works/{work.slug}/{image.src}.jpg 1200w
+					"
+				>
+				<img
+					src="/images/works/{work.slug}/{image.src}.jpg" 
+					alt="{image.alt}"
+				>
 			</picture>
 		{/each}
 	</div>
