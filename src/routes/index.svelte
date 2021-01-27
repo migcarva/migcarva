@@ -78,7 +78,7 @@
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
 	import mixpanel from 'mixpanel-browser';
-	mixpanel.track("Home page");
+	// mixpanel.track("Homepage");
 
   export let works;
 

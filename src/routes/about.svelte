@@ -254,6 +254,7 @@
 
 	import mixpanel from 'mixpanel-browser';
 	mixpanel.track("About page");
+	
 </script>
 
 <style lang="scss">
