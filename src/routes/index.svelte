@@ -77,7 +77,7 @@
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
-	import { Mixpanel } from '../Mixpanel'; 
+	import { Mixpanel } from '../mixpanel.js'; 
 
 	Mixpanel.track('Homepage hit');
 	Mixpanel.track("Video play", {"genre": "hip-hop", "duration in seconds": 42});
