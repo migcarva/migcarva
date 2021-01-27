@@ -251,6 +251,9 @@
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import Logo from '../components/Logo.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
+
+	import mixpanel from 'mixpanel-browser';
+	mixpanel.track("About page");
 </script>
 
 <style lang="scss">

@@ -19,6 +19,9 @@
 	import PostsList from '../../components/PostsList.svelte';
 	import Logo from '../../components/Logo.svelte';
 
+	import mixpanel from 'mixpanel-browser';
+	mixpanel.track("Blog page");
+
 	export let posts;
 </script>
 

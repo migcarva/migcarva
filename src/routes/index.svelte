@@ -72,11 +72,13 @@
 
 <script>
 	import { fade, fly } from 'svelte/transition';
-	import { bounceIn } from 'svelte/easing';
 	import Logo from '../components/Logo.svelte';
 	import WorksList from '../components/WorksList.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
+
+	import mixpanel from 'mixpanel-browser';
+	mixpanel.track("Home page");
 
   export let works;
 
