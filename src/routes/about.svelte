@@ -252,8 +252,8 @@
 	import Logo from '../components/Logo.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
 
-	import mixpanel from 'mixpanel-browser';
-	mixpanel.track("About page");
+	// import mixpanel from 'mixpanel-browser';
+	// mixpanel.track("About page");
 	
 </script>
 
