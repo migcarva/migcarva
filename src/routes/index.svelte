@@ -24,7 +24,7 @@
 	<section id="about">
 		<IntersectableTransition anchor='#about' threshold={.5}>
 			<h2>
-				A frontend developer from Lisbon<br>
+				A frontend developer from <strike>Lisbon</strike>Sesimbra<br>
 				<span>— I enjoy simple, concise and readable code</span>
 			</h2>
 		</IntersectableTransition>
