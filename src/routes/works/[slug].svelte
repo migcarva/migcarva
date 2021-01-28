@@ -103,8 +103,8 @@
 	<div class="gallery">
 		{#each work.images as image}
 			<picture>
-				<source type="image/avif" srcset="/images/works/{work.slug}/{image.src_m}.avif">
-				<source type="image/webp" srcset="/images/works/{work.slug}/{image.src_m}.webp">
+				<source type="image/avif" srcset="/images/works/{work.slug}/{image.src}.avif">
+				<source type="image/webp" srcset="/images/works/{work.slug}/{image.src}.webp">
 				<img src="/images/works/{work.slug}/{image.src}.jpg" alt="{image.alt}">
 			</picture>
 		{/each}
