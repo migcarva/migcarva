@@ -24,7 +24,7 @@
 	<section id="about">
 		<IntersectableTransition anchor='#about' threshold={.5}>
 			<h2>
-				A frontend developer from <strike>Lisbon</strike>Sesimbra<br>
+				A frontend developer from <strike>Lisbon</strike> Sesimbra<br>
 				<span>— I enjoy simple, concise and readable code</span>
 			</h2>
 		</IntersectableTransition>
@@ -44,7 +44,7 @@
 			<div class="col-5">
 				<IntersectableTransition anchor='#about' threshold={.75} options={{ delay: 384 }}>
 					<p>
-						I'm currently working as an agile engineer at <a href="https://www.iammoneysmart.com/">IAmMoney</a>, building a new kind of banking experience. <strike>I spent most of my time reviewing code, mentoring younger developers and chilling out in the caffetaria.</strike> I spent most of my time reviewing code, mentoring younger developers and chilling out with my family.
+						I'm currently working as an agile engineer at <a href="https://www.iammoneysmart.com/">IAmMoney</a>, building a new kind of banking experience. I spent most of my time reviewing code, mentoring younger developers and chilling out <strike>in the caffetaria</strike> with my family.
 					</p>
 				</IntersectableTransition>
 			</div>
