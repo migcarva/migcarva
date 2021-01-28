@@ -16,8 +16,8 @@ const works = [
 		tech: 'Vanila JS',
 		punchline: 'Experience, creative and investment',
 		description: `
-			<p>As part of the Labs team, at Bright Pixel, everyone was in charge of maintaing the company's website in good shape. Updating it with new information, creating new content, adding new job oppenings and bug fixing were weekly tasks.</p>
-			<p>No frameworks were used to create this interesting website, neither any animal was killed! All the code was carefully handmade for a prefect control over the dom and it's elements. In my opinion, it shows the commitment and effort the team behind gave while building it.</p>
+			<p>As part of the Labs team, at Bright Pixel, everyone was in charge of maintaining the company's website in good shape. Updating it with new information, creating new content, adding new job openings and bug fixing were weekly tasks.</p>
+			<p>No frameworks were used to create this interesting website, neither any animal was killed! All the code was carefully handmade for prefect control over the dom and its elements. In my opinion, it shows the commitment and effort the team behind gave while building it.</p>
 		`,
 		images: [
 			{
@@ -70,7 +70,7 @@ const works = [
 		tech: 'Nuxt.js',
 		punchline: 'Serious people doing serious work',
 		description: `
-			<p>Serious is an agile tech agency based both in Zurich and Lisbon. They develop high-quality websites, apps and platforms at affordable prices and high quality standards.</p>
+			<p>Serious is an agile tech agency based both in Zurich and Lisbon. They develop high-quality websites, apps and platforms at affordable prices and high-quality standards.</p>
 			<p>After a long period using Vue.js, the development team thought it was a good idea to test out Nuxt.js, the Vue alternative to React's Next.js. The development experience was as expected, making us able to deliver a good quality website in record time. All the background animations were handmade!</p>
 		`,
 		images: [
@@ -119,7 +119,7 @@ const works = [
 		punchline: 'All the stats you need',
 		description: `
 		<p>BPstat is an online statistical dissemination website that provides a large volume of statistical data and information. With BPstat, users can easily and efficiently access the statistical series produced by Banco de Portugal, as well as the main economic statistics and indicators produced by other institutions.</p>
-		<p>Although not the pretiest website I've made, the system complexity was really high. The biggest part of the website is only available on the Bank's local network, where the bank employees can add, update and create new data, using the newly created admin system. Is this backoffice that let them manage all the data comming from several diferrent sources, centralizing everything in a integrated and conflit aware system.</p>
+		<p>Although not the prettiest website I've made, the system complexity was really high. The biggest part of the website is only available on the Bank's local network, where the bank employees can add, update and create new data, using the newly created admin system. Is this backoffice that let them manage all the data coming from several differrent sources, centralizing everything in an integrated and conflict aware system.</p>
 		`,
 		images: [
 			{
@@ -168,7 +168,7 @@ const works = [
 		punchline: 'Amazing agency from Zurich',
 		description: `
 			<p>Station is passionate about new technologies and digital communication. They shape the state of the art with their applications, branding and content – and they always take things a step further with smart ideas and innovative use of content, design and technology.</p>
-			<p>This website was made using Drupal, which was a challenge for me. All the moving parts were a bit hidden behid the framework curtins, and you'd need to open a lot of doors before finding what you're looking for. Also, customizing drupal is no easy job, but when done right allows you to achieve impressive work!</p>
+			<p>This website was made using Drupal, which was a challenge for me. All the moving parts were a bit hidden behind the framework curtains, and you'd need to open a lot of doors before finding what you're looking for. Also, customizing drupal is no easy job, but when done right allows you to achieve impressive work!</p>
 		`,
 		images: [
 			{
@@ -221,8 +221,8 @@ const works = [
 		tech: 'Vue.js + Highcharts',
 		punchline: 'How good is the Portuguese education system?',
 		description: `
-			<p>Educação em Exame, is the result of a study led by Francisco Manuel dos Santos foundation and Expresso newspapper, to give insigths about the evolution and quality of the Portuguese education system, with the collaboration of the Portuguese National Council for Education.</p>
-			<p>Showing data in a compeling way is always a challenging job. On the other hand, this was a website created to publish the result of a long study and feedback gathered from the target audience, while also providing a way to get more detailed insights through a questionaire directed at students.</p>
+			<p>Educação em Exame, is the result of a study led by Francisco Manuel dos Santos foundation and Expresso newspaper, to give insights into the evolution and quality of the Portuguese education system, with the collaboration of the Portuguese National Council for Education.</p>
+			<p>Showing data in a compelling way is always a challenging job. On the other hand, this was a website created to publish the result of a long study and feedback gathered from the target audience, while also providing a way to get more detailed insights through a questionnaire directed at students.</p>
 		`,
 		images: [
 			{
@@ -270,8 +270,8 @@ const works = [
 		tech: 'jQuery + Highcharts',
 		punchline: 'Inequality after the global crisis',
 		description: `
-			<p>Another study from Francisco Manuel dos Santos Foundation, analysing the impact of the Euro Crisis in the portuguese society.</p>
-			<p>Creating interesting interactive infocharts is always a technical challenge, but with Highcharts the difficulties are reduce to something very bearable. This was one of the last website I've made using jQuery, and I can't say I miss it a lot. It served me well, though.</p>
+			<p>Another study from Francisco Manuel dos Santos Foundation, analyzing the impact of the Euro Crisis in the Portuguese society.</p>
+			<p>Creating interesting interactive info charts is always a technical challenge, but with Highcharts the difficulties are reduced to something very bearable. This was one of the last website I've made using jQuery, and I can't say I miss it a lot. It served me well, though.</p>
 		`,
 		images: [
 			{
@@ -324,8 +324,8 @@ const works = [
 		tech: 'Laravel + jQuery',
 		punchline: 'Having a party? Order all online!',
 		description: `
-			<p>Migros asked us to build this special marketplace for people with a bussy life. Having a BBQ at your house next weekend? Going to the park with some friends? Order online and pick your food prepared at the closest store!</p>
-			<p>Migro wanted to create a intereseting experience to choose ingredients. We explore different approaches and explored new ways to order online.</p>
+			<p>Migros asked us to build this special marketplace for people with a busy life. Having a BBQ at your house next weekend? Going to the park with some friends? Order online and pick your food prepared at the closest store!</p>
+			<p>Migro wanted to create an interesting experience to choose ingredients. We explore different approaches and explored new ways to order online.</p>
 		`,
 		images: [
 			{
