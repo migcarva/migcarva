@@ -13,15 +13,9 @@
 		</IntersectableTransition>
 		<IntersectableTransition options={{ x: 1024, y: 0, duration: 2048, delay: 256}}>
 			<picture>
-					<source media="(min-width: 1024px)"
-						sizes="100vw"
-						srcset="images/about_cover_m.webp 1024w,
-                  	images/about_cover.webp 1200w">
-					<img src="images/about_cover.jpg" alt="Miguel Carvalho in the nature"
-							sizes="100vw"
-							srcset="images/about_cover_s.jpg 480w,
-											images/about_cover_m.jpg 1024w,
-											images/about_cover.jpg 1200w">
+				<source srcset="images/about_cover.avif" type="image/avif">
+				<source srcset="images/about_cover.webp" type="image/webp">
+				<img src="images/about_cover.jpg" alt="Miguel Carvalho in the nature">
 			</picture>
 		</IntersectableTransition>
 		<!-- <a class="freccia" href="#list"></a> -->
@@ -151,13 +145,14 @@
 		<IntersectableTransition anchor='#skills' threshold={.3} options={{ delay: 256 * 2 }}>
 			<div class="row">
 				<div class="col-2">
-					<h3>MV frameworks</h3>
+					<h3>Frameworks</h3>
 				</div>
 				<div class="col-4">
 					<ul>
 						<li>React</li>
 						<li>Svelte</li>
 						<li>Single SPA</li>
+						<li>Express</li>
 					</ul>
 				</div>
 				<div class="col-4">
@@ -165,6 +160,7 @@
 						<li>Vue.js</li>
 						<li>jQuery</li>
 						<li>Vanila.js ;)</li>
+						<li>Koa</li>
 					</ul>
 				</div>
 			</div>
@@ -179,6 +175,8 @@
 					<ul>
 						<li>Paper.js</li>
 						<li>GreenSock GSAP</li>
+						<li>D3.js</li>
+						<li>HighCharts</li>
 						<li>Styled Components</li>
 					</ul>
 				</div>
@@ -186,7 +184,9 @@
 					<ul>
 						<li>Anime.js</li>
 						<li>Scroll Magic</li>
+						<li>C3.js</li>
 						<li>React 360</li>
+						<li>Lodash</li>
 					</ul>
 				</div>
 			</div>
@@ -251,10 +251,6 @@
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 	import Logo from '../components/Logo.svelte';
 	import ActionLink from '../components/ActionLink.svelte';
-
-	// import mixpanel from 'mixpanel-browser';
-	// mixpanel.track("About page");
-	
 </script>
 
 <style lang="scss">

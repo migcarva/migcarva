@@ -10,18 +10,10 @@
 				options={{ y: 1280, duration: 1280, delay: 1024}}
 			>
 				<picture>
-					<img
-						src="/images/works/{work.slug}/cover.jpg"
-						alt="{work.alt}"
-						sizes="100vw"
-						srcset="/images/works/{work.slug}/cover.jpg 480w, /images/works/{work.slug}/cover.jpg 1024w, /images/works/{work.slug}/cover.jpg 1200w"
-					/>
-					<source
-						media="(min-width: 1024px)"
-						sizes="100vw"
-						srcset="/images/works/{work.slug}/cover.webp 1024w, /images/works/{work.slug}/cover.webp 1200w"
-					/>
-			</picture>
+					<source srcset="/images/works/{work.slug}/cover.avif" type="image/avif">
+					<source srcset="/images/works/{work.slug}/cover.webp" type="image/webp">
+					<img src="/images/works/{work.slug}/cover.jpg" alt="{work.alt}">
+				</picture>
 			</IntersectableTransition>
 		</div>
 	</figure>
@@ -111,29 +103,9 @@
 	<div class="gallery">
 		{#each work.images as image}
 			<picture>
-				<source 
-					media="(min-width: 1024px)"
-					sizes="100vw"
-					type="image/webp"
-					srcset="
-						/images/works/{work.slug}/{image.src_m}.webp 1024w, 
-						/images/works/{work.slug}/{image.src}.webp 1200w
-					"
-				>
-				<source 
-					media="(min-width: 480px)"
-					sizes="100vw"
-					type="image/jpeg"
-					srcset="
-						/images/works/{work.slug}/{image.src_s}.jpg 480w, 
-						/images/works/{work.slug}/{image.src_m}.jpg 1024w, 
-						/images/works/{work.slug}/{image.src}.jpg 1200w
-					"
-				>
-				<img
-					src="/images/works/{work.slug}/{image.src}.jpg" 
-					alt="{image.alt}"
-				>
+				<source type="image/avif" srcset="/images/works/{work.slug}/{image.src_m}.avif">
+				<source type="image/webp" srcset="/images/works/{work.slug}/{image.src_m}.webp">
+				<img src="/images/works/{work.slug}/{image.src}.jpg" alt="{image.alt}">
 			</picture>
 		{/each}
 	</div>
