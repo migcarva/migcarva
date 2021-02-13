@@ -77,19 +77,6 @@
 	import ActionLink from '../components/ActionLink.svelte';
 	import IntersectableTransition from '../helpers/IntersectableTransition.svelte';
 
-	// import { v4 as uuidv4 } from 'uuid';
-	// import { Mixpanel } from '../mixpanel.js'; 
-
-	// Mixpanel.track('Homepage hit');
-	// Mixpanel.track("Video play", {"genre": "hip-hop", "duration in seconds": 42});
-
-	// const USER_ID = uuidv4();
-	// Mixpanel.identify(USER_ID);
-
-	// Mixpanel.people.set({
-	// 	"USER_ID": USER_ID,    // use human-readable names
-	// });
-
   export let works;
 
 	let showScrollText = false;
