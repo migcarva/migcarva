@@ -6,4 +6,4 @@ I spend a lot of my time programming. Not just for work, but as a general hobby.
 
 I like to keep things uncomplicated.
 
-Check out my website: https://migcarva.com 
+Check out my website: https://miguelcarvalho.xyz
